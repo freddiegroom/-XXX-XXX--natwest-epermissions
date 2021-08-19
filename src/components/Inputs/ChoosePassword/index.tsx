@@ -1,24 +1,24 @@
 import React, { useState, FC } from "react";
 import { InputContainer, RedInput, NormalInput } from "../inputs.styles";
 
-const Postcode: FC = () => {
+const ChoosePassword: FC = () => {
   const [clicked, setClicked] = useState(false);
   return (
     <>
       {!clicked && (
         <InputContainer onClick={() => setClicked(true)}>
-          <p>Postcode</p>
+          <p>Choose your Online Banking password</p>
           <RedInput></RedInput>
         </InputContainer>
       )}
       {clicked && (
         <InputContainer>
-          <p>Postcode</p>
-          <NormalInput>EH1 1HE</NormalInput>
+          <p>Choose your Online Banking password</p>
+          <NormalInput>************</NormalInput>
         </InputContainer>
       )}
     </>
   );
 };
 
-export default Postcode;
+export default ChoosePassword;

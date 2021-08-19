@@ -12,20 +12,30 @@ export const TextContainerStyle = styled.div`
     margin: 0;
     padding-bottom: 18px;
   }
+  max-width: 900px;
 `;
 
 export const CardContainerStyle = styled.div`
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
+  width: 850px;
+  @media only screen and (max-width: 849px) {
+    width: 100%;
+  }
+  @media only screen and (max-width: 600px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 export const CardStyle = styled.div`
-padding: 1em;
-@media (min-width: 450px) { 
-  width: 268px;
+// padding: 1em;
+@media (min-width: 600px) { 
 }
-  p {font-size: 14px;
+  max-width: 268px;
+  p {
+    font-size: 14px;
   line-height: 20px;
   padding-bottom; 8px;
   margin: 0;
@@ -34,6 +44,9 @@ padding: 1em;
 
 export const ColourBar = styled.div`
   width: 245px;
+  @media only screen and (max-width: 600px) {
+    width: 100%;
+  }
   height: 8px;
   background-color: ${(props) => props.color || "#D8D2E8"};
   margin: 1em 0;
@@ -49,10 +62,10 @@ export const CardTitle = styled.p`
 export const CardSubtitle = styled.p`
   font-size: 14px;
   line-height: 24px;
-  padding-bottom: 10x;
   color: #1d7b8a;
   margin: 0;
   height: 50px;
+  max-width: ;
 `;
 
 export const CardList = styled.ul`
@@ -64,8 +77,12 @@ export const CardList = styled.ul`
     font-size: 14px;
     padding-bottom: 8px;
     margin: 0;
-    width: 100%;
+    max-width: 242px;
   }
+  p {
+    max-width: 253px;
+  }
+
   margin: 0;
   padding-inline-start: 1em;
   margin-inline-end: 0 !important;
@@ -91,4 +108,23 @@ export const Row = styled.div`
   p {
     padding-left: 8px;
   }
+`;
+
+export const ChooseButton = styled.button`
+  background: transparent;
+  box-shadow: 0px 0px 0px transparent;
+  border: 0px solid transparent;
+  text-shadow: 0px 0px 0px transparent;
+  width: 213px;
+  height: 50px;
+  background-color: #1d7b8a;
+  color: #ffffff;
+  font-size: 18px;
+  align-self: flex-end;
+  cursor: pointer;
+  // justify-self: flex-end;
+  @media only screen and (max-width: 600px) {
+    width: 100%;
+  }
+  margin-bottom: 32px;
 `;

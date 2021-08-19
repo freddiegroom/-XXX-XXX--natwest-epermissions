@@ -3,7 +3,7 @@ import { Story, Meta } from "@storybook/react/types-6-0";
 import Postcode from ".";
 
 export default {
-  title: "Inputs/Postcode",
+  title: "Components/Inputs/Postcode",
   component: Postcode,
 } as Meta;
 

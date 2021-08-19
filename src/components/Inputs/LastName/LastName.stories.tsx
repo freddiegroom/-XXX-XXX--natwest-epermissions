@@ -1,10 +1,9 @@
 import React from "react";
 import { Story, Meta } from "@storybook/react/types-6-0";
 import LastName from ".";
-import App from "../../../App";
 
 export default {
-  title: "Inputs/LastName",
+  title: "Components/Inputs/LastName",
   component: LastName,
 } as Meta;
 

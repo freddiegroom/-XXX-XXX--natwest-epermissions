@@ -1,7 +1,7 @@
 import React, { FC } from "react";
-import Button from "../../../components/Button";
+// import ChooseButton from "../../../components/Buttons/ChooseButton";
 import ExperimentContainer from "../../../components/ExperimentContainer";
-import Footer from "../../../components/Footer";
+import WhiteFooter from "../../../components/WhiteFooter";
 import Header from "../../../components/Header";
 import {
   CardList,
@@ -13,22 +13,34 @@ import {
   ColourBar,
   Content,
   TextContainerStyle,
+  ChooseButton,
 } from "./CurrentAccount.styles";
 import infoIcon from "../../../images/information-icon.png";
+import { useScrollToTop } from "../../../hooks/useScrollToTop";
+import { useHistory } from "react-router-dom";
+import { HeadingText, RegularText } from "../../../components/Text/Text.style";
+// import { useHistory } from "react-router-dom";
+// import { useScrollToTop } from "../../../hooks/useScrollToTop";
 
 const CurrentAccount: FC = () => {
+  useScrollToTop();
+  const history = useHistory();
+
+  const handleNextPage = (route: string) => {
+    history.push(route);
+  };
   return (
     <ExperimentContainer>
       <Header>Find the right bank account for you</Header>
       <TextContainerStyle>
-        <p>Switch to NatWest</p>
-        <p>
+        <HeadingText>Switch to NatWest</HeadingText>
+        <RegularText>
           The Current Account Switch Service will do all the work when it comes
           to switching, moving everything across from your old account to your
           new account all within 7 working days, including Direct Debits and
           standing orders. All you need to do is tell us the details of your old
           bank account and when you want the Switch to start.
-        </p>
+        </RegularText>
       </TextContainerStyle>
       <CardContainerStyle>
         <CardStyle>
@@ -54,7 +66,9 @@ const CurrentAccount: FC = () => {
               <p>To apply, you need to 18+ and a UK resident.</p>
             </Row>
           </Content>
-          <Button>Choose Account</Button>
+          <ChooseButton onClick={() => handleNextPage("/PersonalDetails")}>
+            Choose Account
+          </ChooseButton>
         </CardStyle>
         <CardStyle>
           <ColourBar color="#009FAC" />
@@ -79,7 +93,9 @@ const CurrentAccount: FC = () => {
               account every month
             </p>
           </Content>
-          <Button>Choose Account</Button>
+          <ChooseButton onClick={() => handleNextPage("/PersonalDetails")}>
+            Choose Account
+          </ChooseButton>
         </CardStyle>
         <CardStyle>
           <ColourBar color="#E60303" />
@@ -102,10 +118,12 @@ const CurrentAccount: FC = () => {
               <li>No monthly fee for UK students.</li>
             </CardList>
           </Content>
-          <Button>Choose Account</Button>
+          <ChooseButton onClick={() => handleNextPage("/PersonalDetails")}>
+            Choose Account
+          </ChooseButton>
         </CardStyle>
       </CardContainerStyle>
-      <Footer />
+      <WhiteFooter />
     </ExperimentContainer>
   );
 };

@@ -1,6 +1,7 @@
 import React from "react";
 import { Story, Meta } from "@storybook/react/types-6-0";
 import Loan from ".";
+import { HashRouter as Router } from "react-router-dom";
 
 export default {
   title: "screens/Product Choice/Loan",
@@ -10,7 +11,11 @@ export default {
 interface StoryProps {}
 
 const Template: Story = () => {
-  return <Loan />;
+  return (
+    <Router>
+      <Loan />
+    </Router>
+  );
 };
 
 export const Basic = Template.bind({});

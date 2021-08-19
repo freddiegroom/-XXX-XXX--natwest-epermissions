@@ -3,7 +3,7 @@ import { Story, Meta } from "@storybook/react/types-6-0";
 import FirstName from ".";
 
 export default {
-  title: "Inputs/FirstName",
+  title: "Components/Inputs/FirstName",
   component: FirstName,
 } as Meta;
 

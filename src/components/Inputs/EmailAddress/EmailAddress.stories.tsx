@@ -3,7 +3,7 @@ import { Story, Meta } from "@storybook/react/types-6-0";
 import EmailAddress from ".";
 
 export default {
-  title: "Inputs/EmailAddress",
+  title: "Components/Inputs/EmailAddress",
   component: EmailAddress,
 } as Meta;
 

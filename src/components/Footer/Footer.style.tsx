@@ -6,5 +6,9 @@ export const FooterStyle = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 32px;
+  background-color: #f2f2f8;
+  width: 100%;
+  @media only screen and (max-width: 600px) {
+    font-size: 14px;
+  }
 `;

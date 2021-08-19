@@ -1,0 +1,16 @@
+import React from "react";
+import { Story, Meta } from "@storybook/react/types-6-0";
+import OTPostChannel from ".";
+
+export default {
+  title: "Components/OneTickChannel/PostChannel",
+  component: OTPostChannel,
+} as Meta;
+
+interface StoryProps {}
+
+const Template: Story = () => {
+  return <OTPostChannel />;
+};
+
+export const Basic = Template.bind({});

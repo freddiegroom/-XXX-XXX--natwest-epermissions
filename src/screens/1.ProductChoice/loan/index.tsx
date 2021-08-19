@@ -1,8 +1,9 @@
 import React, { FC } from "react";
-import Button from "../../../components/Button";
+import { useHistory } from "react-router-dom";
 import ExperimentContainer from "../../../components/ExperimentContainer";
-import Footer from "../../../components/Footer";
+import WhiteFooter from "../../../components/WhiteFooter";
 import Header from "../../../components/Header";
+import { useScrollToTop } from "../../../hooks/useScrollToTop";
 import tick from "../../../images/tick.png";
 
 import {
@@ -14,14 +15,22 @@ import {
   PurpleCard,
   CardRow,
   BlueText,
+  ChooseButton,
 } from "./Loan.styles";
+import { HeadingText } from "../../../components/Text/Text.style";
 
 const Loan: FC = () => {
+  useScrollToTop();
+  const history = useHistory();
+
+  const handleNextPage = (route: string) => {
+    history.push(route);
+  };
   return (
     <ExperimentContainer>
       <Header>Revamp your space with a home improvement loan</Header>
       <TextContainerStyle>
-        <p>Taking out a home improvement loan</p>
+        <HeadingText>Taking out a home improvement loan</HeadingText>
       </TextContainerStyle>
       <Row>
         <TickContainer>
@@ -80,7 +89,9 @@ const Loan: FC = () => {
               <p>(Annual Percentage Rate)</p>
               <p>(fixed)</p>
             </CardRow>
-            <Button>Choose Loan</Button>
+            <ChooseButton onClick={() => handleNextPage("/PersonalDetails")}>
+              Choose Loan
+            </ChooseButton>
           </PurpleCard>
         </Card>
         <Card>
@@ -114,7 +125,9 @@ const Loan: FC = () => {
               <p>(Annual Percentage Rate)</p>
               <p>(fixed)</p>
             </CardRow>
-            <Button>Choose Loan</Button>
+            <ChooseButton onClick={() => handleNextPage("/PersonalDetails")}>
+              Choose Loan
+            </ChooseButton>
           </PurpleCard>
         </Card>
         <Card>
@@ -148,11 +161,13 @@ const Loan: FC = () => {
               <p>(Annual Percentage Rate)</p>
               <p>(fixed)</p>
             </CardRow>
-            <Button>Choose Loan</Button>
+            <ChooseButton onClick={() => handleNextPage("/PersonalDetails")}>
+              Choose Loan
+            </ChooseButton>
           </PurpleCard>
         </Card>
       </Row>
-      <Footer />
+      <WhiteFooter />
     </ExperimentContainer>
   );
 };

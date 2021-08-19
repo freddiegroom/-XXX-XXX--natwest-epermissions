@@ -1,28 +1,43 @@
+import { useEFSData } from "@dectech/react-library";
 import React, { FC } from "react";
-import { Switch, Route } from "react-router-dom";
-import { useHistory } from "react-router-dom";
-
-// import BasketScreen from './pageDirectory/basketScreen'
-// import FirstScreen from './pageDirectory/firstScreen'
-// import StoreScreen from './pageDirectory/storePage'
+import { HashRouter as Router, Switch, Route } from "react-router-dom";
+import CurrentAccount from "../../screens/1.ProductChoice/current-account";
+import Loan from "../../screens/1.ProductChoice/loan/index";
+import PCExistingCustomer from "../../screens/2.PersonalDetails/PCExistingCustomer";
+import PCNewCustomer from "../../screens/2.PersonalDetails/PCNewCustomer/index";
+import AccountDetailsBlank from "../../screens/3.AccountDetails/AccountDetails";
+import PermissionsInfo from "../../screens/4.PermissionsInfo";
+import Scenario1 from "../../screens/5.MarketingPreferences/NewCustomer/Scenario1";
+import PrivacyPermissions from "../../screens/6.PrivacyPermissions";
 
 const Condition1: FC = () => {
-  const history = useHistory();
-
-  const handleNextPage = (route: string) => {
-    history.push(route);
-  };
+  const { product = "current account", user = "existing" } = useEFSData();
   return (
-    <Switch>
-      <Route exact path="/">
-        {/* <FirstScreen /> */}
-      </Route>
-      <Route path="/1">{/* <StoreScreen /> */}</Route>
-      <Route path="/2">{/* <BasketScreen /> */}</Route>
-      <Route path="/3">{/* <BasketScreen /> */}</Route>
-      <Route path="/4">{/* <BasketScreen /> */}</Route>
-      <Route path="/5">{/* <BasketScreen /> */}</Route>
-    </Switch>
+    <Router>
+      <Switch>
+        <Route exact path="/">
+          {/* <FirstScreen /> */}
+          {product === "current account" && <CurrentAccount />}
+          {product === "loan" && <Loan />}
+        </Route>
+        <Route path="/PersonalDetails">
+          {user === "existing" && <PCNewCustomer />}
+          {user === "new" && <PCExistingCustomer />}
+        </Route>
+        <Route path="/AccountDetails">
+          <AccountDetailsBlank />
+        </Route>
+        <Route path="/PermissionsInfo">
+          <PermissionsInfo />
+        </Route>
+        <Route path="/MarketingPreferences">
+          <Scenario1 />
+        </Route>
+        <Route path="/PrivacyPermissions">
+          <PrivacyPermissions />
+        </Route>
+      </Switch>
+    </Router>
   );
 };
 

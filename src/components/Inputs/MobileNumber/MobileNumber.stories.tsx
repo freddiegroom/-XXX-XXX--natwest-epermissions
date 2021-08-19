@@ -3,7 +3,7 @@ import { Story, Meta } from "@storybook/react/types-6-0";
 import MobileNumber from ".";
 
 export default {
-  title: "Inputs/MobileNumber",
+  title: "Components/Inputs/MobileNumber",
   component: MobileNumber,
 } as Meta;
 
