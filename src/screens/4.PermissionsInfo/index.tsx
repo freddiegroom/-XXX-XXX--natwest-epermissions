@@ -5,12 +5,14 @@ import ExperimentContainer from "../../components/ExperimentContainer";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import { HeadingText } from "../../components/Text/Text.style";
+import WhiteContentContainer from "../../components/WhiteContentContainer";
+import WhiteFooter from "../../components/WhiteFooter";
 
 const PermissionsInfo: FC = () => {
   return (
     <ExperimentContainer>
       <Header>How we'll get in touch</Header>
-      <ContentContainer>
+      <WhiteContentContainer>
         <HeadingText>Your statements</HeadingText>
         <p>
           We’ve set you up to get your statements online. We’ll send them to
@@ -48,8 +50,8 @@ const PermissionsInfo: FC = () => {
           (app eligibility applies).
         </p>
         <NextButton routeAddress="/MarketingPreferences">Next</NextButton>
-      </ContentContainer>
-      <Footer />
+      </WhiteContentContainer>
+      <WhiteFooter />
     </ExperimentContainer>
   );
 };

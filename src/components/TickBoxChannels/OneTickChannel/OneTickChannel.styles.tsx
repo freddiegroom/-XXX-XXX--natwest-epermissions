@@ -2,6 +2,11 @@ import styled from "styled-components";
 
 export const ChannelWrapper = styled.div`
   padding: 0.5em 0;
+  @media only screen and (max-width: 600px) {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
 `;
 
 export const Channel = styled.div`
@@ -12,6 +17,12 @@ export const Channel = styled.div`
   justify-content: space-between;
   max-width: 560px;
   min-height: 90px;
+  @media only screen and (max-width: 600px) {
+   flex-wrap: wrap;
+   width: 90%;
+   justify-content: space-between;
+   min-height: 140px;
+  }
 `;
 
 export const ClickBox = styled.div`
@@ -26,6 +37,7 @@ export const ClickBox = styled.div`
     padding-left: 24px;
     padding-top: 24px;
     align-items: flex-start;
+    width: 40%;
   }
 `;
 
@@ -37,12 +49,18 @@ export const ClickedBox = styled.div`
     height: 20px;
   }
   padding-left: 32px;
+  @media only screen and (max-width: 600px) {
+    padding-left: 24px;
+    padding-top: 24px;
+    align-items: flex-start;
+    width: 40%;
+  }
 `;
 
 export const ChannelText = styled.div`
   padding-left: 32px;
   @media only screen and (max-width: 600px) {
-    padding-left: 16px;
+    padding-left: 24px;
   }
   display: flex;
   flex-direction: column;
@@ -51,6 +69,7 @@ export const ChannelText = styled.div`
   line-height: 28px;
   p {
     margin: 0;
+    padding: 0;
     width: 325px;
     @media only screen and (max-width: 600px) {
       width: 100%;
@@ -62,6 +81,11 @@ export const ChannelText = styled.div`
     color: #666666;
     font-size: 16px;
     line-height: 20px;
+  }
+  @media only screen and (max-width: 600px) {
+    order: 999;
+    width: 100%;
+    align-self: flex-start;
   }
 `;
 
@@ -76,6 +100,9 @@ export const EmailImg = styled.div`
     width: 40px;
     height: 29px;
   }
+  @media only screen and (max-width: 600px) {
+    padding-top: 8px;
+  }
 `;
 
 export const PostImg = styled.div`
@@ -88,6 +115,9 @@ export const PostImg = styled.div`
     width: 40px;
     height: 42px;
   }
+  @media only screen and (max-width: 600px) {
+    padding-top: 8px;
+  }
 `;
 export const SocialImg = styled.div`
   display: flex;
@@ -98,6 +128,9 @@ export const SocialImg = styled.div`
   img {
     width: 40px;
     height: 40px;
+  }
+  @media only screen and (max-width: 600px) {
+    padding-top: 8px;
   }
 `;
 
@@ -111,6 +144,9 @@ export const TelephoneImg = styled.div`
     width: 39px;
     height: 35px;
   }
+  @media only screen and (max-width: 600px) {
+    padding-top: 8px;
+  }
 `;
 
 export const TextImg = styled.div`
@@ -122,5 +158,8 @@ export const TextImg = styled.div`
   img {
     width: 24px;
     height: 40px;
+  }
+  @media only screen and (max-width: 600px) {
+    padding-top: 8px;
   }
 `;

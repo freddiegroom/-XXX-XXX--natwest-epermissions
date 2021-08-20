@@ -17,6 +17,9 @@ p {
   line-height: 16px;
 }
 cursor: pointer;
+@media only screen and (max-width: 600px) {
+  padding: 0 16px;
+}
 `;
 
 export const RedRadioContainer = styled.div`
@@ -34,6 +37,9 @@ export const RedRadioContainer = styled.div`
     line-height: 16px;
   }
   cursor: pointer;
+  @media only screen and (max-width: 600px) {
+    padding: 0 16px;
+  }
 `;
 
 export const RedRadio = styled.div`

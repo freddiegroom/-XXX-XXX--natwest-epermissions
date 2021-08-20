@@ -1,24 +1,23 @@
 import styled from "styled-components";
 
 export const TextContainerStyle = styled.div`
-  padding: 32p 0;
-  max-width: 900px;
-  @media only screen and (max-width: 900px) {
+  padding-top: 32px;
+  width: 70%;
+  @media only screen and (max-width: 960px) {
     width: 100%;
   }
   p {
     font-size: 16px;
     line-height: 24px;
     margin: 0;
-    padding-bottom: 18px;
-    width: 900px;
-    @media only screen and (max-width: 899px) {
-      max-width: 900px;
-    }
     @media only screen and (max-width: 600px) {
-      // padding: 0 16px;
-      width: 100%;
+      display: flex;
+      justify-content: center;
+      padding: 16px 8px;
     }
+  }
+  @media only screen and (max-width: 600px) {
+    padding-top: 16px;
   }
 `;
 

@@ -5,6 +5,9 @@ export const OffersAndUpdatesContainer = styled.div`
   align-items: center;
   color: #666666;
   padding: 1rem 0;
+  @media only screen and (max-width: 600px) {
+    padding: 16px;
+  }
 `;
 
 export const OAUBox = styled.button`

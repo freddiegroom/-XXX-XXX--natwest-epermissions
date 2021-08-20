@@ -1,11 +1,11 @@
 import React, { FC } from "react";
 import "./App.css";
-import Condition1 from "./routing/Condition1";
+import ConditionSelector from "./ConditionSelector";
 
 const App: FC = ({ children }) => {
   return (
     <div className="App">
-      <Condition1 />
+      <ConditionSelector />
     </div>
   );
 };

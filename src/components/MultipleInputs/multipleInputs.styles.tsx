@@ -9,6 +9,9 @@ export const ADMultipleInputContainer = styled.div`
     height: 43px;
   }
   align-items: center;
+  @media only screen and (max-width: 600px) {
+    padding-left: 16px;
+  }
 `;
 export const MultipleInputContainer = styled.div`
   display: flex;
@@ -19,6 +22,9 @@ export const MultipleInputContainer = styled.div`
     height: 43px;
   }
   align-items: center;
+  @media only screen and (max-width: 600px) {
+    padding-left: 16px;
+  }
 `;
 
 export const InputContainer = styled.div`

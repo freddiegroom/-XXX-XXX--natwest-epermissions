@@ -15,6 +15,15 @@ export const SelectContainer = styled.div`
   }
   @media only screen and (max-width: 600px) {
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    p,
+    .subText {
+      align-self: flex-start;
+      padding-left: 16px;
+    }
   }
 `;
 
@@ -47,11 +56,14 @@ export const RedSelect = styled.div`
   justify-content: space-between;
   font-size: 16px;
   line-height: 24px;
-  padding: 0 16px;
+  padding-left: 16px;
   color: #969c9c;
   cursor: pointer;
   @media only screen and (max-width: 600px) {
     width: 85%;
+  }
+  img {
+    padding-right: 16px;
   }
 `;
 
@@ -67,10 +79,13 @@ export const NormalSelect = styled.div`
   justify-content: space-between;
   font-size: 16px;
   line-height: 24px;
-  padding: 0 16px;
+  padding-left: 16px;
   color: #333;
   @media only screen and (max-width: 600px) {
     width: 85%;
+  }
+  img {
+    padding-right: 16px;
   }
 `;
 
@@ -88,5 +103,8 @@ export const DisabledSelect = styled.div`
   color: #333;
   @media only screen and (max-width: 600px) {
     width: 85%;
+  }
+  img {
+    padding-right: 16px;
   }
 `;

@@ -6,12 +6,14 @@ import Footer from "../../../../components/Footer";
 import Header from "../../../../components/Header";
 import { BoldText, HeadingText } from "../../../../components/Text/Text.style";
 import OffersAndUpdates from "../../../../components/TickBoxes/OffersAndUpdates";
+import WhiteFooter from "../../../../components/WhiteFooter";
+import WhiteContentContainer from "../../../../components/WhiteContentContainer";
 
 const Scenario1: FC = () => {
   return (
     <ExperimentContainer>
       <Header>How we'll get in touch</Header>
-      <ContentContainer>
+      <WhiteContentContainer>
         <HeadingText>Your statements</HeadingText>
         <p>
           We’ve set you up to get your statements online. We’ll send them to
@@ -57,8 +59,8 @@ const Scenario1: FC = () => {
           want to get these offers and updates.
         </OffersAndUpdates>
         <NextButton routeAddress="/PrivacyPermissions" />
-      </ContentContainer>
-      <Footer />
+      </WhiteContentContainer>
+      <WhiteFooter />
     </ExperimentContainer>
   );
 };

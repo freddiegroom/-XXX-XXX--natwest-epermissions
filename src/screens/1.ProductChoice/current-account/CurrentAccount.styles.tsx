@@ -11,6 +11,7 @@ export const TextContainerStyle = styled.div`
     line-height: 24px;
     margin: 0;
     padding-bottom: 18px;
+    padding-left: 16px;
   }
   max-width: 900px;
 `;

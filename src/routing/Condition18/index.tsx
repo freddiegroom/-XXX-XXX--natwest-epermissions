@@ -1,8 +1,9 @@
 import { useEFSData } from "@dectech/react-library";
-import React, { FC } from "react";
+import React, { FC, useState } from "react";
 import { HashRouter as Router, Switch, Route } from "react-router-dom";
 import CurrentAccount from "../../screens/1.ProductChoice/current-account";
 import Loan from "../../screens/1.ProductChoice/loan/index";
+import PCExistingCustomer from "../../screens/2.PersonalDetails/PCExistingCustomer";
 import PCNewCustomer from "../../screens/2.PersonalDetails/PCNewCustomer/index";
 import AccountDetailsBlank from "../../screens/3.AccountDetails/AccountDetails";
 import PermissionsInfo from "../../screens/4.PermissionsInfo";
@@ -10,21 +11,28 @@ import Scenario18 from "../../screens/5.MarketingPreferences/ExistingCustomer/Sc
 import PrivacyPermissions from "../../screens/6.PrivacyPermissions";
 
 const Condition18: FC = () => {
-  const { product = "current account" } = useEFSData();
+  const { product = "current account", debug } = useEFSData();
+  const [debugProduct, setDebugProduct] = useState("loan");
   return (
     <Router>
       <Switch>
         <Route exact path="/">
+          <button onClick={() => setDebugProduct("current account")}>
+            current account
+          </button>
+          <button onClick={() => setDebugProduct("loan")}>loan</button>
           {/* <FirstScreen /> */}
-          {product === "current account" && <CurrentAccount />}
-          {product === "loan" && <Loan />}
+          {!debug && product === "current account" && <CurrentAccount />}
+          {!debug && product === "loan" && <Loan />}
+          {debug && debugProduct === "current account" && <CurrentAccount />}
+          {debug && debugProduct === "loan" && <Loan />}
         </Route>
         <Route path="/PersonalDetails">
-          <PCNewCustomer />
+          <PCExistingCustomer />
         </Route>
-        <Route path="/AccountDetails">
+        {/* <Route path="/AccountDetails">
           <AccountDetailsBlank />
-        </Route>
+        </Route> */}
         <Route path="/PermissionsInfo">
           <PermissionsInfo />
         </Route>

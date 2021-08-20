@@ -20,4 +20,8 @@ export const FormBlank = styled.div`
     box-sizing: border-box; /* Opera/IE 8+ */
     border-color: #969c9c;
   }
+  @media only screen and (max-width: 899px) {
+    width: 100%;
+    // padding: 0 16px;
+  }
 `;

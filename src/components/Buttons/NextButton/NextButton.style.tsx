@@ -11,16 +11,19 @@ export const NextButtonStyle = styled.button`
   background-color: #1d7b8a;
   color: #ffffff;
   font-size: 18px;
-  align-self: flex-end;
+  // align-self: flex-end;
   cursor: pointer;
   .smallBevel {
     display: none;
   }
   .largeBevel {
-    display: black;
+    display: block;
+    @media only screen and (max-width: 600px) {
+      width: 90%;
+    }
   }
   @media only screen and (max-width: 600px) {
-    width: 100%;
+    width: 90%;
     img {
       height: 2px;
     }
@@ -38,13 +41,17 @@ export const NextButtonContainer = styled.div`
     display: none;
   }
   @media only screen and (max-width: 600px) {
+    align-items: center;
     width: 100%;
     .smallBevel {
       display: none;
     }
     .largeBevel {
       display: block;
+      width: 90%;
     }
+    width: 100%;
+    align-items: center;
   }
-  margin-top: 32px;
+  margin: 32px 0;
 `;

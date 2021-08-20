@@ -5,11 +5,9 @@ import {
   ChannelWrapper,
   ClickBox,
   ClickedBox,
-  EmailImg,
 } from "../OneTickChannel.styles";
 import tickedCheckbox from "../../../../images/tick-checkbox.png";
 import checkbox from "../../../../images/checkbox.png";
-import email from "../../../../images/email.png";
 
 const NatwestEmailsChannel: FC = () => {
   const [clicked, setClicked] = useState(false);

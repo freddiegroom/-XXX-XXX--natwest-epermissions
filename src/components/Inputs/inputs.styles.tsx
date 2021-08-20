@@ -18,6 +18,15 @@ export const InputContainer = styled.div`
   }
   @media only screen and (max-width: 600px) {
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    p,
+    .subText {
+      align-self: flex-start;
+      padding-left: 16px;
+    }
   }
 `;
 
@@ -40,6 +49,15 @@ export const RedInputContainer = styled.div`
   }
   @media only screen and (max-width: 600px) {
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    p,
+    .subText {
+      align-self: flex-start;
+      padding-left: 16px;
+    }
   }
 `;
 

@@ -16,8 +16,10 @@ export const WideText = styled.p`
 export const HeadingText = styled.p`
   font-size: 20px !important;
   line-height: 32px;
+  padding-left: 16px;
   @media only screen and (max-width: 600px) {
     line-height: 28px;
+    padding-left: 8px;
   }
   margin: 0;
 `;
