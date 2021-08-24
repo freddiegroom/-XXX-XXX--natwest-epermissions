@@ -8,8 +8,10 @@ import ChoosePassword from "../../../components/Inputs/ChoosePassword";
 import ConfirmPassword from "../../../components/Inputs/ConfirmPassword";
 import ConfirmPIN from "../../../components/ConfirmPIN";
 import PIN from "../../../components/Inputs/PIN";
-import { HeadingText } from "../../../components/Text/Text.style";
+import { HeadingText, RedText } from "../../../components/Text/Text.style";
 import WhiteContentContainer from "../../../components/WhiteContentContainer";
+import WhiteFooter from "../../../components/WhiteFooter";
+import FakeNextButton from "../../../components/Buttons/FakeNextButton";
 
 const AccountDetails: FC = () => {
   const { condition } = useEFSData();
@@ -30,6 +32,8 @@ const AccountDetails: FC = () => {
   const [pinClick, setPinClick] = useState(false);
   const [choosePasswordClick, setChoosePasswordClick] = useState(false);
   const [confirmPasswordClick, setConfirmPasswordClick] = useState(false);
+  const [confirmPin, setConfirmPin] = useState("");
+  const [fillMessage, setFillMessage] = useState(false);
 
   return (
     <ExperimentContainer>
@@ -45,7 +49,7 @@ const AccountDetails: FC = () => {
           or have numbers that repeat 3 times or more (like 1112).
         </p>
         <PIN state={pinClick} setState={setPinClick} />
-        <ConfirmPIN />
+        <ConfirmPIN state={confirmPin} setState={setConfirmPin} />
         <HeadingText>Your Online Banking Password</HeadingText>
         <p>
           Passwords must be between 6 and 20 characters and a combination of
@@ -59,9 +63,34 @@ const AccountDetails: FC = () => {
           state={confirmPasswordClick}
           setState={setConfirmPasswordClick}
         />
-        <NextButton routeAddress={routeyRouteRoute} />
+        {/* <NextButton routeAddress={routeyRouteRoute} /> */}
+        {!(
+          pinClick &&
+          confirmPin === "5467" &&
+          choosePasswordClick &&
+          confirmPasswordClick
+        ) && (
+          <>
+            {fillMessage && (
+              <RedText>
+                Please fill in your online banking details to continue
+              </RedText>
+            )}
+            <FakeNextButton setState={setFillMessage}>
+              scroll to top
+            </FakeNextButton>
+          </>
+        )}
+
+        {/* {titleClick && */}
+        {pinClick &&
+          confirmPin === "5467" &&
+          choosePasswordClick &&
+          confirmPasswordClick && (
+            <NextButton routeAddress={routeyRouteRoute} />
+          )}
       </WhiteContentContainer>
-      <Footer />
+      <WhiteFooter />
     </ExperimentContainer>
   );
 };

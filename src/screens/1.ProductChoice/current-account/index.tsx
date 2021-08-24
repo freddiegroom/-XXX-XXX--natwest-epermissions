@@ -73,7 +73,12 @@ const CurrentAccount: FC = () => {
               <p>To apply, you need to 18+ and a UK resident.</p>
             </Row>
           </Content>
-          <ChooseButton onClick={() => nextPageFunc("Select Account")}>
+          <ChooseButton
+            onClick={(e) => {
+              e.preventDefault();
+              nextPageFunc("Select Account");
+            }}
+          >
             Choose Account
           </ChooseButton>
         </CardStyle>
@@ -100,7 +105,12 @@ const CurrentAccount: FC = () => {
               account every month
             </p>
           </Content>
-          <ChooseButton onClick={() => nextPageFunc("Reward")}>
+          <ChooseButton
+            onClick={(e) => {
+              e.preventDefault();
+              nextPageFunc("Reward");
+            }}
+          >
             Choose Account
           </ChooseButton>
         </CardStyle>
@@ -125,7 +135,12 @@ const CurrentAccount: FC = () => {
               <li>No monthly fee for UK students.</li>
             </CardList>
           </Content>
-          <ChooseButton onClick={() => nextPageFunc("Student")}>
+          <ChooseButton
+            onClick={(e) => {
+              e.preventDefault();
+              nextPageFunc("Student");
+            }}
+          >
             Choose Account
           </ChooseButton>
         </CardStyle>

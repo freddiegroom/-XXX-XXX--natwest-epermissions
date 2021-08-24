@@ -46,10 +46,24 @@ const TTTextMessageChannel: FC<TTTextMessageChannelProps> = ({
             <p>YES</p>
             <p>NO</p>
           </YesNoContainer>
-          <Channel onClick={() => clickFunc()}>
+          <Channel>
             <ClickBox>
-              <img src={checkbox} alt=""></img>
-              <img src={checkbox} alt=""></img>
+              <img
+                src={checkbox}
+                onClick={(e) => {
+                  e.preventDefault();
+                  clickFunc();
+                }}
+                alt=""
+              ></img>
+              <img
+                onClick={(e) => {
+                  e.preventDefault();
+                  unClickFunc();
+                }}
+                src={checkbox}
+                alt=""
+              ></img>
             </ClickBox>
             <ChannelText>
               <p>Text message</p>
@@ -67,10 +81,29 @@ const TTTextMessageChannel: FC<TTTextMessageChannelProps> = ({
             <p>YES</p>
             <p>NO</p>
           </YesNoContainer>
-          <Channel onClick={() => clickFunc()}>
+          <Channel
+          // onClick={(e) => {
+          //   e.preventDefault();
+          //   clickFunc();
+          // }}
+          >
             <ClickBox>
-              <img src={checkbox} alt=""></img>
-              <img src={tickedCheckbox} alt=""></img>
+              <img
+                src={checkbox}
+                onClick={(e) => {
+                  e.preventDefault();
+                  clickFunc();
+                }}
+                alt=""
+              ></img>
+              <img
+                src={tickedCheckbox}
+                alt=""
+                onClick={(e) => {
+                  e.preventDefault();
+                  clickFunc();
+                }}
+              ></img>
             </ClickBox>
             <ChannelText>
               <p>Text message</p>
@@ -88,10 +121,24 @@ const TTTextMessageChannel: FC<TTTextMessageChannelProps> = ({
             <p>YES</p>
             <p>NO</p>
           </YesNoContainer>{" "}
-          <Channel onClick={() => unClickFunc()}>
+          <Channel>
             <ClickedBox>
-              <img src={tickedCheckbox} alt=""></img>
-              <img src={checkbox} alt=""></img>
+              <img
+                src={tickedCheckbox}
+                alt=""
+                onClick={(e) => {
+                  e.preventDefault();
+                  unClickFunc();
+                }}
+              ></img>
+              <img
+                src={checkbox}
+                onClick={(e) => {
+                  e.preventDefault();
+                  unClickFunc();
+                }}
+                alt=""
+              ></img>
             </ClickedBox>
             <ChannelText>
               <p>Text message</p>

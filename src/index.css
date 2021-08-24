@@ -32,11 +32,12 @@
 }
 
 body {
-  margin: 0;
-  font-family: RNHouseSans-Light, Arial;
+  margin: 0 !important;
   padding: 0;
 }
-
+* {
+  font-family: RNHouseSans-Light, Arial !important;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;

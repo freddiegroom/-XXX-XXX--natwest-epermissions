@@ -4,7 +4,7 @@ import ContentContainer from "../../../../components/ContentContainer";
 import ExperimentContainer from "../../../../components/ExperimentContainer";
 import Footer from "../../../../components/Footer";
 import Header from "../../../../components/Header";
-import { BoldText } from "../../../../components/Text/Text.style";
+import { BoldText, HeadingText } from "../../../../components/Text/Text.style";
 import OTEmailChannel from "../../../../components/TickBoxChannels/OneTickChannel/OTEmailChannel";
 import OTPostChannel from "../../../../components/TickBoxChannels/OneTickChannel/OTPostChannel";
 import OTSocialMediaChannel from "../../../../components/TickBoxChannels/OneTickChannel/OTSocialMediaChannel";
@@ -28,10 +28,10 @@ const Scenario9: FC = () => {
           that may benefit you. We wouldn’t want you to miss out, so please
           select below all of the ways you’re happy for us to stay in touch.
         </p>
-        <p>
+        <HeadingText>
           Please tick the boxes if you <BoldText>want</BoldText> to receive
           offers and updates.
-        </p>
+        </HeadingText>
         <OTTextMessageChannel state={textClick} setState={setTextClick} />
         <OTEmailChannel state={emailClick} setState={setEmailClick} />
         <OTTelephoneChannel

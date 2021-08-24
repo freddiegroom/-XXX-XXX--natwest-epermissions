@@ -15,7 +15,12 @@ const NatwestEmailsChannel: FC = () => {
     <>
       {!clicked && (
         <ChannelWrapper>
-          <Channel onClick={() => setClicked(true)}>
+          <Channel
+            onClick={(e) => {
+              e.preventDefault();
+              setClicked(true);
+            }}
+          >
             <ClickBox>
               <img src={checkbox} alt=""></img>
             </ClickBox>
@@ -30,7 +35,12 @@ const NatwestEmailsChannel: FC = () => {
       )}
       {clicked && (
         <ChannelWrapper>
-          <Channel onClick={() => setClicked(false)}>
+          <Channel
+            onClick={(e) => {
+              e.preventDefault();
+              setClicked(false);
+            }}
+          >
             <ClickedBox>
               <img src={tickedCheckbox} alt=""></img>
             </ClickedBox>

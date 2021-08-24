@@ -31,7 +31,12 @@ const DOB: FC<DOBDateProps> = ({
       <p>Date of birth</p>
       <MultipleInputContainer>
         {!ddState && (
-          <InputContainer onClick={() => setDDState(1)}>
+          <InputContainer
+            onClick={(e) => {
+              e.preventDefault();
+              setDDState(1);
+            }}
+          >
             <p className="subText">DD</p>
             <SmallRedInput>01</SmallRedInput>
           </InputContainer>
@@ -44,7 +49,12 @@ const DOB: FC<DOBDateProps> = ({
         )}
         <img src={slash} alt="" />
         {!mmState && (
-          <InputContainer onClick={() => setMMState(1)}>
+          <InputContainer
+            onClick={(e) => {
+              e.preventDefault();
+              setMMState(1);
+            }}
+          >
             <p className="subText">MM</p>
             <SmallRedInput>01</SmallRedInput>
           </InputContainer>
@@ -57,7 +67,12 @@ const DOB: FC<DOBDateProps> = ({
         )}{" "}
         <img src={slash} alt="" />
         {!yyyyState && (
-          <InputContainer onClick={() => setYYYYState(1)}>
+          <InputContainer
+            onClick={(e) => {
+              e.preventDefault();
+              setYYYYState(1);
+            }}
+          >
             <p className="subText">YYYY</p>
             <RedInput>1982</RedInput>
           </InputContainer>

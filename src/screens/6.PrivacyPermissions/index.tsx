@@ -1,16 +1,20 @@
 import React, { FC } from "react";
+import { useDispatch } from "react-redux";
 import NextButton from "../../components/Buttons/NextButton";
 import ContentContainer from "../../components/ContentContainer";
 import ExperimentContainer from "../../components/ExperimentContainer";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
-import { BoldText } from "../../components/Text/Text.style";
+import { BoldText, HeadingText } from "../../components/Text/Text.style";
 import NatwestEmailsChannel from "../../components/TickBoxChannels/NoImageChannel/NatwestEmailsChannel";
 import OtherNewsChannel from "../../components/TickBoxChannels/NoImageChannel/OtherNewsChannel";
 import ThirdPartyChannel from "../../components/TickBoxChannels/NoImageChannel/ThirdPartyChannel";
 import cupSaucer from "../../images/cup-saucer.png";
+import { PrivacySpan } from "./PrivacyPermissions.styles";
+import { clickPrivacyNotice } from "./PrivacyPermissionsSlice";
 
 const PrivacyPermissions: FC = () => {
+  const dispatch = useDispatch();
   return (
     <ExperimentContainer>
       <Header image={cupSaucer}>News and offers</Header>
@@ -22,18 +26,26 @@ const PrivacyPermissions: FC = () => {
           hear directly from us and we won’t share your data with third parties
           for their own marketing.{" "}
         </p>
-        <p>
+        <HeadingText>
           Please tick the box if you<BoldText>&nbsp;want&nbsp;</BoldText>
           to hear from us about:
-        </p>
+        </HeadingText>
         <OtherNewsChannel />
         <ThirdPartyChannel />
-        <p>How can we use your information?</p>
+        <HeadingText>How can we use your information?</HeadingText>
         <p>
           We use cookies in emails to help us understand your interests and how
           you interact with our emails. It also helps us to identify delivery
-          problems and log when emails are opened. For more information see our
-          Privacy Notice.{" "}
+          problems and log when emails are opened. For more information see
+          our&nbsp;
+          <PrivacySpan
+            onClick={(e) => {
+              e.preventDefault();
+              dispatch(clickPrivacyNotice());
+            }}
+          >
+            Privacy Notice.
+          </PrivacySpan>{" "}
         </p>
         <NatwestEmailsChannel />
         <NextButton routeAddress="/" />

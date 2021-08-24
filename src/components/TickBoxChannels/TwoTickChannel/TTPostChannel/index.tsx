@@ -46,10 +46,24 @@ const TTPostChannel: FC<TTPostChannelProps> = ({
             <p>YES</p>
             <p>NO</p>
           </YesNoContainer>{" "}
-          <Channel onClick={() => clickFunc()}>
+          <Channel>
             <ClickBox>
-              <img src={checkbox} alt=""></img>
-              <img src={checkbox} alt=""></img>
+              <img
+                src={checkbox}
+                alt=""
+                onClick={(e) => {
+                  e.preventDefault();
+                  clickFunc();
+                }}
+              ></img>
+              <img
+                src={checkbox}
+                alt=""
+                onClick={(e) => {
+                  e.preventDefault();
+                  unClickFunc();
+                }}
+              ></img>
             </ClickBox>
             <ChannelText>
               <p>Post</p>
@@ -69,10 +83,24 @@ const TTPostChannel: FC<TTPostChannelProps> = ({
             <p>YES</p>
             <p>NO</p>
           </YesNoContainer>{" "}
-          <Channel onClick={() => clickFunc()}>
+          <Channel>
             <ClickBox>
-              <img src={checkbox} alt=""></img>
-              <img src={tickedCheckbox} alt=""></img>
+              <img
+                src={checkbox}
+                alt=""
+                onClick={(e) => {
+                  e.preventDefault();
+                  clickFunc();
+                }}
+              ></img>
+              <img
+                src={tickedCheckbox}
+                alt=""
+                onClick={(e) => {
+                  e.preventDefault();
+                  clickFunc();
+                }}
+              ></img>
             </ClickBox>
             <ChannelText>
               <p>Post</p>
@@ -92,10 +120,24 @@ const TTPostChannel: FC<TTPostChannelProps> = ({
             <p>YES</p>
             <p>NO</p>
           </YesNoContainer>{" "}
-          <Channel onClick={() => unClickFunc()}>
+          <Channel>
             <ClickedBox>
-              <img src={tickedCheckbox} alt=""></img>
-              <img src={checkbox} alt=""></img>
+              <img
+                src={tickedCheckbox}
+                alt=""
+                onClick={(e) => {
+                  e.preventDefault();
+                  unClickFunc();
+                }}
+              ></img>
+              <img
+                src={checkbox}
+                alt=""
+                onClick={(e) => {
+                  e.preventDefault();
+                  unClickFunc();
+                }}
+              ></img>
             </ClickedBox>
             <ChannelText>
               <p>Post</p>

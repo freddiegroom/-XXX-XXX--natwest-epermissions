@@ -16,7 +16,12 @@ const EmailAddress: FC<EmailAddressProps> = ({ state, setState }) => {
   return (
     <>
       {!state && (
-        <RedInputContainer onClick={() => setState(1)}>
+        <RedInputContainer
+          onClick={(e) => {
+            e.preventDefault();
+            setState(1);
+          }}
+        >
           <p>Email address</p>
           <p className="redSubText">
             Why do you need my email?{" "}

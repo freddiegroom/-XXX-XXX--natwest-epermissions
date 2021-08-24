@@ -4,9 +4,8 @@ export const HeaderStyle = styled.div`
   width: 100%;
   background-color: #2e0a3d;
   color: white;
-  height: 184px;
-  @media only screen and (max-width: 600px) {
-    height: 155px;
+  @media only screen and (min-width: 600px) {
+    height: 184px;
   }
 `;
 
@@ -29,12 +28,12 @@ export const IconRow = styled.div`
 
 export const TitleRow = styled.div`
   width: 100%;
-  height: 136px;
+  // height: 136px;
   display: flex;
   justify-content: center;
   align-items: center;
   @media only screen and (max-width: 600px) {
-    height: 115px;
+    min-height: 115px;
   }
   h1 {
     width: 712px;

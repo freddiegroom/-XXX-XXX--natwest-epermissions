@@ -12,7 +12,12 @@ const DetailsRadio: FC = () => {
   return (
     <>
       {!clicked && (
-        <RadioContainer onClick={() => setClicked(true)}>
+        <RadioContainer
+          onClick={(e) => {
+            e.preventDefault();
+            setClicked(true);
+          }}
+        >
           <RedRadio></RedRadio>
           <p>Yes</p>
         </RadioContainer>

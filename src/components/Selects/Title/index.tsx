@@ -19,13 +19,19 @@ const Title: FC<TitleProps> = ({ state, setState }) => {
   const dispatch = useDispatch();
   const clickFunc = (titleString: string) => {
     dispatch(saveTitle(titleString));
+    setState(2);
     setTitle(titleString);
   };
 
   return (
     <>
       {!state && (
-        <SelectContainer onClick={() => setState(1)}>
+        <SelectContainer
+          onClick={(e) => {
+            e.preventDefault();
+            setState(1);
+          }}
+        >
           <p>Title</p>
           <RedSelect>
             {title}
@@ -34,25 +40,77 @@ const Title: FC<TitleProps> = ({ state, setState }) => {
         </SelectContainer>
       )}
       {state === 1 && (
-        <SelectContainer onClick={() => setState(2)}>
+        <SelectContainer>
           <p>Title</p>
           <SelectorContainer>
-            <NormalSelect>
+            <NormalSelect
+              onClick={(e) => {
+                e.preventDefault();
+                setState(0);
+              }}
+            >
               {title}
               <img src={chevronDown} alt="" />
             </NormalSelect>
-            <button onClick={() => clickFunc("Mr")}>Mr</button>
-            <button onClick={() => clickFunc("Mrs")}>Mrs</button>
-            <button onClick={() => clickFunc("Miss")}>Miss</button>
-            <button onClick={() => clickFunc("Ms")}>Ms</button>
-            <button onClick={() => clickFunc("Dr")}>Dr</button>
-            <button onClick={() => clickFunc("Professor")}>Professor</button>
+            <button
+              onClick={(e) => {
+                e.preventDefault();
+                clickFunc("Mr");
+              }}
+            >
+              Mr
+            </button>
+            <button
+              onClick={(e) => {
+                e.preventDefault();
+                clickFunc("Mrs");
+              }}
+            >
+              Mrs
+            </button>
+            <button
+              onClick={(e) => {
+                e.preventDefault();
+                clickFunc("Miss");
+              }}
+            >
+              Miss
+            </button>
+            <button
+              onClick={(e) => {
+                e.preventDefault();
+                clickFunc("Ms");
+              }}
+            >
+              Ms
+            </button>
+            <button
+              onClick={(e) => {
+                e.preventDefault();
+                clickFunc("Dr");
+              }}
+            >
+              Dr
+            </button>
+            <button
+              onClick={(e) => {
+                e.preventDefault();
+                clickFunc("Professor");
+              }}
+            >
+              Professor
+            </button>
           </SelectorContainer>
         </SelectContainer>
       )}
 
       {state === 2 && (
-        <SelectContainer onClick={() => setState(1)}>
+        <SelectContainer
+          onClick={(e) => {
+            e.preventDefault();
+            setState(1);
+          }}
+        >
           <p>Title</p>
           <NormalSelect>
             {title} <img src={chevronDown} alt="" />

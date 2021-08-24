@@ -9,7 +9,7 @@ import OTEmailChannel from "../../../../components/TickBoxChannels/OneTickChanne
 import OTTelephoneChannel from "../../../../components/TickBoxChannels/OneTickChannel/OTTelephoneChannel";
 import OTPostChannel from "../../../../components/TickBoxChannels/OneTickChannel/OTPostChannel";
 import OTSocialMediaChannel from "../../../../components/TickBoxChannels/OneTickChannel/OTSocialMediaChannel";
-import { BoldText } from "../../../../components/Text/Text.style";
+import { BoldText, HeadingText } from "../../../../components/Text/Text.style";
 import cupSaucer from "../../../../images/cup-saucer.png";
 
 const Scenario3: FC = () => {
@@ -28,10 +28,10 @@ const Scenario3: FC = () => {
           never share your details with other NatWest group companies or third
           parties for marketing purposes without your permission.
         </p>
-        <p>
+        <HeadingText>
           Please tick the boxes if you <BoldText>don't</BoldText> want to
           receive offers and updates.
-        </p>
+        </HeadingText>
         <OTTextMessageChannel state={textClick} setState={setTextClick} />
         <OTEmailChannel state={emailClick} setState={setEmailClick} />
         <OTTelephoneChannel

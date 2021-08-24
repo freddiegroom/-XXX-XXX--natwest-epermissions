@@ -8,18 +8,33 @@ import AccountDetails from "../../screens/3.AccountDetails/AccountDetails";
 import PermissionsInfo from "../../screens/4.PermissionsInfo";
 import Scenario15 from "../../screens/5.MarketingPreferences/ExistingCustomer/Scenario15";
 import PrivacyPermissions from "../../screens/6.PrivacyPermissions";
+import ScrollToTop from "../ScrollToTop";
 
 const Condition15: FC = () => {
   const { product = "current account", debug } = useEFSData();
   const [debugProduct, setDebugProduct] = useState("loan");
   return (
     <Router>
+      {" "}
+      <ScrollToTop />
       <Switch>
         <Route exact path="/">
-          <button onClick={() => setDebugProduct("current account")}>
+          <button
+            onClick={(e) => {
+              e.preventDefault();
+              setDebugProduct("current account");
+            }}
+          >
             current account
           </button>
-          <button onClick={() => setDebugProduct("loan")}>loan</button>
+          <button
+            onClick={(e) => {
+              e.preventDefault();
+              setDebugProduct("loan");
+            }}
+          >
+            loan
+          </button>
           {!debug && product === "current account" && <CurrentAccount />}
           {!debug && product === "loan" && <Loan />}
           {debug && debugProduct === "current account" && <CurrentAccount />}

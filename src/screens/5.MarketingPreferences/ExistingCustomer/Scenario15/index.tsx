@@ -51,11 +51,11 @@ const Scenario15: FC = () => {
         <HeadingText>Offers and updates</HeadingText>
         <p>
           We'd like to share details about NatWest offers that could be
-          financially beneficial to you. A never share your details with third
-          parties for marketing purposes.
+          financially beneficial to you. We'll never share your details with
+          third parties for marketing purposes.
         </p>
         <OffersAndUpdates>
-          I <BoldText>don't</BoldText>
+          I <BoldText> don't </BoldText>
           want to get these offers and updates.
         </OffersAndUpdates>
         <NextButton routeAddress="/PrivacyPermissions" />

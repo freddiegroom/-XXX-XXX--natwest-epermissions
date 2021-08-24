@@ -10,7 +10,12 @@ const Postcode: FC<PostcodeProps> = ({ state, setState }) => {
   return (
     <>
       {!state && (
-        <InputContainer onClick={() => setState(1)}>
+        <InputContainer
+          onClick={(e) => {
+            e.preventDefault();
+            setState(1);
+          }}
+        >
           <p>Postcode</p>
           <RedInput>EH1 1HE</RedInput>
         </InputContainer>

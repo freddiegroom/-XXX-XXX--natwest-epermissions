@@ -21,7 +21,7 @@ export const InputContainer = styled.div`
     font-size: 14px;
     line-height: 16px;
     margin: 4px 0;
-    padding: 0;
+    padding: 0px;
   }
   @media only screen and (max-width: 600px) {
     width: 100%;
@@ -40,6 +40,9 @@ export const InputContainer = styled.div`
       line-height: 16px;
       margin: 4px 0;
       padding: 0;
+      padding-left: 16px;
+    }
+    p {
       padding-left: 16px;
     }
   }
@@ -78,6 +81,10 @@ export const RedInputContainer = styled.div`
     p,
     .subText {
       align-self: flex-start;
+      padding-left: 16px;
+    }
+    .subText {
+      padding: 0;
       padding-left: 16px;
     }
   }

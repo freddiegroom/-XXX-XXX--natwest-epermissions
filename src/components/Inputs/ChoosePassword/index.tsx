@@ -10,7 +10,12 @@ const ChoosePassword: FC<ChoosePasswordProps> = ({ state, setState }) => {
   return (
     <>
       {!state && (
-        <InputContainer onClick={() => setState(true)}>
+        <InputContainer
+          onClick={(e) => {
+            e.preventDefault();
+            setState(true);
+          }}
+        >
           <p>Choose your Online Banking password</p>
           <RedInput>************</RedInput>
         </InputContainer>

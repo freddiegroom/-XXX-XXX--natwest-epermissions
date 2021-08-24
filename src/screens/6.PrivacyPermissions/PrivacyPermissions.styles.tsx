@@ -21,3 +21,7 @@ export const FormBlank = styled.div`
     border-color: #969c9c;
   }
 `;
+
+export const PrivacySpan = styled.span`
+  text-decoration: underline;
+`;

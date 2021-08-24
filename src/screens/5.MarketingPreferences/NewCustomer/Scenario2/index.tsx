@@ -54,8 +54,7 @@ const Scenario2: FC = () => {
           third parties for marketing purposes.
         </p>
         <OffersAndUpdates>
-          I <BoldText>want</BoldText>
-          to get these offers and updates.
+          I <BoldText> want </BoldText>to get these offers and updates.
         </OffersAndUpdates>
         <NextButton routeAddress="/PrivacyPermissions" />
       </WhiteContentContainer>

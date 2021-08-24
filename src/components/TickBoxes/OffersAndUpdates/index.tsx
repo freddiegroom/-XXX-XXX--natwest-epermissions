@@ -25,12 +25,22 @@ const OffersAndUpdates: FC = ({ children }) => {
   return (
     <>
       <OffersAndUpdatesContainer>
-        {!clicked && <OAUBox onClick={() => clickFunc()} />}
+        {!clicked && (
+          <OAUBox
+            onClick={(e) => {
+              e.preventDefault();
+              clickFunc();
+            }}
+          />
+        )}
         {clicked && (
           <OAUBoxTicked
             src={tickBox}
             alt={`${tickBox}`}
-            onClick={() => unClickFunc()}
+            onClick={(e) => {
+              e.preventDefault();
+              unClickFunc();
+            }}
           />
         )}
         <div>{children}</div>

@@ -10,7 +10,12 @@ const ConfirmPassword: FC<ConfirmPasswordProps> = ({ state, setState }) => {
   return (
     <>
       {!state && (
-        <InputContainer onClick={() => setState(1)}>
+        <InputContainer
+          onClick={(e) => {
+            e.preventDefault();
+            setState(1);
+          }}
+        >
           <p>Confirm your password</p>
           <RedInput>************</RedInput>
         </InputContainer>

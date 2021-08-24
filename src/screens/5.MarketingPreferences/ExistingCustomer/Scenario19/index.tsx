@@ -4,7 +4,7 @@ import ContentContainer from "../../../../components/ContentContainer";
 import ExperimentContainer from "../../../../components/ExperimentContainer";
 import Footer from "../../../../components/Footer";
 import Header from "../../../../components/Header";
-import { BoldText } from "../../../../components/Text/Text.style";
+import { BoldText, HeadingText } from "../../../../components/Text/Text.style";
 import TTEmailChannel from "../../../../components/TickBoxChannels/TwoTickChannel/TTEmailChannel";
 import TTPostChannel from "../../../../components/TickBoxChannels/TwoTickChannel/TTPostChannel";
 import TTSocialMediaChannel from "../../../../components/TickBoxChannels/TwoTickChannel/TTSocialMediaChannel";
@@ -29,10 +29,10 @@ const Scenario19: FC = () => {
           never share your details with other NatWest group companies or third
           parties for marketing purposes without your permission.
         </p>
-        <p>
+        <HeadingText>
           Please review your existing preferences and choose if you are{" "}
           <BoldText>happy</BoldText> for us to contact you by{" "}
-        </p>
+        </HeadingText>
         <DesktopYesNoContainer>
           <p>YES</p>
           <p>NO</p>

@@ -41,7 +41,12 @@ const OTPostChannel: FC<OTEmailChannelProps> = ({
     <>
       {state === 0 && (
         <ChannelWrapper>
-          <Channel onClick={() => clickFunc()}>
+          <Channel
+            onClick={(e) => {
+              e.preventDefault();
+              clickFunc();
+            }}
+          >
             <ClickBox>
               <img src={checkbox} alt=""></img>
             </ClickBox>
@@ -59,7 +64,12 @@ const OTPostChannel: FC<OTEmailChannelProps> = ({
       )}
       {state === 1 && (
         <ChannelWrapper>
-          <Channel onClick={() => unClickFunc()}>
+          <Channel
+            onClick={(e) => {
+              e.preventDefault();
+              unClickFunc();
+            }}
+          >
             <ClickedBox>
               <img src={tickedCheckbox} alt=""></img>
             </ClickedBox>

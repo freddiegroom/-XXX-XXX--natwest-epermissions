@@ -27,7 +27,12 @@ const AddressDate: FC<AddressDateProps> = ({
       <p>When did you move into this address?</p>
       <ADMultipleInputContainer>
         {!mmState && (
-          <InputContainer onClick={() => setMMState(1)}>
+          <InputContainer
+            onClick={(e) => {
+              e.preventDefault();
+              setMMState(1);
+            }}
+          >
             <p className="subText">MM</p>
             <SmallRedInput>01</SmallRedInput>
           </InputContainer>
@@ -40,7 +45,12 @@ const AddressDate: FC<AddressDateProps> = ({
         )}{" "}
         <img src={slash} alt="" />
         {!yyyyState && (
-          <InputContainer onClick={() => setYYYYState(1)}>
+          <InputContainer
+            onClick={(e) => {
+              e.preventDefault();
+              setYYYYState(1);
+            }}
+          >
             <p className="subText">YYYY</p>
             <RedInput>2009</RedInput>
           </InputContainer>

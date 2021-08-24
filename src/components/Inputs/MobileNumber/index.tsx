@@ -16,7 +16,12 @@ const MobileNumber: FC<MobileNumberProps> = ({ state, setState }) => {
   return (
     <>
       {!state && (
-        <RedInputContainer onClick={() => setState(true)}>
+        <RedInputContainer
+          onClick={(e) => {
+            e.preventDefault();
+            setState(true);
+          }}
+        >
           <p>Mobile number</p>
           <p className="redSubText">
             Why do you need my number?{" "}

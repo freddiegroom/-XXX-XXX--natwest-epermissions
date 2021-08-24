@@ -101,7 +101,12 @@ const Loan: FC = () => {
               <p>(Annual Percentage Rate)</p>
               <p>(fixed)</p>
             </PaddedCardRow>
-            <ChooseButton onClick={() => nextPageFunc("£5,000")}>
+            <ChooseButton
+              onClick={(e) => {
+                e.preventDefault();
+                nextPageFunc("£5,000");
+              }}
+            >
               Choose Loan
             </ChooseButton>
           </PurpleCard>
@@ -137,7 +142,12 @@ const Loan: FC = () => {
               <p>(Annual Percentage Rate)</p>
               <p>(fixed)</p>
             </PaddedCardRow>
-            <ChooseButton onClick={() => nextPageFunc("£10,000")}>
+            <ChooseButton
+              onClick={(e) => {
+                e.preventDefault();
+                nextPageFunc("£10,000");
+              }}
+            >
               Choose Loan
             </ChooseButton>
           </PurpleCard>
@@ -173,7 +183,12 @@ const Loan: FC = () => {
               <p>(Annual Percentage Rate)</p>
               <p>(fixed)</p>
             </PaddedCardRow>
-            <ChooseButton onClick={() => nextPageFunc("£20,000")}>
+            <ChooseButton
+              onClick={(e) => {
+                e.preventDefault();
+                nextPageFunc("£20,000");
+              }}
+            >
               Choose Loan
             </ChooseButton>
           </PurpleCard>

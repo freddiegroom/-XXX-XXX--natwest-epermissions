@@ -15,7 +15,12 @@ const LastName: FC<LastNameProps> = ({ state, setState }) => {
   return (
     <>
       {!state && (
-        <RedInputContainer onClick={() => setState(1)}>
+        <RedInputContainer
+          onClick={(e) => {
+            e.preventDefault();
+            setState(1);
+          }}
+        >
           <p>Last Name</p>
           <RedInput>Smith</RedInput>
         </RedInputContainer>

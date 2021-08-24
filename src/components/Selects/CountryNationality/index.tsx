@@ -23,12 +23,18 @@ const CountryNationality: FC<CountryNationalityProps> = ({
   const dispatch = useDispatch();
   const clickFunc = (titleString: string) => {
     dispatch(saveNationality(titleString));
+    setState(2);
     setNationality(titleString);
   };
   return (
     <>
       {state === 0 && (
-        <SelectContainer onClick={() => setState(1)}>
+        <SelectContainer
+          onClick={(e) => {
+            e.preventDefault();
+            setState(1);
+          }}
+        >
           <p>Country of nationality</p>
           <RedSelect>
             {nationality}
@@ -37,23 +43,45 @@ const CountryNationality: FC<CountryNationalityProps> = ({
         </SelectContainer>
       )}
       {state === 1 && (
-        <SelectContainer onClick={() => setState(2)}>
+        <SelectContainer>
           <p>Country of nationality</p>
           <SelectorContainer>
-            <NormalSelect>
+            <NormalSelect
+              onClick={(e) => {
+                e.preventDefault();
+                setState(0);
+              }}
+            >
               {nationality}
               <img src={chevronDown} alt="" />
             </NormalSelect>
-            <button onClick={() => clickFunc("United Kingdom")}>
+            <button
+              onClick={(e) => {
+                e.preventDefault();
+                clickFunc("United Kingdom");
+              }}
+            >
               United Kingdom
             </button>
-            <button onClick={() => clickFunc("Other")}>Other</button>
+            <button
+              onClick={(e) => {
+                e.preventDefault();
+                clickFunc("Other");
+              }}
+            >
+              Other
+            </button>
           </SelectorContainer>
         </SelectContainer>
       )}
 
       {state === 2 && (
-        <SelectContainer onClick={() => setState(1)}>
+        <SelectContainer
+          onClick={(e) => {
+            e.preventDefault();
+            setState(1);
+          }}
+        >
           <p>Country of nationality</p>
           <NormalSelect>
             {nationality} <img src={chevronDown} alt="" />

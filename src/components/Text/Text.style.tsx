@@ -17,11 +17,13 @@ export const HeadingText = styled.p`
   font-size: 20px !important;
   line-height: 32px;
   padding-left: 16px;
+  margin: 0;
   @media only screen and (max-width: 600px) {
     line-height: 28px;
     padding-left: 8px;
+    width: 95%;
+    margin: 8px 0;
   }
-  margin: 0;
 `;
 
 export const RegularText = styled.p`
@@ -37,4 +39,8 @@ export const BoldText = styled.span`
 export const PaddingDiv = styled.div`
   height: 32px;
   width: 100%;
+`;
+
+export const RedText = styled.div`
+  color: #c8001e;
 `;

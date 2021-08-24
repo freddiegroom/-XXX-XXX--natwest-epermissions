@@ -28,7 +28,7 @@ import {
 } from "./Scenario6.styles";
 import { useDispatch } from "react-redux";
 import cupSaucer from "../../../../images/cup-saucer.png";
-import { BoldText } from "../../../../components/Text/Text.style";
+import { BoldText, HeadingText } from "../../../../components/Text/Text.style";
 
 const Scenario6: FC = () => {
   const [textClick, setTextClick] = useState(0);
@@ -73,10 +73,10 @@ const Scenario6: FC = () => {
           never share your details with other NatWest group companies or third
           parties for marketing purposes without your permission.
         </p>
-        <p>
+        <HeadingText>
           Please tick the boxes if you <BoldText>want</BoldText> to receive
           offers and updates.
-        </p>
+        </HeadingText>
         <OTTextMessageChannel state={textClick} setState={setTextClick} />
         <OTEmailChannel state={emailClick} setState={setEmailClick} />
         <OTTelephoneChannel
@@ -95,10 +95,20 @@ const Scenario6: FC = () => {
           targeting cookies through your browser.
         </p>
         <SelectButtonsContainer>
-          <SelectAllButton onClick={() => selectAllFunction()}>
+          <SelectAllButton
+            onClick={(e) => {
+              e.preventDefault();
+              selectAllFunction();
+            }}
+          >
             <BoldText>Select All</BoldText>
           </SelectAllButton>{" "}
-          <SelectNoneButton onClick={() => selectNoneFunction()}>
+          <SelectNoneButton
+            onClick={(e) => {
+              e.preventDefault();
+              selectNoneFunction();
+            }}
+          >
             <BoldText>Select None</BoldText>
           </SelectNoneButton>
         </SelectButtonsContainer>

@@ -7,11 +7,13 @@ export const SelectContainer = styled.div`
     color: #666666;
     font-size: 16px;
     line-height: 24px;
+    padding-left: 8px;
   }
   .subText {
     color: #333333;
     font-size: 14px;
     line-height: 16px;
+    padding-left: 8px;
   }
   @media only screen and (max-width: 600px) {
     width: 100%;
@@ -24,6 +26,10 @@ export const SelectContainer = styled.div`
       align-self: flex-start;
       padding-left: 16px;
     }
+    p {
+      padding: 0;
+      padding-left: 16px;
+    }
   }
 `;
 
@@ -34,14 +40,32 @@ export const RedSelectContainer = styled.div`
     color: #666666;
     font-size: 16px;
     line-height: 24px;
+    padding-left: 8px;
   }
   .subText {
     color: #ad1982;
     font-size: 14px;
     line-height: 16px;
+    padding-left: 8px;
   }
   @media only screen and (max-width: 600px) {
     width: 100%;
+    p {
+      padding: 0;
+      padding-left: 16px;
+    }
+  }
+  padding-bottom: 24px;
+  p {
+    margin: 0;
+    color: #666666;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .subText {
+    color: #333333;
+    font-size: 14px;
+    line-height: 16px;
   }
 `;
 
@@ -117,17 +141,22 @@ export const SelectorContainer = styled.div`
     padding-left: 16px;
     align-items: center;
     background-color: #fff;
-    color: #333;
-    border: 1px solid #c8001e;
+    color: #969c9c;
+    border: 2px solid #c8001e;
     height: 40px;
     font-size: 16px;
-    width: 313px;
+    border-top: none;
   }
   @media only screen and (max-width: 600px) {
     width: 100%;
     button {
-      width: 293px;
+      width: 90%;
       // margin-left: 16px;
+      border-top: none;
     }
+    align-items: center;
+  }
+  @media only screen and (min-width: 601px) {
+    width: 293px;
   }
 `;

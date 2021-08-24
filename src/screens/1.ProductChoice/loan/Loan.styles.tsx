@@ -27,6 +27,10 @@ export const ColourBar = styled.div`
     margin-top: 24px;
     width: 316px;
   }
+  @media only screen and (max-width: 316px) {
+    margin-top: 24px;
+    width: 100%;
+  }
   height: 8px;
   background-color: ${(props) => props.color || "#D8D2E8"};
   margin: 0;

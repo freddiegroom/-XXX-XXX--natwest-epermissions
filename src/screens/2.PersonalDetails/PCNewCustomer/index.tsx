@@ -14,9 +14,10 @@ import Address from "../../../components/Selects/Address";
 import AddressDate from "../../../components/MultipleInputs/AddressDate";
 import DOB from "../../../components/MultipleInputs/DOB";
 import WhiteContentContainer from "../../../components/WhiteContentContainer";
-import { useScrollToTop } from "../../../hooks/useScrollToTop";
-import { HeadingText } from "../../../components/Text/Text.style";
+import { HeadingText, RedText } from "../../../components/Text/Text.style";
 import CountryNationality from "../../../components/Selects/CountryNationality";
+import FakeNextButton from "../../../components/Buttons/FakeNextButton";
+import { useScrollToTop } from "../../../hooks/useScrollToTop";
 
 const PCNewCustomer: FC = () => {
   useScrollToTop();
@@ -33,6 +34,9 @@ const PCNewCustomer: FC = () => {
   const [addressClick, setAddressClick] = useState(0);
   const [addressMMClick, setAddressMMClick] = useState();
   const [addressYYYYClick, setAddressYYYYClick] = useState();
+
+  //
+  const [fillMessage, setFillMessage] = useState();
 
   return (
     <ExperimentContainer>
@@ -79,37 +83,49 @@ const PCNewCustomer: FC = () => {
           setYYYYState={setAddressYYYYClick}
         />
 
-        {!titleClick &&
-          !firstNameClick &&
-          !lastNameClick &&
-          !dobDDClick &&
-          !dobMMClick &&
-          !dobYYYYClick &&
-          !nationalityClick &&
-          !mobileClick &&
-          !emailClick &&
-          !postcodeClick &&
-          !addressClick &&
-          !addressMMClick &&
-          !addressYYYYClick &&
-          !lastNameClick &&
-          !firstNameClick && <p>Please fill in your details</p>}
-
-        {/* {titleClick && */}
-        {firstNameClick &&
+        {!(
+          titleClick === 2 &&
+          firstNameClick &&
           lastNameClick &&
           dobDDClick &&
           dobMMClick &&
           dobYYYYClick &&
-          nationalityClick &&
+          nationalityClick === 2 &&
           mobileClick &&
           emailClick &&
           postcodeClick &&
-          addressClick &&
+          addressClick === 2 &&
           addressMMClick &&
           addressYYYYClick &&
           lastNameClick &&
-          firstNameClick && <NextButton routeAddress={"/AccountDetails"} />}
+          firstNameClick
+        ) && (
+          <>
+            {fillMessage && (
+              <RedText>
+                Please fill in your personal details to continue
+              </RedText>
+            )}
+            <FakeNextButton setState={setFillMessage}>
+              scroll to top
+            </FakeNextButton>
+          </>
+        )}
+
+        {/* {titleClick && */}
+        {titleClick === 2 &&
+          firstNameClick &&
+          lastNameClick &&
+          dobDDClick &&
+          dobMMClick &&
+          dobYYYYClick &&
+          nationalityClick === 2 &&
+          mobileClick &&
+          emailClick &&
+          postcodeClick &&
+          addressClick === 2 &&
+          addressMMClick &&
+          addressYYYYClick && <NextButton routeAddress={"/AccountDetails"} />}
       </WhiteContentContainer>
       <WhiteFooter />
     </ExperimentContainer>

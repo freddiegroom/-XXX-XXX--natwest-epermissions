@@ -4,7 +4,7 @@ import ContentContainer from "../../../../components/ContentContainer";
 import ExperimentContainer from "../../../../components/ExperimentContainer";
 import Footer from "../../../../components/Footer";
 import Header from "../../../../components/Header";
-import { BoldText } from "../../../../components/Text/Text.style";
+import { BoldText, HeadingText } from "../../../../components/Text/Text.style";
 import OTEmailChannel from "../../../../components/TickBoxChannels/OneTickChannel/OTEmailChannel";
 import OTTextMessageChannel from "../../../../components/TickBoxChannels/OneTickChannel/OTTextMessageChannel";
 import cupSaucer from "../../../../images/cup-saucer.png";
@@ -23,10 +23,10 @@ const Scenario13: FC = () => {
           never share your details with other NatWest group companies or third
           parties for marketing purposes without your permission.
         </p>
-        <p>
+        <HeadingText>
           Please tick the boxes if you <BoldText>don't</BoldText> want to
           receive offers and updates.
-        </p>
+        </HeadingText>
         <OTTextMessageChannel state={textClick} setState={setTextClick} />
         <OTEmailChannel state={emailClick} setState={setEmailClick} />
         <NextButton routeAddress="/PrivacyPermissions" />

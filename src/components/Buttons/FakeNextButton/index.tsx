@@ -1,26 +1,22 @@
 import React, { FC } from "react";
-import { NextButtonStyle, NextButtonContainer } from "./NextButton.style";
+import { NextButtonStyle, NextButtonContainer } from "./FakeNextButton.style";
 import bottomBevel from "../../../images/bottom-bevel.png";
 import largebottomBevel from "../../../images/large-bottom-bevel.png";
-import { useHistory } from "react-router-dom";
 
-export interface NextButtonProps {
-  routeAddress: string;
+export interface FakeNextButtonProps {
+  setState: any;
 }
 
-const NextButton: FC<NextButtonProps> = ({ routeAddress }) => {
-  const history = useHistory();
-  const handleNextPage = (route: string) => {
-    history.push(route);
+const FakeNextButton: FC<FakeNextButtonProps> = ({ setState }) => {
+  const clickFunc = () => {
+    setState(true);
   };
-
-  console.log(routeAddress);
   return (
     <NextButtonContainer>
       <NextButtonStyle
         onClick={(e) => {
           e.preventDefault();
-          handleNextPage(`${routeAddress}`);
+          clickFunc();
         }}
       >
         Next
@@ -31,4 +27,4 @@ const NextButton: FC<NextButtonProps> = ({ routeAddress }) => {
   );
 };
 
-export default NextButton;
+export default FakeNextButton;

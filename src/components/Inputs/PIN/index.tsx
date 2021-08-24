@@ -10,7 +10,12 @@ const PIN: FC<PINProps> = ({ state, setState }) => {
   return (
     <>
       {!state && (
-        <InputContainer onClick={() => setState(true)}>
+        <InputContainer
+          onClick={(e) => {
+            e.preventDefault();
+            setState(true);
+          }}
+        >
           <RedInput>5467</RedInput>
         </InputContainer>
       )}

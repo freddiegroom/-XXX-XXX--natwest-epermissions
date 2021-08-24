@@ -2,16 +2,16 @@ import styled from "styled-components";
 
 export const ADMultipleInputContainer = styled.div`
   display: flex;
-  // width: 156px;
   justify-content: flex-start;
   img {
     width: 10px;
     height: 43px;
     padding: 0 16px;
   }
-  align-items: center;
   @media only screen and (max-width: 600px) {
+    align-items: flex-start;
     padding-left: 16px;
+    width: 95%;
   }
 `;
 export const MultipleInputContainer = styled.div`
@@ -26,11 +26,12 @@ export const MultipleInputContainer = styled.div`
   align-items: center;
   @media only screen and (max-width: 600px) {
     padding-left: 16px;
+    width: 95%;
   }
 `;
 
 export const InputContainer = styled.div`
-  padding-bottom: 24px;
+  // padding-bottom: 24px;
   p {
     margin: 0;
     color: #666666;
@@ -42,10 +43,13 @@ export const InputContainer = styled.div`
     font-size: 14px;
     line-height: 16px;
   }
+  @media only screen and (max-width: 600px) {
+    padding-bottom: 0;
+  }
 `;
 
 export const RedInputContainer = styled.div`
-  padding-bottom: 24px;
+  // padding-bottom: 24px;
   p {
     margin: 0;
     color: #666666;
@@ -56,6 +60,9 @@ export const RedInputContainer = styled.div`
     color: #ad1982;
     font-size: 14px;
     line-height: 16px;
+  }
+  @media only screen and (max-width: 600px) {
+    padding-bottom: 0;
   }
 `;
 

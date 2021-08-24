@@ -5,11 +5,9 @@ import {
   ChannelWrapper,
   ClickBox,
   ClickedBox,
-  EmailImg,
 } from "../NoImageChannel.styles";
 import tickedCheckbox from "../../../../images/tick-checkbox.png";
 import checkbox from "../../../../images/checkbox.png";
-import email from "../../../../images/email.png";
 
 const OtherNewsChannel: FC = () => {
   const [clicked, setClicked] = useState(false);
@@ -17,7 +15,12 @@ const OtherNewsChannel: FC = () => {
     <>
       {!clicked && (
         <ChannelWrapper>
-          <Channel onClick={() => setClicked(true)}>
+          <Channel
+            onClick={(e) => {
+              e.preventDefault();
+              setClicked(true);
+            }}
+          >
             <ClickBox>
               <img src={checkbox} alt=""></img>
             </ClickBox>
@@ -29,7 +32,12 @@ const OtherNewsChannel: FC = () => {
       )}
       {clicked && (
         <ChannelWrapper>
-          <Channel onClick={() => setClicked(false)}>
+          <Channel
+            onClick={(e) => {
+              e.preventDefault();
+              setClicked(false);
+            }}
+          >
             <ClickedBox>
               <img src={tickedCheckbox} alt=""></img>
             </ClickedBox>

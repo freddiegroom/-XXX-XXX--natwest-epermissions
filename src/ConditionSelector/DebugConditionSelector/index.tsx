@@ -28,115 +28,172 @@ const DebugConditionSelector: FC = () => {
         conditions
         <button
           className={debugCondition === 1 ? "redButton" : "none"}
-          onClick={() => SetDebugCondition(1)}
+          onClick={(e) => {
+            e.preventDefault();
+            SetDebugCondition(1);
+          }}
         >
           1
         </button>
         <button
           className={debugCondition === 2 ? "redButton" : "none"}
-          onClick={() => SetDebugCondition(2)}
+          onClick={(e) => {
+            e.preventDefault();
+            SetDebugCondition(2);
+          }}
         >
           2
         </button>
         <button
           className={debugCondition === 3 ? "redButton" : "none"}
-          onClick={() => SetDebugCondition(3)}
+          onClick={(e) => {
+            e.preventDefault();
+            SetDebugCondition(3);
+          }}
         >
           3
         </button>
         <button
           className={debugCondition === 4 ? "redButton" : "none"}
-          onClick={() => SetDebugCondition(4)}
+          onClick={(e) => {
+            e.preventDefault();
+            SetDebugCondition(4);
+          }}
         >
           4
         </button>
         <button
           className={debugCondition === 5 ? "redButton" : "none"}
-          onClick={() => SetDebugCondition(5)}
+          onClick={(e) => {
+            e.preventDefault();
+            SetDebugCondition(5);
+          }}
         >
           5
         </button>
         <button
           className={debugCondition === 6 ? "redButton" : "none"}
-          onClick={() => SetDebugCondition(6)}
+          onClick={(e) => {
+            e.preventDefault();
+            SetDebugCondition(6);
+          }}
         >
           6
         </button>
         <button
           className={debugCondition === 7 ? "redButton" : "none"}
-          onClick={() => SetDebugCondition(7)}
+          onClick={(e) => {
+            e.preventDefault();
+            SetDebugCondition(7);
+          }}
         >
           7
         </button>
         <button
           className={debugCondition === 8 ? "redButton" : "none"}
-          onClick={() => SetDebugCondition(8)}
+          onClick={(e) => {
+            e.preventDefault();
+            SetDebugCondition(8);
+          }}
         >
           8
         </button>
         <button
           className={debugCondition === 9 ? "redButton" : "none"}
-          onClick={() => SetDebugCondition(9)}
+          onClick={(e) => {
+            e.preventDefault();
+            SetDebugCondition(9);
+          }}
         >
           9
         </button>
         <button
           className={debugCondition === 10 ? "redButton" : "none"}
-          onClick={() => SetDebugCondition(10)}
+          onClick={(e) => {
+            e.preventDefault();
+            SetDebugCondition(10);
+          }}
         >
           10
         </button>
         <button
           className={debugCondition === 11 ? "redButton" : "none"}
-          onClick={() => SetDebugCondition(11)}
+          onClick={(e) => {
+            e.preventDefault();
+            SetDebugCondition(11);
+          }}
         >
           11
         </button>
         <button
           className={debugCondition === 12 ? "redButton" : "none"}
-          onClick={() => SetDebugCondition(12)}
+          onClick={(e) => {
+            e.preventDefault();
+            SetDebugCondition(12);
+          }}
         >
           12
         </button>
         <button
           className={debugCondition === 13 ? "redButton" : "none"}
-          onClick={() => SetDebugCondition(13)}
+          onClick={(e) => {
+            e.preventDefault();
+            SetDebugCondition(13);
+          }}
         >
           13
         </button>
         <button
           className={debugCondition === 14 ? "redButton" : "none"}
-          onClick={() => SetDebugCondition(14)}
+          onClick={(e) => {
+            e.preventDefault();
+            SetDebugCondition(14);
+          }}
         >
           14
         </button>
         <button
           className={debugCondition === 15 ? "redButton" : "none"}
-          onClick={() => SetDebugCondition(15)}
+          onClick={(e) => {
+            e.preventDefault();
+            SetDebugCondition(15);
+          }}
         >
           15
         </button>
         <button
           className={debugCondition === 16 ? "redButton" : "none"}
-          onClick={() => SetDebugCondition(16)}
+          onClick={(e) => {
+            e.preventDefault();
+            SetDebugCondition(16);
+          }}
         >
           16
         </button>
         <button
           className={debugCondition === 17 ? "redButton" : "none"}
-          onClick={() => SetDebugCondition(17)}
+          onClick={(e) => {
+            e.preventDefault();
+            SetDebugCondition(17);
+          }}
         >
           17
         </button>
         <button
           className={debugCondition === 18 ? "redButton" : "none"}
-          onClick={() => SetDebugCondition(18)}
+          onClick={(e) => {
+            e.preventDefault();
+            SetDebugCondition(18);
+          }}
         >
           18
         </button>
         <button
           className={debugCondition === 19 ? "redButton" : "none"}
-          onClick={() => SetDebugCondition(19)}
+          onClick={(e) => {
+            e.preventDefault();
+            SetDebugCondition(19);
+          }}
         >
           19
         </button>

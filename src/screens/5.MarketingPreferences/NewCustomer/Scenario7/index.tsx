@@ -5,7 +5,7 @@ import ContentContainer from "../../../../components/ContentContainer";
 import ExperimentContainer from "../../../../components/ExperimentContainer";
 import Footer from "../../../../components/Footer";
 import Header from "../../../../components/Header";
-import { BoldText } from "../../../../components/Text/Text.style";
+import { BoldText, HeadingText } from "../../../../components/Text/Text.style";
 import OTEmailChannel from "../../../../components/TickBoxChannels/OneTickChannel/OTEmailChannel";
 import OTPostChannel from "../../../../components/TickBoxChannels/OneTickChannel/OTPostChannel";
 import OTSocialMediaChannel from "../../../../components/TickBoxChannels/OneTickChannel/OTSocialMediaChannel";
@@ -29,10 +29,10 @@ const Scenario7: FC = () => {
           never share your details with other NatWest group companies or third
           parties for marketing purposes without your permission.
         </p>
-        <p>
+        <HeadingText>
           Please tick the boxes if you <BoldText>want</BoldText> to receive
           offers and updates.
-        </p>
+        </HeadingText>
         <OTEmailChannel state={emailClick} setState={setEmailClick} />
         <OTTextMessageChannel state={textClick} setState={setTextClick} />
         <OTPostChannel state={postClick} setState={setPostClick} />
