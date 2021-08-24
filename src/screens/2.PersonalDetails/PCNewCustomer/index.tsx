@@ -42,9 +42,7 @@ const PCNewCustomer: FC = () => {
     <ExperimentContainer>
       <Header>About you</Header>
       <WhiteContentContainer>
-        <p>Let's start by checking we've got the right info for you.</p>
-        {/*  */}
-        <HeadingText>Confirm your details</HeadingText>
+        <p>Let's start by getting a few details about you</p>
         {/*  */}
         <Title state={titleClick} setState={setTitleClick} />
         {/*  */}

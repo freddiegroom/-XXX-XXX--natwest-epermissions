@@ -24,7 +24,7 @@ export const InputContainer = styled.div`
     padding: 0;
   }
   @media only screen and (max-width: 600px) {
-    width: 100%;
+    width: 85%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -70,11 +70,10 @@ export const RedInputContainer = styled.div`
     padding: 0;
   }
   @media only screen and (max-width: 600px) {
-    width: 100%;
+    width: 90%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     p,
     .subText {
       align-self: flex-start;
@@ -85,27 +84,21 @@ export const RedInputContainer = styled.div`
 
 export const RedInput = styled.input`
   border: 2px solid #c8001e;
-  @media only screen and (min-width: 601px) {
-    width: 293px;
-  }
+  width: 65px;
+
   height: 40px;
   display: flex;
-  align-items: center;
+  align-self: flex-start;
   font-size: 16px;
   line-height: 24px;
   padding-left: 16px;
   color: #969c9c;
   cursor: pointer;
-  @media only screen and (max-width: 600px) {
-    width: 85%;
-  }
 `;
 
 export const NormalInput = styled.div`
   border: 2px solid #969c9c;
-  @media only screen and (min-width: 601px) {
-    width: 293px;
-  }
+  width: 65px;
   height: 40px;
   display: flex;
   align-items: center;
@@ -113,9 +106,6 @@ export const NormalInput = styled.div`
   line-height: 24px;
   padding-left: 16px;
   color: #333;
-  @media only screen and (max-width: 600px) {
-    width: 85%;
-  }
 `;
 
 export const DisabledInput = styled.input`

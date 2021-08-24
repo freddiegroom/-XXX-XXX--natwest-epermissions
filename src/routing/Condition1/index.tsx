@@ -1,7 +1,6 @@
 import { useEFSData } from "@dectech/react-library";
 import React, { FC, useState } from "react";
 import { HashRouter as Router, Switch, Route } from "react-router-dom";
-import { useScrollToTop } from "../../hooks/useScrollToTop";
 import CurrentAccount from "../../screens/1.ProductChoice/current-account";
 import Loan from "../../screens/1.ProductChoice/loan/index";
 import PCNewCustomer from "../../screens/2.PersonalDetails/PCNewCustomer/index";
@@ -48,7 +47,7 @@ const Condition1: FC = () => {
         </Route>
         <Route path="/AccountDetails">
           {" "}
-          <AccountDetailsBlank />
+          <AccountDetailsBlank debugCondition={1} />
         </Route>{" "}
         <Route path="/PermissionsInfo">
           {" "}

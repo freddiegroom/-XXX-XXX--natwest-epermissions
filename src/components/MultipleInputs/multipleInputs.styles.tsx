@@ -3,31 +3,33 @@ import styled from "styled-components";
 export const ADMultipleInputContainer = styled.div`
   display: flex;
   justify-content: flex-start;
+  align-items: flex-end;
   img {
     width: 10px;
     height: 43px;
     padding: 0 16px;
   }
   @media only screen and (max-width: 600px) {
-    align-items: flex-start;
-    padding-left: 16px;
     width: 95%;
   }
+  margin-bottom: 8px;
 `;
 export const MultipleInputContainer = styled.div`
   display: flex;
   // width: 249px;
   justify-content: flex-start;
+  align-items: flex-end;
   img {
     width: 10px;
-    height: 43px;
+    height: 44px;
     padding: 0 16px;
   }
-  align-items: center;
   @media only screen and (max-width: 600px) {
-    padding-left: 16px;
+    align-items: flex-end;
+
     width: 95%;
   }
+  margin-bottom: 8px;
 `;
 
 export const InputContainer = styled.div`

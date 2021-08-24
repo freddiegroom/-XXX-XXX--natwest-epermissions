@@ -7,22 +7,26 @@ import {
   RedCircle,
 } from "../radios.styles";
 
-const DetailsRadio: FC = () => {
-  const [clicked, setClicked] = useState(false);
+interface DetailsRadioProps {
+  state: any;
+  setState: any;
+}
+
+const DetailsRadio: FC<DetailsRadioProps> = ({ state, setState }) => {
   return (
     <>
-      {!clicked && (
+      {!state && (
         <RadioContainer
           onClick={(e) => {
             e.preventDefault();
-            setClicked(true);
+            setState(1);
           }}
         >
           <RedRadio></RedRadio>
           <p>Yes</p>
         </RadioContainer>
       )}
-      {clicked && (
+      {state && (
         <RadioContainer>
           <NormalRadio>
             <RedCircle />

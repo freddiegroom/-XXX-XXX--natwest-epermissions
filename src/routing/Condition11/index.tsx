@@ -46,7 +46,7 @@ const Condition11: FC = () => {
           <PCNewCustomer />
         </Route>
         <Route path="/AccountDetails">
-          <AccountDetailsBlank />
+          <AccountDetailsBlank debugCondition={11} />
         </Route>
         <Route path="/PermissionsInfo">
           <PermissionsInfo />

@@ -42,14 +42,8 @@ const Condition16: FC = () => {
           {debug && debugProduct === "loan" && <Loan />}
         </Route>
         <Route path="/PersonalDetails">
-          <PCExistingCustomer />
+          <PCExistingCustomer debugCondition={16} />
         </Route>
-        <Route path="/AccountDetails">
-          <AccountDetails />
-        </Route>
-        {/* <Route path="/PermissionsInfo">
-          <PermissionsInfo />
-        </Route> */}
         <Route path="/MarketingPreferences">
           <Scenario16 />
         </Route>

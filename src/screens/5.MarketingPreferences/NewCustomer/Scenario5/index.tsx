@@ -1,10 +1,11 @@
 import React, { FC, useState } from "react";
+import FakeNextButton from "../../../../components/Buttons/FakeNextButton";
 import NextButton from "../../../../components/Buttons/NextButton";
 import ContentContainer from "../../../../components/ContentContainer";
 import ExperimentContainer from "../../../../components/ExperimentContainer";
 import Footer from "../../../../components/Footer";
 import Header from "../../../../components/Header";
-import { HeadingText } from "../../../../components/Text/Text.style";
+import { HeadingText, RedText } from "../../../../components/Text/Text.style";
 import TTEmailChannel from "../../../../components/TickBoxChannels/TwoTickChannel/TTEmailChannel";
 import TTPostChannel from "../../../../components/TickBoxChannels/TwoTickChannel/TTPostChannel";
 import TTSocialMediaChannel from "../../../../components/TickBoxChannels/TwoTickChannel/TTSocialMediaChannel";
@@ -19,6 +20,7 @@ const Scenario5: FC = () => {
   const [telephoneClick, setTelephoneClick] = useState(3);
   const [postClick, setPostClick] = useState(3);
   const [socialMediaClick, setSocialMediaClick] = useState(3);
+  const [fillMessage, setFillMessage] = useState("");
   return (
     <ExperimentContainer>
       <Header image={cupSaucer}>News and offers</Header>
@@ -51,7 +53,31 @@ const Scenario5: FC = () => {
           may still see ads on your social media feed if you have accepted
           targeting cookies through your browser.
         </p>
-        <NextButton routeAddress="/PrivacyPermissions" />
+        {!(
+          textClick !== 3 &&
+          emailClick !== 3 &&
+          telephoneClick !== 3 &&
+          postClick !== 3 &&
+          socialMediaClick !== 3
+        ) && (
+          <>
+            {fillMessage && (
+              <RedText>Please make your choices to continue</RedText>
+            )}
+            <FakeNextButton setState={setFillMessage}>
+              scroll to top
+            </FakeNextButton>
+          </>
+        )}
+
+        {/* {titleClick && */}
+        {textClick !== 3 &&
+          emailClick !== 3 &&
+          telephoneClick !== 3 &&
+          postClick !== 3 &&
+          socialMediaClick !== 3 && (
+            <NextButton routeAddress={"/PrivacyPermissions"} />
+          )}
       </ContentContainer>
       <Footer />
     </ExperimentContainer>

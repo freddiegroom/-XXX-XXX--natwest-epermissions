@@ -58,6 +58,9 @@ export const TickContainer = styled.div`
     width: 24px;
     height: 20px;
   }
+  p {
+    margin: 2px 0;
+  }
 `;
 
 export const PurpleCard = styled.div`

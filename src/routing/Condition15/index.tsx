@@ -41,14 +41,11 @@ const Condition15: FC = () => {
           {debug && debugProduct === "loan" && <Loan />}
         </Route>
         <Route path="/PersonalDetails">
-          <PCExistingCustomer />
+          <PCExistingCustomer debugCondition={15} />
         </Route>
-        <Route path="/AccountDetails">
-          <AccountDetails />
-        </Route>
-        <Route path="/PermissionsInfo">
-          <PermissionsInfo />
-        </Route>
+        {/* <Route path="/AccountDetails">
+          <AccountDetails debugCondition={15} />
+        </Route> */}
         <Route path="/MarketingPreferences">
           <Scenario15 />
         </Route>

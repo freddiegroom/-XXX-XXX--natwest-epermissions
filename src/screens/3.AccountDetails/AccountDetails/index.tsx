@@ -13,18 +13,25 @@ import WhiteContentContainer from "../../../components/WhiteContentContainer";
 import WhiteFooter from "../../../components/WhiteFooter";
 import FakeNextButton from "../../../components/Buttons/FakeNextButton";
 
-const AccountDetails: FC = () => {
+interface AccountDetailsProps {
+  debugCondition: number;
+}
+
+const AccountDetails: FC<AccountDetailsProps> = ({ debugCondition }) => {
   const { condition } = useEFSData();
   const routeFunction = () => {
-    if (
-      condition === 1 ||
-      condition === 2 ||
-      condition === 15 ||
-      condition === 16
-    ) {
-      return "/MarketingPreferences";
+    if (condition) {
+      if (condition === 1 || condition === 2) {
+        return "/MarketingPreferences";
+      } else {
+        return "/PermissionsInfo";
+      }
     } else {
-      return "/PermissionsInfo";
+      if (debugCondition === 1 || debugCondition === 2) {
+        return "/MarketingPreferences";
+      } else {
+        return "/PermissionsInfo";
+      }
     }
   };
   let routeyRouteRoute = routeFunction();

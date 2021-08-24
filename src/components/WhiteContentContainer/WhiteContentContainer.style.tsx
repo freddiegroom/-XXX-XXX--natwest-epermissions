@@ -11,7 +11,7 @@ export const ContentContainerStyle = styled.div`
   padding: 32px 0;
   @media only screen and (max-width: 600px) {
     display: flex;
-    justify-content: center;
+    // justify-content: center;
     // padding: 0 16px;
   }
 `;
@@ -19,7 +19,7 @@ export const ContentContainerStyle = styled.div`
 export const Container = styled.div`
   width: 600px;
   p {
-    padding: 0 8px;
+    padding: 4px 0;;
   }
 
   @media only screen and (max-width: 600px) {
@@ -27,7 +27,7 @@ export const Container = styled.div`
     padding: 0 1em;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    // align-items: center;
    }
   }
 `;

@@ -45,9 +45,7 @@ const Condition18: FC = () => {
         <Route path="/PersonalDetails">
           <PCExistingCustomer />
         </Route>
-        {/* <Route path="/AccountDetails">
-          <AccountDetailsBlank />
-        </Route> */}
+
         <Route path="/PermissionsInfo">
           <PermissionsInfo />
         </Route>

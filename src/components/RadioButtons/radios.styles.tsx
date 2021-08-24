@@ -18,7 +18,8 @@ p {
 }
 cursor: pointer;
 @media only screen and (max-width: 600px) {
-  padding: 0 16px;
+  width: 100%;
+  padding: 8px 16px;;
 }
 `;
 
