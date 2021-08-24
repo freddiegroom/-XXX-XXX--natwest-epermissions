@@ -6,11 +6,12 @@ import { BoldText, HeadingText } from "../../../../components/Text/Text.style";
 import OffersAndUpdates from "../../../../components/TickBoxes/OffersAndUpdates";
 import WhiteFooter from "../../../../components/WhiteFooter";
 import WhiteContentContainer from "../../../../components/WhiteContentContainer";
+import cupSaucer from "../../../../images/cup-saucer.png";
 
 const Scenario2: FC = () => {
   return (
     <ExperimentContainer>
-      <Header>How we'll get in touch</Header>
+      <Header image={cupSaucer}>How we'll get in touch</Header>
       <WhiteContentContainer>
         <HeadingText>Your statements</HeadingText>
         <p>
@@ -28,7 +29,7 @@ const Scenario2: FC = () => {
           We'll try to send you everything digitally, although some things may
           still be posted.
         </p>
-        <HeadingText>Alerts News and offersr account</HeadingText>
+        <HeadingText>Alerts about your account</HeadingText>
         <p>
           We’ve registered you for alerts to help put you in control of your
           money and account, wherever you are.
@@ -53,10 +54,9 @@ const Scenario2: FC = () => {
           third parties for marketing purposes.
         </p>
         <OffersAndUpdates>
-          I<BoldText> &nbsp;want&nbsp; </BoldText>
-          want to get these offers and updates.
+          I <BoldText>want</BoldText>
+          to get these offers and updates.
         </OffersAndUpdates>
-        <p>[PLACEHOLDER INPUT] I don't want to get these offers and updates.</p>
         <NextButton routeAddress="/PrivacyPermissions" />
       </WhiteContentContainer>
       <WhiteFooter />

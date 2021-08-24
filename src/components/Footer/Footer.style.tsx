@@ -10,5 +10,6 @@ export const FooterStyle = styled.div`
   width: 100%;
   @media only screen and (max-width: 600px) {
     font-size: 14px;
+    margin-top: 24px;
   }
 `;

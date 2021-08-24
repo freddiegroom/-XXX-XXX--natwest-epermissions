@@ -5,13 +5,11 @@ import {
   ChannelWrapper,
   ClickBox,
   ClickedBox,
-  EmailImg,
-} from "../OneTickChannel.styles";
+} from "../NoImageChannel.styles";
 import tickedCheckbox from "../../../../images/tick-checkbox.png";
 import checkbox from "../../../../images/checkbox.png";
-import email from "../../../../images/email.png";
 
-const OtherNewsChannel: FC = () => {
+const ThirdPartyChannel: FC = () => {
   const [clicked, setClicked] = useState(false);
   return (
     <>
@@ -22,7 +20,7 @@ const OtherNewsChannel: FC = () => {
               <img src={checkbox} alt=""></img>
             </ClickBox>
             <ChannelText>
-              <p>Other NatWest group news and offers</p>
+              <p>Third party news and offers</p>
             </ChannelText>
           </Channel>
         </ChannelWrapper>
@@ -34,7 +32,7 @@ const OtherNewsChannel: FC = () => {
               <img src={tickedCheckbox} alt=""></img>
             </ClickedBox>
             <ChannelText>
-              <p>Other NatWest group news and offers</p>
+              <p>Third party news and offers</p>
             </ChannelText>
           </Channel>
         </ChannelWrapper>
@@ -43,4 +41,4 @@ const OtherNewsChannel: FC = () => {
   );
 };
 
-export default OtherNewsChannel;
+export default ThirdPartyChannel;

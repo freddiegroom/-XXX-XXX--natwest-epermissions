@@ -2,11 +2,12 @@ import styled from "styled-components";
 
 export const ADMultipleInputContainer = styled.div`
   display: flex;
-  width: 156px;
-  justify-content: space-between;
+  // width: 156px;
+  justify-content: flex-start;
   img {
     width: 10px;
     height: 43px;
+    padding: 0 16px;
   }
   align-items: center;
   @media only screen and (max-width: 600px) {
@@ -15,11 +16,12 @@ export const ADMultipleInputContainer = styled.div`
 `;
 export const MultipleInputContainer = styled.div`
   display: flex;
-  width: 249px;
-  justify-content: space-between;
+  // width: 249px;
+  justify-content: flex-start;
   img {
     width: 10px;
     height: 43px;
+    padding: 0 16px;
   }
   align-items: center;
   @media only screen and (max-width: 600px) {
@@ -63,7 +65,7 @@ export const RedInput = styled.div`
   height: 40px;
   display: flex;
   align-items: center;
-  font-size: 24px;
+  font-size: 16px;
   color: #969c9c;
   cursor: pointer;
   padding-left: 8px;
@@ -75,7 +77,7 @@ export const NormalInput = styled.div`
   height: 40px;
   display: flex;
   align-items: center;
-  font-size: 24px;
+  font-size: 16px;
   color: #333;
   padding-left: 8px;
 `;
@@ -86,7 +88,7 @@ export const SmallRedInput = styled.div`
   height: 40px;
   display: flex;
   align-items: center;
-  font-size: 24px;
+  font-size: 16px;
   color: #969c9c;
   cursor: pointer;
   padding-left: 8px;
@@ -98,7 +100,7 @@ export const SmallNormalInput = styled.div`
   height: 40px;
   display: flex;
   align-items: center;
-  font-size: 24px;
+  font-size: 16px;
   color: #333;
   padding-left: 8px;
 `;
@@ -109,7 +111,7 @@ export const DisabledInput = styled.div`
   height: 40px;
   display: flex;
   align-items: center;
-  font-size: 24px;
+  font-size: 16px;
   padding-left: 16px;
   color: #333;
 `;

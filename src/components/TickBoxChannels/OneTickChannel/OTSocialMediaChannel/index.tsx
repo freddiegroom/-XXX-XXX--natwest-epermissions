@@ -11,19 +11,43 @@ import {
 import tickedCheckbox from "../../../../images/tick-checkbox.png";
 import checkbox from "../../../../images/checkbox.png";
 import social from "../../../../images/social.png";
+import { useDispatch } from "react-redux";
+import {
+  tickSocialMedia,
+  unTickSocialMedia,
+} from "../../../../screens/5.MarketingPreferences/MarketingPreferencesSlice";
 
-const OTSocialMediaChannel: FC = () => {
-  const [clicked, setClicked] = useState(false);
+interface OTEmailChannelProps {
+  state: any;
+  setState: any;
+  hideSubText?: boolean;
+}
+
+const OTSocialMediaChannel: FC<OTEmailChannelProps> = ({
+  state,
+  setState,
+  hideSubText,
+}) => {
+  // const [clicked, setClicked] = useState(false);
+  const dispatch = useDispatch();
+  const clickFunc = () => {
+    dispatch(tickSocialMedia());
+    setState(1);
+  };
+  const unClickFunc = () => {
+    dispatch(unTickSocialMedia());
+    setState(0);
+  };
   return (
     <>
-      {!clicked && (
+      {state === 0 && (
         <ChannelWrapper>
-          <Channel onClick={() => setClicked(true)}>
+          <Channel onClick={() => clickFunc()}>
             <ClickBox>
               <img src={checkbox} alt=""></img>
             </ClickBox>
             <ChannelText>
-              <p>SocialMedia*</p>
+              <p>Social media*</p>
               {/* <p className="sub">0778****234</p> */}
             </ChannelText>
             <SocialImg>
@@ -32,14 +56,14 @@ const OTSocialMediaChannel: FC = () => {
           </Channel>
         </ChannelWrapper>
       )}
-      {clicked && (
+      {state === 1 && (
         <ChannelWrapper>
-          <Channel onClick={() => setClicked(false)}>
+          <Channel onClick={() => unClickFunc()}>
             <ClickedBox>
               <img src={tickedCheckbox} alt=""></img>
             </ClickedBox>
             <ChannelText>
-              <p>Social Media*</p>
+              <p>Social media*</p>
               {/* <p className="sub">0778****234</p> */}
             </ChannelText>
             <SocialImg>

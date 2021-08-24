@@ -6,17 +6,21 @@ import {
   NormalInput,
 } from "../inputs.styles";
 
-const LastName: FC = () => {
-  const [clicked, setClicked] = useState(false);
+interface LastNameProps {
+  state?: number;
+  setState: any;
+}
+
+const LastName: FC<LastNameProps> = ({ state, setState }) => {
   return (
     <>
-      {!clicked && (
-        <RedInputContainer onClick={() => setClicked(true)}>
+      {!state && (
+        <RedInputContainer onClick={() => setState(1)}>
           <p>Last Name</p>
-          <RedInput></RedInput>
+          <RedInput>Smith</RedInput>
         </RedInputContainer>
       )}
-      {clicked && (
+      {state && (
         <InputContainer>
           <p>Last Name</p>
           <NormalInput>Smith</NormalInput>

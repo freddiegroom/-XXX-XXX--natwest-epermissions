@@ -1,14 +1,27 @@
-import React, { FC } from "react";
+import React, { FC, useState } from "react";
 import NextButton from "../../../../components/Buttons/NextButton";
 import ContentContainer from "../../../../components/ContentContainer";
 import ExperimentContainer from "../../../../components/ExperimentContainer";
 import Footer from "../../../../components/Footer";
 import Header from "../../../../components/Header";
+import { BoldText } from "../../../../components/Text/Text.style";
+import TTEmailChannel from "../../../../components/TickBoxChannels/TwoTickChannel/TTEmailChannel";
+import TTPostChannel from "../../../../components/TickBoxChannels/TwoTickChannel/TTPostChannel";
+import TTSocialMediaChannel from "../../../../components/TickBoxChannels/TwoTickChannel/TTSocialMediaChannel";
+import TTTelephoneChannel from "../../../../components/TickBoxChannels/TwoTickChannel/TTTelephoneChannel";
+import TTTextMessageChannel from "../../../../components/TickBoxChannels/TwoTickChannel/TTTextMessageChannel";
+import { DesktopYesNoContainer } from "../../../../components/TickBoxChannels/TwoTickChannel/TwoTickChannel.styles";
+import cupSaucer from "../../../../images/cup-saucer.png";
 
 const Scenario19: FC = () => {
+  const [textClick, setTextClick] = useState(0);
+  const [emailClick, setEmailClick] = useState(0);
+  const [telephoneClick, setTelephoneClick] = useState(0);
+  const [postClick, setPostClick] = useState(0);
+  const [socialMediaClick, setSocialMediaClick] = useState(0);
   return (
     <ExperimentContainer>
-      <Header>News and offers</Header>
+      <Header image={cupSaucer}>News and offers</Header>
       <ContentContainer>
         <p>
           We'd like to keep you informed about NatWest products, services and
@@ -17,14 +30,33 @@ const Scenario19: FC = () => {
           parties for marketing purposes without your permission.
         </p>
         <p>
-          Please review your existing preferences and choose if you are happy
-          for us to contact you by{" "}
+          Please review your existing preferences and choose if you are{" "}
+          <BoldText>happy</BoldText> for us to contact you by{" "}
         </p>
-        <p>[PLACEHOLDER TICKBOX BOX]</p>
-        <p>[PLACEHOLDER TICKBOX BOX]</p>
-        <p>[PLACEHOLDER TICKBOX BOX]</p>
-        <p>[PLACEHOLDER TICKBOX BOX]</p>
-        <p>[PLACEHOLDER TICKBOX BOX]</p>
+        <DesktopYesNoContainer>
+          <p>YES</p>
+          <p>NO</p>
+        </DesktopYesNoContainer>
+        <TTTextMessageChannel
+          state={textClick}
+          setState={setTextClick}
+          hideSubText
+        />
+        <TTEmailChannel
+          state={emailClick}
+          setState={setEmailClick}
+          hideSubText
+        />
+        <TTTelephoneChannel
+          state={telephoneClick}
+          setState={setTelephoneClick}
+          hideSubText
+        />
+        <TTPostChannel state={postClick} setState={setPostClick} hideSubText />
+        <TTSocialMediaChannel
+          state={socialMediaClick}
+          setState={setSocialMediaClick}
+        />
         <p>
           *We use data to match you with your social media profile so we can
           display relevant offers to you on your social media pages. Note, you

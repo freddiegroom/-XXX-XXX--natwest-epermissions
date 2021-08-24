@@ -19,19 +19,26 @@ import infoIcon from "../../../images/information-icon.png";
 import { useScrollToTop } from "../../../hooks/useScrollToTop";
 import { useHistory } from "react-router-dom";
 import { HeadingText, RegularText } from "../../../components/Text/Text.style";
-// import { useHistory } from "react-router-dom";
-// import { useScrollToTop } from "../../../hooks/useScrollToTop";
+import { selectChoice } from "../productChoiceSlice";
+import { useDispatch } from "react-redux";
+import creditCard from "../../../images/credit-card-logo.png";
 
 const CurrentAccount: FC = () => {
   useScrollToTop();
   const history = useHistory();
+  const dispatch = useDispatch();
 
   const handleNextPage = (route: string) => {
     history.push(route);
   };
+
+  const nextPageFunc = (product: string) => {
+    dispatch(selectChoice(product));
+    handleNextPage("/PersonalDetails");
+  };
   return (
     <ExperimentContainer>
-      <Header>Find the right bank account for you</Header>
+      <Header image={creditCard}>Find the right bank account for you</Header>
       <TextContainerStyle>
         <HeadingText>Switch to NatWest</HeadingText>
         <RegularText>
@@ -62,11 +69,11 @@ const CurrentAccount: FC = () => {
               <li>No monthly fee.</li>
             </CardList>
             <Row>
-              <img src={infoIcon} />
+              <img src={infoIcon} alt="info icon" />
               <p>To apply, you need to 18+ and a UK resident.</p>
             </Row>
           </Content>
-          <ChooseButton onClick={() => handleNextPage("/PersonalDetails")}>
+          <ChooseButton onClick={() => nextPageFunc("Select Account")}>
             Choose Account
           </ChooseButton>
         </CardStyle>
@@ -88,12 +95,12 @@ const CurrentAccount: FC = () => {
               </li>
             </CardList>
             <p>
-              To apply, you need to be 18+ and a UK resident. To hold a REward
+              To apply, you need to be 18+ and a UK resident. To hold a Reward
               account, you’ll need to pay £1,250 into your eligible NatWest
               account every month
             </p>
           </Content>
-          <ChooseButton onClick={() => handleNextPage("/PersonalDetails")}>
+          <ChooseButton onClick={() => nextPageFunc("Reward")}>
             Choose Account
           </ChooseButton>
         </CardStyle>
@@ -118,7 +125,7 @@ const CurrentAccount: FC = () => {
               <li>No monthly fee for UK students.</li>
             </CardList>
           </Content>
-          <ChooseButton onClick={() => handleNextPage("/PersonalDetails")}>
+          <ChooseButton onClick={() => nextPageFunc("Student")}>
             Choose Account
           </ChooseButton>
         </CardStyle>

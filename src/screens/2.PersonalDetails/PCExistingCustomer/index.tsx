@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import React, { FC, useState } from "react";
 import ExperimentContainer from "../../../components/ExperimentContainer";
 import WhiteFooter from "../../../components/WhiteFooter";
 import Header from "../../../components/Header";
@@ -10,6 +10,7 @@ import { useScrollToTop } from "../../../hooks/useScrollToTop";
 
 const PCExistingCustomer: FC = () => {
   useScrollToTop();
+  const [titleClick, setTitleClick] = useState();
 
   return (
     <ExperimentContainer>
@@ -19,7 +20,7 @@ const PCExistingCustomer: FC = () => {
         {/*  */}
         <p>Confirm your details</p>
         {/*  */}
-        <Title />
+        <Title state={titleClick} setState={setTitleClick} />
         {/*  */}
         <p>Name</p>
         <p>Alex Smith</p>

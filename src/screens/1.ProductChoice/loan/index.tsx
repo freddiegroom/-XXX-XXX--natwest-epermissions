@@ -16,19 +16,31 @@ import {
   CardRow,
   BlueText,
   ChooseButton,
+  PaddedCardRow,
 } from "./Loan.styles";
 import { HeadingText } from "../../../components/Text/Text.style";
+import { selectChoice } from "../productChoiceSlice";
+import { useDispatch } from "react-redux";
+import loan from "../../../images/loan.png";
 
 const Loan: FC = () => {
   useScrollToTop();
   const history = useHistory();
+  const dispatch = useDispatch();
 
   const handleNextPage = (route: string) => {
     history.push(route);
   };
+
+  const nextPageFunc = (product: string) => {
+    dispatch(selectChoice(product));
+    handleNextPage("/PersonalDetails");
+  };
   return (
     <ExperimentContainer>
-      <Header>Revamp your space with a home improvement loan</Header>
+      <Header image={loan}>
+        Revamp your space with a home improvement loan
+      </Header>
       <TextContainerStyle>
         <HeadingText>Taking out a home improvement loan</HeadingText>
       </TextContainerStyle>
@@ -65,18 +77,18 @@ const Loan: FC = () => {
               <p>Borrowing</p>
               <p>Over</p>
             </CardRow>
-            <CardRow>
+            <PaddedCardRow>
               <h3>£5,000</h3>
               <h3>60 Months</h3>
-            </CardRow>
+            </PaddedCardRow>
             <CardRow>
               <p>Monthly repayment</p>
               <p>Total repayment</p>
             </CardRow>
-            <CardRow>
+            <PaddedCardRow>
               <h3>£100.50</h3>
               <h3>£6,030.00</h3>
-            </CardRow>
+            </PaddedCardRow>
             <CardRow>
               <p>Representative</p>
               <p>Representative</p>
@@ -85,11 +97,11 @@ const Loan: FC = () => {
               <h3>7.9% APR</h3>
               <h3>7.90%p.a.</h3>
             </CardRow>
-            <CardRow>
+            <PaddedCardRow>
               <p>(Annual Percentage Rate)</p>
               <p>(fixed)</p>
-            </CardRow>
-            <ChooseButton onClick={() => handleNextPage("/PersonalDetails")}>
+            </PaddedCardRow>
+            <ChooseButton onClick={() => nextPageFunc("£5,000")}>
               Choose Loan
             </ChooseButton>
           </PurpleCard>
@@ -101,18 +113,18 @@ const Loan: FC = () => {
               <p>Borrowing</p>
               <p>Over</p>
             </CardRow>
-            <CardRow>
+            <PaddedCardRow>
               <h3>10,000</h3>
               <h3>60 Months</h3>
-            </CardRow>
+            </PaddedCardRow>
             <CardRow>
               <p>Monthly repayment</p>
               <p>Total repayment</p>
             </CardRow>
-            <CardRow>
+            <PaddedCardRow>
               <h3>£181.25</h3>
               <h3>£10,875.00</h3>
-            </CardRow>
+            </PaddedCardRow>
             <CardRow>
               <p>Representative</p>
               <p>Representative</p>
@@ -121,11 +133,11 @@ const Loan: FC = () => {
               <h3>3.4% APR</h3>
               <h3>3.40%p.a.</h3>
             </CardRow>
-            <CardRow>
+            <PaddedCardRow>
               <p>(Annual Percentage Rate)</p>
               <p>(fixed)</p>
-            </CardRow>
-            <ChooseButton onClick={() => handleNextPage("/PersonalDetails")}>
+            </PaddedCardRow>
+            <ChooseButton onClick={() => nextPageFunc("£10,000")}>
               Choose Loan
             </ChooseButton>
           </PurpleCard>
@@ -137,18 +149,18 @@ const Loan: FC = () => {
               <p>Borrowing</p>
               <p>Over</p>
             </CardRow>
-            <CardRow>
+            <PaddedCardRow>
               <h3>£20,000</h3>
               <h3>60 Months</h3>
-            </CardRow>
+            </PaddedCardRow>
             <CardRow>
               <p>Monthly repayment</p>
               <p>Total repayment</p>
             </CardRow>
-            <CardRow>
+            <PaddedCardRow>
               <h3>£375.50</h3>
               <h3>£22,530.00</h3>
-            </CardRow>
+            </PaddedCardRow>
             <CardRow>
               <p>Representative</p>
               <p>Representative</p>
@@ -157,11 +169,11 @@ const Loan: FC = () => {
               <h3>4.9% APR</h3>
               <h3>4.90%p.a</h3>
             </CardRow>
-            <CardRow>
+            <PaddedCardRow>
               <p>(Annual Percentage Rate)</p>
               <p>(fixed)</p>
-            </CardRow>
-            <ChooseButton onClick={() => handleNextPage("/PersonalDetails")}>
+            </PaddedCardRow>
+            <ChooseButton onClick={() => nextPageFunc("£20,000")}>
               Choose Loan
             </ChooseButton>
           </PurpleCard>

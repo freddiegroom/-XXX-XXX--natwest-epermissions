@@ -1,0 +1,9 @@
+import { OutputTypes } from "./outputSlice";
+import { store } from "../redux/store";
+
+export const getOutput = (state: RootState) => (key: OutputTypes): string => {
+  if (Object.prototype.hasOwnProperty.call(state.output, key)) {
+    return state.output[key];
+  }
+  return "";
+};

@@ -2,9 +2,9 @@ import styled from "styled-components";
 
 export const TextContainerStyle = styled.div`
   padding-top: 32px;
-  width: 70%;
-  @media only screen and (max-width: 960px) {
-    width: 100%;
+  width: 975px;
+  @media only screen and (max-width: 975px) {
+    width: 95%;
   }
   p {
     font-size: 16px;
@@ -24,6 +24,7 @@ export const TextContainerStyle = styled.div`
 export const ColourBar = styled.div`
   width: 100%;
   @media only screen and (max-width: 600px) {
+    margin-top: 24px;
     width: 316px;
   }
   height: 8px;
@@ -37,15 +38,18 @@ export const Row = styled.div`
   justify-content: space-evenly;
   flex-wrap: wrap;
   width: 100%;
+  max-width: 1000px;
+  padding-bottom: 32px;
   @media only screen and (max-width: 600px) {
     align-items: center;
+    padding-bottom: 0;
   }
 `;
 
 export const TickContainer = styled.div`
   display: flex;
   max-width: 300px;
-  padding: 16px 0;
+  padding: 16px 8px;
   img {
     width: 24px;
     height: 20px;
@@ -63,12 +67,13 @@ export const PurpleCard = styled.div`
 
 export const Card = styled.div`
   width: 300px;
-  padding: 1em 0;
+  padding: 1em 8px;
   @media only screen and (max-width: 600px) {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 0;
   }
 `;
 
@@ -77,6 +82,7 @@ export const CardRow = styled.div`
   color: #fff;
   flex-direction: row;
   justify-content: space-evenly;
+  // padding-bottom: 8px;
   p {
     display: flex;
     flex: 1;
@@ -91,6 +97,30 @@ export const CardRow = styled.div`
     display: flex;
     flex: 1;
     margin: 0;
+    font-weight: normal;
+  }
+`;
+export const PaddedCardRow = styled.div`
+  display: flex;
+  color: #fff;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding-bottom: 8px;
+  p {
+    display: flex;
+    flex: 1;
+    font-size: 14px;
+    line-height: 20px;
+    margin: 0;
+    color: #fff;
+  }
+  h3 {
+    font-size: 24px;
+    line-height: 28px;
+    display: flex;
+    flex: 1;
+    margin: 0;
+    font-weight: normal;
   }
 `;
 

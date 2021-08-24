@@ -70,7 +70,7 @@ export const RedSelect = styled.div`
 export const NormalSelect = styled.div`
   border: 2px solid #969c9c;
   @media only screen and (min-width: 601px) {
-    width: 313px;
+    width: 293px;
   }
   height: 40px;
   display: flex;
@@ -106,5 +106,28 @@ export const DisabledSelect = styled.div`
   }
   img {
     padding-right: 16px;
+  }
+`;
+
+export const SelectorContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  button {
+    display: flex;
+    padding-left: 16px;
+    align-items: center;
+    background-color: #fff;
+    color: #333;
+    border: 1px solid #c8001e;
+    height: 40px;
+    font-size: 16px;
+    width: 313px;
+  }
+  @media only screen and (max-width: 600px) {
+    width: 100%;
+    button {
+      width: 293px;
+      // margin-left: 16px;
+    }
   }
 `;

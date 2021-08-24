@@ -1,17 +1,20 @@
 import React, { useState, FC } from "react";
-import { InputContainer, RedInput, NormalInput } from "../inputs.styles";
+import { InputContainer, RedInput, NormalInput } from "./inputs.styles";
 
 const ConfirmPIN: FC = () => {
-  const [clicked, setClicked] = useState(false);
+  const [input, setInput] = useState("");
+  let num = "5467";
   return (
     <>
-      {!clicked && (
-        <InputContainer onClick={() => setClicked(true)}>
+      {input != num && (
+        <InputContainer>
           <p>Confirm your PIN</p>
-          <RedInput></RedInput>
+          <RedInput
+            onChange={(event) => setInput(`${event.target.value}`)}
+          ></RedInput>
         </InputContainer>
       )}
-      {clicked && (
+      {input == num && (
         <InputContainer>
           <p>Confirm your PIN</p>
           <NormalInput>5467</NormalInput>

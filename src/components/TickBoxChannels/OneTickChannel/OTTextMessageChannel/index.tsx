@@ -10,20 +10,44 @@ import {
 import tickedCheckbox from "../../../../images/tick-checkbox.png";
 import checkbox from "../../../../images/checkbox.png";
 import text from "../../../../images/text.png";
+import { useDispatch } from "react-redux";
+import {
+  tickTextMessage,
+  unTickTextMessage,
+} from "../../../../screens/5.MarketingPreferences/MarketingPreferencesSlice";
 
-const OTTextMessageChannel: FC = () => {
-  const [clicked, setClicked] = useState(false);
+interface OTEmailChannelProps {
+  state: any;
+  setState: any;
+  hideSubText?: boolean;
+}
+
+const OTTextMessageChannel: FC<OTEmailChannelProps> = ({
+  state,
+  setState,
+  hideSubText,
+}) => {
+  // const [clicked, setClicked] = useState(false);
+  const dispatch = useDispatch();
+  const clickFunc = () => {
+    dispatch(tickTextMessage());
+    setState(1);
+  };
+  const unClickFunc = () => {
+    dispatch(unTickTextMessage());
+    setState(0);
+  };
   return (
     <>
-      {!clicked && (
+      {state === 0 && (
         <ChannelWrapper>
-          <Channel onClick={() => setClicked(true)}>
+          <Channel onClick={() => clickFunc()}>
             <ClickBox>
               <img src={checkbox} alt=""></img>
             </ClickBox>
             <ChannelText>
               <p>Text message</p>
-              <p className="sub">0778****234</p>
+              {!hideSubText && <p className="sub">0778****234</p>}
             </ChannelText>
             <TextImg>
               <img src={text} alt="" />
@@ -31,15 +55,15 @@ const OTTextMessageChannel: FC = () => {
           </Channel>
         </ChannelWrapper>
       )}
-      {clicked && (
+      {state === 1 && (
         <ChannelWrapper>
-          <Channel onClick={() => setClicked(false)}>
+          <Channel onClick={() => unClickFunc()}>
             <ClickedBox>
               <img src={tickedCheckbox} alt=""></img>
             </ClickedBox>
             <ChannelText>
               <p>Text message</p>
-              <p className="sub">0778****234</p>
+              {!hideSubText && <p className="sub">0778****234</p>}
             </ChannelText>
             <TextImg>
               <img src={text} alt="" />

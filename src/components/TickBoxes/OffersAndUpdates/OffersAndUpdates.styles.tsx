@@ -18,11 +18,12 @@ export const OAUBox = styled.button`
   margin-right: 16px;
 `;
 
-export const OAUBoxTicked = styled.button`
+export const OAUBoxTicked = styled.img`
   border: 1px solid #c9c6c6;
   width: 32px;
   height: 32px;
   border-radius: 1px;
   margin-right: 16px;
-  background-color: red;
+  // background-color: red;
+  border: none;
 `;

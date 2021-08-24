@@ -5,22 +5,33 @@ import {
   RedInput,
   NormalInput,
 } from "../inputs.styles";
+import redChevronDown from "../../../images/icon-chev-up.png";
 
-const EmailAddress: FC = () => {
-  const [clicked, setClicked] = useState(false);
+interface EmailAddressProps {
+  state?: number;
+  setState: any;
+}
+
+const EmailAddress: FC<EmailAddressProps> = ({ state, setState }) => {
   return (
     <>
-      {!clicked && (
-        <RedInputContainer onClick={() => setClicked(true)}>
+      {!state && (
+        <RedInputContainer onClick={() => setState(1)}>
           <p>Email address</p>
-          <p className="subText">Why do you need my email? v</p>
-          <RedInput></RedInput>
+          <p className="redSubText">
+            Why do you need my email?{" "}
+            <img src={redChevronDown} alt="chevron down" />
+          </p>
+          <RedInput>alexsmith@gmail.com</RedInput>
         </RedInputContainer>
       )}
-      {clicked && (
+      {state && (
         <InputContainer>
           <p>Email address</p>
-          <p className="subText">Why do you need my number? v</p>
+          <p className="redSubText">
+            Why do you need my email?{" "}
+            <img src={redChevronDown} alt="chevron down" />
+          </p>
           <NormalInput>alexsmith@gmail.com</NormalInput>
         </InputContainer>
       )}

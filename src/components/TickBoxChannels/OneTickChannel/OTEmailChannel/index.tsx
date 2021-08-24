@@ -10,20 +10,44 @@ import {
 import tickedCheckbox from "../../../../images/tick-checkbox.png";
 import checkbox from "../../../../images/checkbox.png";
 import email from "../../../../images/email.png";
+import { useDispatch } from "react-redux";
+import {
+  tickEmail,
+  unTickEmail,
+} from "../../../../screens/5.MarketingPreferences/MarketingPreferencesSlice";
 
-const OTEmailChannel: FC = () => {
-  const [clicked, setClicked] = useState(false);
+interface OTEmailChannelProps {
+  state: any;
+  setState: any;
+  hideSubText?: boolean;
+}
+
+const OTEmailChannel: FC<OTEmailChannelProps> = ({
+  state,
+  setState,
+  hideSubText,
+}) => {
+  // const [clicked, setClicked] = useState(false);
+  const dispatch = useDispatch();
+  const clickFunc = () => {
+    dispatch(tickEmail());
+    setState(1);
+  };
+  const unClickFunc = () => {
+    dispatch(unTickEmail());
+    setState(0);
+  };
   return (
     <>
-      {!clicked && (
+      {state === 0 && (
         <ChannelWrapper>
-          <Channel onClick={() => setClicked(true)}>
+          <Channel onClick={() => clickFunc()}>
             <ClickBox>
               <img src={checkbox} alt=""></img>
             </ClickBox>
             <ChannelText>
               <p>Email</p>
-              <p className="sub">alexsmith@gmail.com</p>
+              {!hideSubText && <p className="sub">alexsmith@gmail.com</p>}
             </ChannelText>
             <EmailImg>
               <img src={email} alt="" />
@@ -31,15 +55,15 @@ const OTEmailChannel: FC = () => {
           </Channel>
         </ChannelWrapper>
       )}
-      {clicked && (
+      {state === 1 && (
         <ChannelWrapper>
-          <Channel onClick={() => setClicked(false)}>
+          <Channel onClick={() => unClickFunc()}>
             <ClickedBox>
               <img src={tickedCheckbox} alt=""></img>
             </ClickedBox>
             <ChannelText>
               <p>Email</p>
-              <p className="sub">alexsmith@gmail.com</p>
+              {!hideSubText && <p className="sub">alexsmith@gmail.com</p>}
             </ChannelText>
             <EmailImg>
               <img src={email} alt="" />

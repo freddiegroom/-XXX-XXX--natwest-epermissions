@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import React, { FC, useState } from "react";
 import NextButton from "../../../components/Buttons/NextButton";
 import ExperimentContainer from "../../../components/ExperimentContainer";
 import WhiteFooter from "../../../components/WhiteFooter";
@@ -15,18 +15,25 @@ import AddressDate from "../../../components/MultipleInputs/AddressDate";
 import DOB from "../../../components/MultipleInputs/DOB";
 import WhiteContentContainer from "../../../components/WhiteContentContainer";
 import { useScrollToTop } from "../../../hooks/useScrollToTop";
-import { useHistory } from "react-router-dom";
 import { HeadingText } from "../../../components/Text/Text.style";
-import { useEFSData } from "@dectech/react-library";
+import CountryNationality from "../../../components/Selects/CountryNationality";
 
 const PCNewCustomer: FC = () => {
   useScrollToTop();
-  const { user = "new" } = useEFSData();
-  const history = useHistory();
+  const [titleClick, setTitleClick] = useState();
+  const [firstNameClick, setFirstNameClick] = useState();
+  const [lastNameClick, setLastNameClick] = useState();
+  const [dobDDClick, setDobDDClick] = useState();
+  const [dobMMClick, setDobMMClick] = useState();
+  const [dobYYYYClick, setDobYYYYClick] = useState();
+  const [nationalityClick, setNationalityClick] = useState(0);
+  const [mobileClick, setMobileClick] = useState();
+  const [emailClick, setEmailClick] = useState();
+  const [postcodeClick, setPostcodeClick] = useState();
+  const [addressClick, setAddressClick] = useState(0);
+  const [addressMMClick, setAddressMMClick] = useState();
+  const [addressYYYYClick, setAddressYYYYClick] = useState();
 
-  const handleNextPage = (route: string) => {
-    history.push(route);
-  };
   return (
     <ExperimentContainer>
       <Header>About you</Header>
@@ -35,26 +42,74 @@ const PCNewCustomer: FC = () => {
         {/*  */}
         <HeadingText>Confirm your details</HeadingText>
         {/*  */}
-        <Title />
+        <Title state={titleClick} setState={setTitleClick} />
         {/*  */}
-        <FirstName />
+        <FirstName state={firstNameClick} setState={setFirstNameClick} />
         {/*  */}
         <MiddleName />
         {/*  */}
-        <LastName />
+        <LastName state={lastNameClick} setState={setLastNameClick} />
         {/*  */}
-        <DOB />
+        <DOB
+          ddState={dobDDClick}
+          setDDState={setDobDDClick}
+          mmState={dobMMClick}
+          setMMState={setDobMMClick}
+          yyyyState={dobYYYYClick}
+          setYYYYState={setDobYYYYClick}
+        />
         {/*  */}
-        <MobileNumber />
+        <CountryNationality
+          state={nationalityClick}
+          setState={setNationalityClick}
+        />
         {/*  */}
-        <EmailAddress />
+        <MobileNumber state={mobileClick} setState={setMobileClick} />
+        {/*  */}
+        <EmailAddress state={emailClick} setState={setEmailClick} />
         {/*  */}
         <p>Find your address</p>
-        <Postcode />
-        <Address />
+        <Postcode state={postcodeClick} setState={setPostcodeClick} />
+        <Address state={addressClick} setState={setAddressClick} />
         {/*  */}
-        <AddressDate />
-        <NextButton routeAddress={"/AccountDetails"} />
+        <AddressDate
+          mmState={addressMMClick}
+          setMMState={setAddressMMClick}
+          yyyyState={addressYYYYClick}
+          setYYYYState={setAddressYYYYClick}
+        />
+
+        {!titleClick &&
+          !firstNameClick &&
+          !lastNameClick &&
+          !dobDDClick &&
+          !dobMMClick &&
+          !dobYYYYClick &&
+          !nationalityClick &&
+          !mobileClick &&
+          !emailClick &&
+          !postcodeClick &&
+          !addressClick &&
+          !addressMMClick &&
+          !addressYYYYClick &&
+          !lastNameClick &&
+          !firstNameClick && <p>Please fill in your details</p>}
+
+        {/* {titleClick && */}
+        {firstNameClick &&
+          lastNameClick &&
+          dobDDClick &&
+          dobMMClick &&
+          dobYYYYClick &&
+          nationalityClick &&
+          mobileClick &&
+          emailClick &&
+          postcodeClick &&
+          addressClick &&
+          addressMMClick &&
+          addressYYYYClick &&
+          lastNameClick &&
+          firstNameClick && <NextButton routeAddress={"/AccountDetails"} />}
       </WhiteContentContainer>
       <WhiteFooter />
     </ExperimentContainer>

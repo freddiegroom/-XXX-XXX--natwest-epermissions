@@ -5,22 +5,33 @@ import {
   RedInput,
   NormalInput,
 } from "../inputs.styles";
+import redChevronDown from "../../../images/icon-chev-up.png";
 
-const MobileNumber: FC = () => {
-  const [clicked, setClicked] = useState(false);
+interface MobileNumberProps {
+  state?: number;
+  setState: any;
+}
+
+const MobileNumber: FC<MobileNumberProps> = ({ state, setState }) => {
   return (
     <>
-      {!clicked && (
-        <RedInputContainer onClick={() => setClicked(true)}>
+      {!state && (
+        <RedInputContainer onClick={() => setState(true)}>
           <p>Mobile number</p>
-          <p className="subText">Why do you need my number? v</p>
-          <RedInput></RedInput>
+          <p className="redSubText">
+            Why do you need my number?{" "}
+            <img src={redChevronDown} alt="chevron down" />
+          </p>
+          <RedInput>0778****234</RedInput>
         </RedInputContainer>
       )}
-      {clicked && (
+      {state && (
         <InputContainer>
           <p>Mobile number</p>
-          <p className="subText">Why do you need my number? v</p>
+          <p className="redSubText">
+            Why do you need my number?{" "}
+            <img src={redChevronDown} alt="chevron down" />
+          </p>
           <NormalInput>0778****234</NormalInput>
         </InputContainer>
       )}

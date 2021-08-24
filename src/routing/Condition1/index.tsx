@@ -20,7 +20,6 @@ const Condition1: FC = () => {
             current account
           </button>
           <button onClick={() => setDebugProduct("loan")}>loan</button>
-          {/* <FirstScreen /> */}
           {!debug && product === "current account" && <CurrentAccount />}
           {!debug && product === "loan" && <Loan />}
           {debug && debugProduct === "current account" && <CurrentAccount />}
@@ -31,7 +30,7 @@ const Condition1: FC = () => {
         </Route>
         <Route path="/AccountDetails">
           <AccountDetailsBlank />
-        </Route>
+        </Route>{" "}
         <Route path="/PermissionsInfo">
           <PermissionsInfo />
         </Route>

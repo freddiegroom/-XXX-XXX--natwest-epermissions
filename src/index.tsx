@@ -5,13 +5,17 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { EFSInputProvider } from "@dectech/react-library";
 import { EFSContinueProvider } from "./hooks/useEFSContinue";
+import { Provider } from "react-redux";
+import { store } from "./redux/store";
 
 ReactDOM.render(
   <EFSInputProvider efsDataID="efsData">
     <EFSContinueProvider>
-      <React.StrictMode>
-        <App />
-      </React.StrictMode>
+      <Provider store={store}>
+        <React.StrictMode>
+          <App />
+        </React.StrictMode>
+      </Provider>
     </EFSContinueProvider>
   </EFSInputProvider>,
   document.getElementById("root")

@@ -4,8 +4,6 @@ import { HashRouter as Router, Switch, Route } from "react-router-dom";
 import CurrentAccount from "../../screens/1.ProductChoice/current-account";
 import Loan from "../../screens/1.ProductChoice/loan/index";
 import PCExistingCustomer from "../../screens/2.PersonalDetails/PCExistingCustomer";
-import PCNewCustomer from "../../screens/2.PersonalDetails/PCNewCustomer/index";
-import AccountDetailsBlank from "../../screens/3.AccountDetails/AccountDetails";
 import PermissionsInfo from "../../screens/4.PermissionsInfo";
 import Scenario19 from "../../screens/5.MarketingPreferences/ExistingCustomer/Scenario19";
 import PrivacyPermissions from "../../screens/6.PrivacyPermissions";

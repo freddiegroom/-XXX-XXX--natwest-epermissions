@@ -1,17 +1,21 @@
 import React, { useState, FC } from "react";
 import { InputContainer, RedInput, NormalInput } from "../inputs.styles";
 
-const ConfirmPassword: FC = () => {
-  const [clicked, setClicked] = useState(false);
+interface ConfirmPasswordProps {
+  state: boolean;
+  setState: any;
+}
+
+const ConfirmPassword: FC<ConfirmPasswordProps> = ({ state, setState }) => {
   return (
     <>
-      {!clicked && (
-        <InputContainer onClick={() => setClicked(true)}>
+      {!state && (
+        <InputContainer onClick={() => setState(1)}>
           <p>Confirm your password</p>
-          <RedInput></RedInput>
+          <RedInput>************</RedInput>
         </InputContainer>
       )}
-      {clicked && (
+      {state && (
         <InputContainer>
           <p>Confirm your password</p>
           <NormalInput>************</NormalInput>

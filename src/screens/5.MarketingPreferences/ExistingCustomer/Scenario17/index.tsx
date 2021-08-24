@@ -1,19 +1,27 @@
-import React, { FC } from "react";
+import React, { FC, useState } from "react";
 import NextButton from "../../../../components/Buttons/NextButton";
 import ContentContainer from "../../../../components/ContentContainer";
 import ExperimentContainer from "../../../../components/ExperimentContainer";
 import Footer from "../../../../components/Footer";
 import Header from "../../../../components/Header";
-import OTEmailChannel from "../../../../components/TickBoxChannels/OneTickChannel/EmailChannel";
-import OTPostChannel from "../../../../components/TickBoxChannels/OneTickChannel/OTPostChannel";
-import OTSocialMediaChannel from "../../../../components/TickBoxChannels/OneTickChannel/OTSocialMediaChannel";
-import OTTelephoneChannel from "../../../../components/TickBoxChannels/OneTickChannel/OTTelephoneChannel";
-import OTTextMessageChannel from "../../../../components/TickBoxChannels/OneTickChannel/OTTextMessageChannel";
+import { BoldText } from "../../../../components/Text/Text.style";
+import TTEmailChannel from "../../../../components/TickBoxChannels/TwoTickChannel/TTEmailChannel";
+import TTPostChannel from "../../../../components/TickBoxChannels/TwoTickChannel/TTPostChannel";
+import TTSocialMediaChannel from "../../../../components/TickBoxChannels/TwoTickChannel/TTSocialMediaChannel";
+import TTTelephoneChannel from "../../../../components/TickBoxChannels/TwoTickChannel/TTTelephoneChannel";
+import TTTextMessageChannel from "../../../../components/TickBoxChannels/TwoTickChannel/TTTextMessageChannel";
+import { DesktopYesNoContainer } from "../../../../components/TickBoxChannels/TwoTickChannel/TwoTickChannel.styles";
+import cupSaucer from "../../../../images/cup-saucer.png";
 
 const Scenario17: FC = () => {
+  const [textClick, setTextClick] = useState(0);
+  const [emailClick, setEmailClick] = useState(0);
+  const [telephoneClick, setTelephoneClick] = useState(0);
+  const [postClick, setPostClick] = useState(0);
+  const [socialMediaClick, setSocialMediaClick] = useState(0);
   return (
     <ExperimentContainer>
-      <Header>News and offers</Header>
+      <Header image={cupSaucer}>News and offers</Header>
       <ContentContainer>
         <p>
           We'd like to keep you informed about NatWest products, services and
@@ -22,14 +30,24 @@ const Scenario17: FC = () => {
           parties for marketing purposes without your permission.
         </p>
         <p>
-          Please review your existing preferences and choose if you are happy
-          for us to contact you by{" "}
+          Please review your existing preferences and choose if you are{" "}
+          <BoldText>happy</BoldText> for us to contact you by{" "}
         </p>
-        <OTTextMessageChannel />
-        <OTEmailChannel />
-        <OTTelephoneChannel />
-        <OTPostChannel />
-        <OTSocialMediaChannel />
+        <DesktopYesNoContainer>
+          <p>YES</p>
+          <p>NO</p>
+        </DesktopYesNoContainer>
+        <TTTextMessageChannel state={textClick} setState={setTextClick} />
+        <TTEmailChannel state={emailClick} setState={setEmailClick} />
+        <TTTelephoneChannel
+          state={telephoneClick}
+          setState={setTelephoneClick}
+        />
+        <TTPostChannel state={postClick} setState={setPostClick} />
+        <TTSocialMediaChannel
+          state={socialMediaClick}
+          setState={setSocialMediaClick}
+        />
         <p>
           *We use data to match you with your social media profile so we can
           display relevant offers to you on your social media pages. Note, you

@@ -5,7 +5,7 @@ import {
   ChannelWrapper,
   ClickBox,
   ClickedBox,
-} from "../OneTickChannel.styles";
+} from "../NoImageChannel.styles";
 import tickedCheckbox from "../../../../images/tick-checkbox.png";
 import checkbox from "../../../../images/checkbox.png";
 
@@ -20,7 +20,10 @@ const NatwestEmailsChannel: FC = () => {
               <img src={checkbox} alt=""></img>
             </ClickBox>
             <ChannelText>
-              <p>Other NatWest group news and offers</p>
+              <p>
+                Yes, I'm happy for you to analyse my interaction with NatWest
+                emails.
+              </p>
             </ChannelText>
           </Channel>
         </ChannelWrapper>
@@ -32,7 +35,10 @@ const NatwestEmailsChannel: FC = () => {
               <img src={tickedCheckbox} alt=""></img>
             </ClickedBox>
             <ChannelText>
-              <p>Other NatWest group news and offers</p>
+              <p>
+                Yes, I'm happy for you to analyse my interaction with NatWest
+                emails.
+              </p>
             </ChannelText>
           </Channel>
         </ChannelWrapper>

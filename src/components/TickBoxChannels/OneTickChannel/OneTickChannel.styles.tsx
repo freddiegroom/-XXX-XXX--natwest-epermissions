@@ -112,8 +112,8 @@ export const PostImg = styled.div`
   width: 72px;
   padding-right: 16px;
   img {
-    width: 40px;
-    height: 42px;
+    width: 54px;
+    height: 54px;
   }
   @media only screen and (max-width: 600px) {
     padding-top: 8px;

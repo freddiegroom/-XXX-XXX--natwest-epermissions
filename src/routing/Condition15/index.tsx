@@ -4,11 +4,9 @@ import { HashRouter as Router, Switch, Route } from "react-router-dom";
 import CurrentAccount from "../../screens/1.ProductChoice/current-account";
 import Loan from "../../screens/1.ProductChoice/loan/index";
 import PCExistingCustomer from "../../screens/2.PersonalDetails/PCExistingCustomer";
-import PCNewCustomer from "../../screens/2.PersonalDetails/PCNewCustomer/index";
-import AccountDetailsBlank from "../../screens/3.AccountDetails/AccountDetails";
+import AccountDetails from "../../screens/3.AccountDetails/AccountDetails";
 import PermissionsInfo from "../../screens/4.PermissionsInfo";
 import Scenario15 from "../../screens/5.MarketingPreferences/ExistingCustomer/Scenario15";
-import Scenario1 from "../../screens/5.MarketingPreferences/NewCustomer/Scenario1";
 import PrivacyPermissions from "../../screens/6.PrivacyPermissions";
 
 const Condition15: FC = () => {
@@ -22,7 +20,6 @@ const Condition15: FC = () => {
             current account
           </button>
           <button onClick={() => setDebugProduct("loan")}>loan</button>
-          {/* <FirstScreen /> */}
           {!debug && product === "current account" && <CurrentAccount />}
           {!debug && product === "loan" && <Loan />}
           {debug && debugProduct === "current account" && <CurrentAccount />}
@@ -31,9 +28,9 @@ const Condition15: FC = () => {
         <Route path="/PersonalDetails">
           <PCExistingCustomer />
         </Route>
-        {/* <Route path="/AccountDetails">
-          <AccountDetailsBlank />
-        </Route> */}
+        <Route path="/AccountDetails">
+          <AccountDetails />
+        </Route>
         <Route path="/PermissionsInfo">
           <PermissionsInfo />
         </Route>

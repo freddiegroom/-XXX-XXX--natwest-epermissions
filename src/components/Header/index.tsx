@@ -1,9 +1,13 @@
 import React, { FC } from "react";
 import { HeaderStyle, IconRow, TitleRow } from "./Header.style";
 import nwLogo from "../../images/nw-logo.png";
-import otherLogo from "../../images/credit-card-logo.png";
+// import otherLogo from "../../images/credit-card-logo.png";
 
-const Header: FC = ({ children }) => {
+interface HeaderImageProps {
+  image?: any;
+}
+
+const Header: FC<HeaderImageProps> = ({ children, image }) => {
   return (
     <HeaderStyle>
       <IconRow>
@@ -11,7 +15,7 @@ const Header: FC = ({ children }) => {
       </IconRow>
       <TitleRow>
         <h1>{children}</h1>
-        <img src={otherLogo} alt={`${otherLogo}`} />
+        {image && <img src={image} alt={`${image}`} />}
       </TitleRow>
     </HeaderStyle>
   );

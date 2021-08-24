@@ -5,14 +5,15 @@ import ExperimentContainer from "../../components/ExperimentContainer";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import { BoldText } from "../../components/Text/Text.style";
-import NatwestEmailsChannel from "../../components/TickBoxChannels/OneTickChannel/NatwestEmailsChannel";
-import OtherNewsChannel from "../../components/TickBoxChannels/OneTickChannel/OtherNewsChannel";
-import ThirdPartyChannel from "../../components/TickBoxChannels/OneTickChannel/ThirdPartyChannel";
+import NatwestEmailsChannel from "../../components/TickBoxChannels/NoImageChannel/NatwestEmailsChannel";
+import OtherNewsChannel from "../../components/TickBoxChannels/NoImageChannel/OtherNewsChannel";
+import ThirdPartyChannel from "../../components/TickBoxChannels/NoImageChannel/ThirdPartyChannel";
+import cupSaucer from "../../images/cup-saucer.png";
 
 const PrivacyPermissions: FC = () => {
   return (
     <ExperimentContainer>
-      <Header>News and offers</Header>
+      <Header image={cupSaucer}>News and offers</Header>
       <ContentContainer>
         <p>
           We’d also like to tell you about valuable news and offers from other

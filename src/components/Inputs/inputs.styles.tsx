@@ -16,6 +16,13 @@ export const InputContainer = styled.div`
     margin: 0;
     padding: 0;
   }
+  .redSubText {
+    color: #ad1982;
+    font-size: 14px;
+    line-height: 16px;
+    margin: 4px 0;
+    padding: 0;
+  }
   @media only screen and (max-width: 600px) {
     width: 100%;
     display: flex;
@@ -25,6 +32,14 @@ export const InputContainer = styled.div`
     p,
     .subText {
       align-self: flex-start;
+      padding-left: 16px;
+    }
+    .redSubText {
+      color: #ad1982;
+      font-size: 14px;
+      line-height: 16px;
+      margin: 4px 0;
+      padding: 0;
       padding-left: 16px;
     }
   }
@@ -45,6 +60,13 @@ export const RedInputContainer = styled.div`
     font-size: 14px;
     line-height: 16px;
     margin: 0;
+    padding: 0;
+  }
+  .redSubText {
+    color: #ad1982;
+    font-size: 14px;
+    line-height: 16px;
+    margin: 4px 0;
     padding: 0;
   }
   @media only screen and (max-width: 600px) {

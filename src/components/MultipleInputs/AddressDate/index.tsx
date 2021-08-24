@@ -9,33 +9,43 @@ import {
 } from "../multipleInputs.styles";
 import slash from "../../../images/slash.png";
 
-const AddressDate: FC = () => {
-  const [mmClicked, mmSetClicked] = useState(false);
-  const [yyyyClicked, yyyySetClicked] = useState(false);
+interface AddressDateProps {
+  mmState?: number;
+  setMMState: any;
+  yyyyState?: number;
+  setYYYYState: any;
+}
+
+const AddressDate: FC<AddressDateProps> = ({
+  mmState,
+  setMMState,
+  yyyyState,
+  setYYYYState,
+}) => {
   return (
     <>
       <p>When did you move into this address?</p>
       <ADMultipleInputContainer>
-        {!mmClicked && (
-          <InputContainer onClick={() => mmSetClicked(true)}>
+        {!mmState && (
+          <InputContainer onClick={() => setMMState(1)}>
             <p className="subText">MM</p>
-            <SmallRedInput></SmallRedInput>
+            <SmallRedInput>01</SmallRedInput>
           </InputContainer>
         )}
-        {mmClicked && (
+        {mmState && (
           <InputContainer>
             <p className="subText">MM</p>
             <SmallNormalInput>01</SmallNormalInput>
           </InputContainer>
         )}{" "}
         <img src={slash} alt="" />
-        {!yyyyClicked && (
-          <InputContainer onClick={() => yyyySetClicked(true)}>
+        {!yyyyState && (
+          <InputContainer onClick={() => setYYYYState(1)}>
             <p className="subText">YYYY</p>
-            <RedInput></RedInput>
+            <RedInput>2009</RedInput>
           </InputContainer>
         )}
-        {yyyyClicked && (
+        {yyyyState && (
           <InputContainer>
             <p className="subText">YYYY</p>
             <NormalInput>2009</NormalInput>

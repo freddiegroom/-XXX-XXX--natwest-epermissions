@@ -1,23 +1,30 @@
 import React, { FC } from "react";
 import NextButton from "../../../../components/Buttons/NextButton";
-import ContentContainer from "../../../../components/ContentContainer";
 import ExperimentContainer from "../../../../components/ExperimentContainer";
 import Footer from "../../../../components/Footer";
 import Header from "../../../../components/Header";
-import { BoldText, HeadingText } from "../../../../components/Text/Text.style";
+import {
+  BoldText,
+  HeadingText,
+  PaddingDiv,
+} from "../../../../components/Text/Text.style";
 import OffersAndUpdates from "../../../../components/TickBoxes/OffersAndUpdates";
+import WhiteContentContainer from "../../../../components/WhiteContentContainer";
+import WhiteFooter from "../../../../components/WhiteFooter";
+import cupSaucer from "../../../../images/cup-saucer.png";
 
 const Scenario16: FC = () => {
   return (
     <ExperimentContainer>
-      <Header>How we'll get in touch</Header>
-      <ContentContainer>
+      <Header image={cupSaucer}>How we'll get in touch</Header>
+      <WhiteContentContainer>
         <HeadingText>Your statements</HeadingText>
         <p>
           We’ve set you up to get your statements online. We’ll send them to
           your NatWest Online Banking once a month, where you can save, print or
           share them. We’ll let you know by email when they’re ready to view.
         </p>
+        <PaddingDiv />
         <HeadingText>Important account info</HeadingText>
         <p>
           We'll either email other important account information directly to
@@ -53,12 +60,12 @@ const Scenario16: FC = () => {
           third parties for marketing purposes.
         </p>
         <OffersAndUpdates>
-          I<BoldText> &nbsp;want&nbsp; </BoldText>
-          want to get these offers and updates.
+          I <BoldText>want</BoldText>
+          to get these offers and updates.
         </OffersAndUpdates>
         <NextButton routeAddress="/PrivacyPermissions" />
-      </ContentContainer>
-      <Footer />
+      </WhiteContentContainer>
+      <WhiteFooter />
     </ExperimentContainer>
   );
 };

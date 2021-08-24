@@ -1,10 +1,39 @@
+@font-face {
+  font-family: RNHouseSans-Bold;
+  src: url(./fonts/rn-house-sans/RNHouseSans-Bold.eot),
+    url(./fonts/rn-house-sans/RNHouseSans-Bold.svg),
+    url(./fonts/rn-house-sans/RNHouseSans-Bold.ttf),
+    url(./fonts/rn-house-sans/RNHouseSans-Bold.woff),
+    url(./fonts/rn-house-sans/RNHouseSans-Bold.woff2);
+}
+@font-face {
+  font-family: RNHouseSans-Light;
+  src: url(./fonts/rn-house-sans/RNHouseSans-Light.eot),
+    url(./fonts/rn-house-sans/RNHouseSans-Light.svg),
+    url(./fonts/rn-house-sans/RNHouseSans-Light.ttf),
+    url(./fonts/rn-house-sans/RNHouseSans-Light.woff),
+    url(./fonts/rn-house-sans/RNHouseSans-Light.woff2);
+}
+@font-face {
+  font-family: RNHouseSans-Regular;
+  src: url(./fonts/rn-house-sans/RNHouseSans-Regular.eot),
+    url(./fonts/rn-house-sans/RNHouseSans-Regular.svg),
+    url(./fonts/rn-house-sans/RNHouseSans-Regular.ttf),
+    url(./fonts/rn-house-sans/RNHouseSans-Regular.woff),
+    url(./fonts/rn-house-sans/RNHouseSans-Regular.woff2);
+}
+@font-face {
+  font-family: RNHouseSans-Thin;
+  src: url(./fonts/rn-house-sans/RNHouseSans-Thin.eot),
+    url(./fonts/rn-house-sans/RNHouseSans-Thin.svg),
+    url(./fonts/rn-house-sans/RNHouseSans-Thin.ttf),
+    url(./fonts/rn-house-sans/RNHouseSans-Thin.woff),
+    url(./fonts/rn-house-sans/RNHouseSans-Thin.woff2);
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: RNHouseSans-Light, Arial;
   padding: 0;
 }
 

@@ -4,11 +4,9 @@ import { HashRouter as Router, Switch, Route } from "react-router-dom";
 import CurrentAccount from "../../screens/1.ProductChoice/current-account";
 import Loan from "../../screens/1.ProductChoice/loan/index";
 import PCExistingCustomer from "../../screens/2.PersonalDetails/PCExistingCustomer";
-import PCNewCustomer from "../../screens/2.PersonalDetails/PCNewCustomer/index";
-import AccountDetailsBlank from "../../screens/3.AccountDetails/AccountDetails";
-import PermissionsInfo from "../../screens/4.PermissionsInfo";
+import AccountDetails from "../../screens/3.AccountDetails/AccountDetails";
+// import PermissionsInfo from "../../screens/4.PermissionsInfo";
 import Scenario16 from "../../screens/5.MarketingPreferences/ExistingCustomer/Scenario16";
-import Scenario1 from "../../screens/5.MarketingPreferences/NewCustomer/Scenario1";
 import PrivacyPermissions from "../../screens/6.PrivacyPermissions";
 
 const Condition16: FC = () => {
@@ -31,12 +29,12 @@ const Condition16: FC = () => {
         <Route path="/PersonalDetails">
           <PCExistingCustomer />
         </Route>
-        {/* <Route path="/AccountDetails">
-          <AccountDetailsBlank />
-        </Route> */}
-        <Route path="/PermissionsInfo">
-          <PermissionsInfo />
+        <Route path="/AccountDetails">
+          <AccountDetails />
         </Route>
+        {/* <Route path="/PermissionsInfo">
+          <PermissionsInfo />
+        </Route> */}
         <Route path="/MarketingPreferences">
           <Scenario16 />
         </Route>

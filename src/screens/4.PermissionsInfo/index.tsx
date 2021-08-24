@@ -7,11 +7,12 @@ import Header from "../../components/Header";
 import { HeadingText } from "../../components/Text/Text.style";
 import WhiteContentContainer from "../../components/WhiteContentContainer";
 import WhiteFooter from "../../components/WhiteFooter";
+import cupSaucer from "../../images/cup-saucer.png";
 
 const PermissionsInfo: FC = () => {
   return (
     <ExperimentContainer>
-      <Header>How we'll get in touch</Header>
+      <Header image={cupSaucer}>How we'll get in touch</Header>
       <WhiteContentContainer>
         <HeadingText>Your statements</HeadingText>
         <p>
@@ -40,9 +41,7 @@ const PermissionsInfo: FC = () => {
           account to make a payment you’ve set up, or when your repayment is due
           if you have a personal loan account with us.
         </p>
-        <HeadingText>
-          If we can't text in advance, we’ll send one the next day.
-        </HeadingText>
+        <p>If we can't text in advance, we’ll send one the next day.</p>
         <p>
           You can make changes to how you get these alerts and set up other
           helpful alerts on the ‘Alerts’ page in Online Banking, when your

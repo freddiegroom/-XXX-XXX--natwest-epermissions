@@ -31,7 +31,7 @@ const Condition2: FC = () => {
         </Route>
         <Route path="/AccountDetails">
           <AccountDetailsBlank />
-        </Route>
+        </Route>{" "}
         <Route path="/PermissionsInfo">
           <PermissionsInfo />
         </Route>

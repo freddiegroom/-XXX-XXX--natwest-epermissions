@@ -50,7 +50,7 @@ export const TitleRow = styled.div`
     }
   }
   img {
-    width: 120px;
+    // width: 120px;
     height: 120px;
     @media only screen and (max-width: 600px) {
       display: none;

@@ -1,17 +1,21 @@
 import React, { useState, FC } from "react";
 import { InputContainer, RedInput, NormalInput } from "../inputs.styles";
 
-const Postcode: FC = () => {
-  const [clicked, setClicked] = useState(false);
+interface PostcodeProps {
+  state?: number;
+  setState: any;
+}
+
+const Postcode: FC<PostcodeProps> = ({ state, setState }) => {
   return (
     <>
-      {!clicked && (
-        <InputContainer onClick={() => setClicked(true)}>
+      {!state && (
+        <InputContainer onClick={() => setState(1)}>
           <p>Postcode</p>
-          <RedInput></RedInput>
+          <RedInput>EH1 1HE</RedInput>
         </InputContainer>
       )}
-      {clicked && (
+      {state && (
         <InputContainer>
           <p>Postcode</p>
           <NormalInput>EH1 1HE</NormalInput>
