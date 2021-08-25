@@ -33,7 +33,7 @@ export const RegularText = styled.p`
 
 export const BoldText = styled.span`
   font-weight: bold;
-  font-family: RNHouseSans-Bold;
+  font-family: RNHouseSans-Bold !important;
 `;
 
 export const PaddingDiv = styled.div`

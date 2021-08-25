@@ -27,12 +27,12 @@ export const InputContainer = styled.div`
     width: 85%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    // justify-content: center;
+    // align-items: center;
     p,
     .subText {
       align-self: flex-start;
-      padding-left: 16px;
+      // padding-left: 16px;
     }
     .redSubText {
       color: #ad1982;

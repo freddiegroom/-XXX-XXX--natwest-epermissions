@@ -56,7 +56,7 @@ const Scenario2: FC = () => {
         <OffersAndUpdates>
           I <BoldText> want </BoldText>to get these offers and updates.
         </OffersAndUpdates>
-        <NextButton routeAddress="/PrivacyPermissions" />
+        <NextButton routeAddress="/" />
       </WhiteContentContainer>
       <WhiteFooter />
     </ExperimentContainer>

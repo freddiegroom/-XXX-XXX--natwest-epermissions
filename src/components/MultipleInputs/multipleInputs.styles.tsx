@@ -8,10 +8,14 @@ export const ADMultipleInputContainer = styled.div`
     width: 10px;
     height: 43px;
     padding: 0 16px;
+    @media only screen and (max-width: 305px) {
+      padding: 0 8px;
+    }
   }
   @media only screen and (max-width: 600px) {
     width: 95%;
   }
+  padding-bottom: 0;
   margin-bottom: 8px;
 `;
 export const MultipleInputContainer = styled.div`
@@ -23,6 +27,9 @@ export const MultipleInputContainer = styled.div`
     width: 10px;
     height: 44px;
     padding: 0 16px;
+    @media only screen and (max-width: 305px) {
+      padding: 0 8px;
+    }
   }
   @media only screen and (max-width: 600px) {
     align-items: flex-end;

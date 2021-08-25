@@ -6,7 +6,7 @@ export const SelectContainer = styled.div`
     color: #666666;
     font-size: 16px;
     line-height: 24px;
-    padding-left: 8px;
+    // padding-left: 8px;
   }
   .subText {
     color: #333333;
@@ -32,7 +32,7 @@ export const RedSelectContainer = styled.div`
     color: #666666;
     font-size: 16px;
     line-height: 24px;
-    padding-left: 8px;
+    // padding-left: 8px;
   }
   .subText {
     color: #ad1982;
@@ -76,6 +76,9 @@ export const RedSelect = styled.div`
   img {
     padding-right: 16px;
   }
+  @media only screen and (max-width: 305px) {
+    max-width: 95%;
+  }
 `;
 
 export const NormalSelect = styled.div`
@@ -92,8 +95,8 @@ export const NormalSelect = styled.div`
   font-size: 16px;
   line-height: 24px;
   color: #333;
-  @media only screen and (max-width: 293px) {
-    width: 95%;
+  @media only screen and (max-width: 305px) {
+    width: 92.5%;
   }
   img {
     padding-right: 16px;
@@ -142,10 +145,16 @@ export const SelectorContainer = styled.div`
       width: 305px;
       // margin-left: 16px;
       border-top: none;
+      @media only screen and (max-width: 305px) {
+        width: 97%;
+      }
     }
     align-items: flex-start;
   }
   @media only screen and (min-width: 601px) {
     width: 293px;
+  }
+  @media only screen and (max-width: 293px) {
+    width: 92.5%;
   }
 `;

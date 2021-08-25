@@ -63,8 +63,8 @@ const Loan: FC = () => {
           <img src={tick} alt="" />
           <p>
             You could get your loan funds on the same day if you apply online,
-            are unconditionally accepted and sign your loan documents{" "}
-            <BlueText> 5.45pm Mon - Fri.</BlueText> Sometimes we need to contact
+            are unconditionally accepted and sign your loan documents before
+            5.45pm <BlueText>Mon - Fri.</BlueText> Sometimes we need to contact
             you for more information so it can take a little longer
           </p>
         </TickContainer>

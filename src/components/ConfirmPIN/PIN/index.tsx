@@ -1,5 +1,5 @@
 import React, { useState, FC } from "react";
-import { InputContainer, RedInput, NormalInput } from "../inputs.styles";
+import { InputContainer, RedInput, NormalInput } from "./inputs.styles";
 
 interface PINProps {
   state: boolean;

@@ -58,7 +58,7 @@ const Scenario15: FC = () => {
           I <BoldText> don't </BoldText>
           want to get these offers and updates.
         </OffersAndUpdates>
-        <NextButton routeAddress="/PrivacyPermissions" />
+        <NextButton routeAddress="/" />
       </WhiteContentContainer>
       <WhiteFooter />
     </ExperimentContainer>

@@ -1,44 +1,42 @@
+body {
+  margin: 0 !important;
+  padding: 0;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
 @font-face {
   font-family: RNHouseSans-Bold;
   src: url(./fonts/rn-house-sans/RNHouseSans-Bold.eot),
     url(./fonts/rn-house-sans/RNHouseSans-Bold.svg),
     url(./fonts/rn-house-sans/RNHouseSans-Bold.ttf),
-    url(./fonts/rn-house-sans/RNHouseSans-Bold.woff),
-    url(./fonts/rn-house-sans/RNHouseSans-Bold.woff2);
+    url(./fonts/rn-house-sans/RNHouseSans-Bold.woff);
 }
 @font-face {
   font-family: RNHouseSans-Light;
   src: url(./fonts/rn-house-sans/RNHouseSans-Light.eot),
     url(./fonts/rn-house-sans/RNHouseSans-Light.svg),
     url(./fonts/rn-house-sans/RNHouseSans-Light.ttf),
-    url(./fonts/rn-house-sans/RNHouseSans-Light.woff),
-    url(./fonts/rn-house-sans/RNHouseSans-Light.woff2);
+    url(./fonts/rn-house-sans/RNHouseSans-Light.woff);
 }
 @font-face {
   font-family: RNHouseSans-Regular;
   src: url(./fonts/rn-house-sans/RNHouseSans-Regular.eot),
     url(./fonts/rn-house-sans/RNHouseSans-Regular.svg),
     url(./fonts/rn-house-sans/RNHouseSans-Regular.ttf),
-    url(./fonts/rn-house-sans/RNHouseSans-Regular.woff),
-    url(./fonts/rn-house-sans/RNHouseSans-Regular.woff2);
+    url(./fonts/rn-house-sans/RNHouseSans-Regular.woff);
 }
 @font-face {
   font-family: RNHouseSans-Thin;
   src: url(./fonts/rn-house-sans/RNHouseSans-Thin.eot),
     url(./fonts/rn-house-sans/RNHouseSans-Thin.svg),
     url(./fonts/rn-house-sans/RNHouseSans-Thin.ttf),
-    url(./fonts/rn-house-sans/RNHouseSans-Thin.woff),
-    url(./fonts/rn-house-sans/RNHouseSans-Thin.woff2);
+    url(./fonts/rn-house-sans/RNHouseSans-Thin.woff);
 }
 
-body {
-  margin: 0 !important;
-  padding: 0;
-}
 * {
   font-family: RNHouseSans-Light, Arial !important;
-}
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
 }

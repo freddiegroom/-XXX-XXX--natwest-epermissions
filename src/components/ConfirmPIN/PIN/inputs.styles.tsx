@@ -1,12 +1,11 @@
 import styled from "styled-components";
 
 export const InputContainer = styled.div`
-  padding-bottom: 24px;
+  // padding-bottom: 24px;
   p {
     color: #666666;
     font-size: 16px;
-    line-height: 24px;    padding-bottom: 0;
-
+    line-height: 24px;
   }
   .subText {
     color: #333333;
@@ -37,15 +36,15 @@ export const InputContainer = styled.div`
 
 
   }
+  margin: 16px 0;
 `;
 
 export const RedInputContainer = styled.div`
-  padding-bottom: 24px;
+  // padding-bottom: 24px;
   p {
     color: #666666;
     font-size: 16px;
     line-height: 24px;
-    padding-bottom: 0;
   }
   .subText {
     color: #ad1982;
@@ -70,12 +69,13 @@ export const RedInputContainer = styled.div`
     .subText {
     }
   }
+  margin: 16px 0;
 `;
 
 export const RedInput = styled.div`
   border: 2px solid #c8001e;
   @media only screen and (min-width: 601px) {
-    width: 293px;
+    width: 65px;
   }
   height: 40px;
   display: flex;
@@ -85,19 +85,16 @@ export const RedInput = styled.div`
   padding-left: 8px;
   color: #969c9c;
   cursor: pointer;
-  padding-left: 8px;
+  padding-left: 16px;
   @media only screen and (max-width: 600px) {
-    width: 293px;
-  }
-  @media only screen and (max-width: 305px) {
-    width: 92.5%;
+    width: 65px;
   }
 `;
 
 export const NormalInput = styled.div`
   border: 2px solid #969c9c;
   @media only screen and (min-width: 601px) {
-    width: 293px;
+    width: 65px;
   }
   height: 40px;
   display: flex;
@@ -105,12 +102,9 @@ export const NormalInput = styled.div`
   font-size: 16px;
   line-height: 24px;
   color: #333;
-  padding-left: 8px;
+  padding-left: 16px;
   @media only screen and (max-width: 600px) {
-    width: 293px;
-  }
-  @media only screen and (max-width: 305px) {
-    width: 92.5%;
+    width: 65px;
   }
 `;
 

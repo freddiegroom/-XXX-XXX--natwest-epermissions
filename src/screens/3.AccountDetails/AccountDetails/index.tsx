@@ -7,7 +7,7 @@ import Header from "../../../components/Header";
 import ChoosePassword from "../../../components/Inputs/ChoosePassword";
 import ConfirmPassword from "../../../components/Inputs/ConfirmPassword";
 import ConfirmPIN from "../../../components/ConfirmPIN";
-import PIN from "../../../components/Inputs/PIN";
+import PIN from "../../../components/ConfirmPIN/PIN";
 import { HeadingText, RedText } from "../../../components/Text/Text.style";
 import WhiteContentContainer from "../../../components/WhiteContentContainer";
 import WhiteFooter from "../../../components/WhiteFooter";
