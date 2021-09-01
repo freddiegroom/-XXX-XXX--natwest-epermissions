@@ -20,22 +20,26 @@ const Condition1: FC = () => {
       <Switch>
         <Route exact path="/">
           <ScrollToTop />
-          <button
-            onClick={(e) => {
-              e.preventDefault();
-              setDebugProduct("current account");
-            }}
-          >
-            current account
-          </button>
-          <button
-            onClick={(e) => {
-              e.preventDefault();
-              setDebugProduct("loan");
-            }}
-          >
-            loan
-          </button>
+          {debug && (
+            <>
+              <button
+                onClick={(e) => {
+                  e.preventDefault();
+                  setDebugProduct("current account");
+                }}
+              >
+                current account
+              </button>
+              <button
+                onClick={(e) => {
+                  e.preventDefault();
+                  setDebugProduct("loan");
+                }}
+              >
+                loan
+              </button>
+            </>
+          )}
           {!debug && product === "current account" && <CurrentAccount />}
           {!debug && product === "loan" && <Loan />}
           {debug && debugProduct === "current account" && <CurrentAccount />}

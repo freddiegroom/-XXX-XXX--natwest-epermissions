@@ -9,15 +9,23 @@ import OTEmailChannel from "../../../../components/TickBoxChannels/OneTickChanne
 import OTTelephoneChannel from "../../../../components/TickBoxChannels/OneTickChannel/OTTelephoneChannel";
 import OTPostChannel from "../../../../components/TickBoxChannels/OneTickChannel/OTPostChannel";
 import OTSocialMediaChannel from "../../../../components/TickBoxChannels/OneTickChannel/OTSocialMediaChannel";
-import { BoldText, HeadingText } from "../../../../components/Text/Text.style";
+import {
+  BoldText,
+  HeadingText,
+  SmallPaddingDiv,
+} from "../../../../components/Text/Text.style";
 import cupSaucer from "../../../../images/cup-saucer.png";
+import { usePageDuration } from "../../../../hooks/usePageDuration";
 
 const Scenario3: FC = () => {
+  const stopPageTiming = usePageDuration("marketing-preferences-3");
+
   const [textClick, setTextClick] = useState(0);
   const [emailClick, setEmailClick] = useState(0);
   const [telephoneClick, setTelephoneClick] = useState(0);
   const [postClick, setPostClick] = useState(0);
   const [socialMediaClick, setSocialMediaClick] = useState(0);
+
   return (
     <ExperimentContainer>
       <Header image={cupSaucer}>News and offers</Header>
@@ -28,6 +36,7 @@ const Scenario3: FC = () => {
           never share your details with other NatWest group companies or third
           parties for marketing purposes without your permission.
         </p>
+        <SmallPaddingDiv />
         <HeadingText>
           Please tick the boxes if you <BoldText>don't</BoldText> want to
           receive offers and updates.
@@ -49,7 +58,10 @@ const Scenario3: FC = () => {
           may still see ads on your social media feed if you have accepted
           targeting cookies through your browser.
         </p>
-        <NextButton routeAddress="/PrivacyPermissions" />
+        <NextButton
+          routeAddress="/PrivacyPermissions"
+          pageTimeFunc={stopPageTiming}
+        />
       </ContentContainer>
       <Footer />
     </ExperimentContainer>

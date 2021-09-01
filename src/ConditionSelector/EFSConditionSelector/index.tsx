@@ -36,7 +36,7 @@ const EFSConditionSelector: FC = () => {
       {condition === 8 && <Condition8 />}
       {condition === 9 && <Condition9 />}
       {condition === 10 && <Condition10 />}
-      {condition === 12 && <Condition11 />}
+      {condition === 11 && <Condition11 />}
       {condition === 12 && <Condition12 />}
       {condition === 13 && <Condition13 />}
       {condition === 14 && <Condition14 />}

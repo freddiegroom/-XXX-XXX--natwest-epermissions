@@ -7,9 +7,10 @@ import DetailsRadio from "../../../components/RadioButtons/DetailsRadio/index";
 import NextButton from "../../../components/Buttons/NextButton";
 import WhiteContentContainer from "../../../components/WhiteContentContainer";
 import { useScrollToTop } from "../../../hooks/useScrollToTop";
-import { RedText } from "../../../components/Text/Text.style";
+import { HeadingText, RedText } from "../../../components/Text/Text.style";
 import FakeNextButton from "../../../components/Buttons/FakeNextButton";
 import { useEFSData } from "@dectech/react-library";
+import { usePageDuration } from "../../../hooks/usePageDuration";
 
 interface PCExistingCustomerProps {
   debugCondition?: number;
@@ -19,6 +20,9 @@ const PCExistingCustomer: FC<PCExistingCustomerProps> = ({
   debugCondition,
 }) => {
   useScrollToTop();
+
+  const stopPageTiming = usePageDuration("personal_details_existing_customer");
+
   const [titleClick, setTitleClick] = useState();
   const [detailsClick, setDetailsClick] = useState();
   const [fillMessage, setFillMessage] = useState();
@@ -43,27 +47,33 @@ const PCExistingCustomer: FC<PCExistingCustomerProps> = ({
     <ExperimentContainer>
       <Header>About you</Header>
       <WhiteContentContainer>
-        <p>Let's start by checking we've got the right info for you.</p>
+        <p className="extraExtraPadding">
+          Let's start by checking we've got the right info for you.
+        </p>
         {/*  */}
-        <p>Confirm your details</p>
+        <HeadingText>
+          <span className="extraExtraPadding">Confirm your details</span>
+        </HeadingText>
+        <br />
         {/*  */}
         <Title state={titleClick} setState={setTitleClick} />
         {/*  */}
         <p>Name</p>
-        <p>Alex Smith</p>
+        <p className="extraPadding">Alex Smith</p>
         {/*  */}
         <p>Mobile number</p>
-        <p>0778****234</p>
+        <p className="extraPadding">0778****234</p>
         {/*  */}
         <p>Email address</p>
-        <p>alexsmith@gmail.com</p>
+        <p className="extraPadding">alexsmith@gmail.com</p>
         {/*  */}
         <p>Current address</p>
         <p>1 Example Road</p>
         <p>Edinburgh</p>
-        <p>EH1 1HE</p>
+        <p className="extraPadding">EH1 1HE</p>
         {/*  */}
         <p>Are these details right?</p>
+        <br />
         <DetailsRadio state={detailsClick} setState={setDetailsClick} />
 
         {!(titleClick === 2) && (
@@ -80,7 +90,12 @@ const PCExistingCustomer: FC<PCExistingCustomerProps> = ({
         )}
 
         {/* {titleClick && */}
-        {titleClick === 2 && <NextButton routeAddress={routeTootieFlootie} />}
+        {titleClick === 2 && (
+          <NextButton
+            routeAddress={routeTootieFlootie}
+            pageTimeFunc={stopPageTiming}
+          />
+        )}
       </WhiteContentContainer>
       <WhiteFooter />
     </ExperimentContainer>

@@ -8,8 +8,14 @@ import {
 } from "../NoImageChannel.styles";
 import tickedCheckbox from "../../../../images/tick-checkbox.png";
 import checkbox from "../../../../images/checkbox.png";
+import { useDispatch } from "react-redux";
+import {
+  tickOtherNews,
+  unTickOtherNews,
+} from "../../../../screens/6.PrivacyPermissions/PrivacyPermissionsSlice";
 
 const OtherNewsChannel: FC = () => {
+  const dispatch = useDispatch();
   const [clicked, setClicked] = useState(false);
   return (
     <>
@@ -18,6 +24,7 @@ const OtherNewsChannel: FC = () => {
           <Channel
             onClick={(e) => {
               e.preventDefault();
+              dispatch(tickOtherNews());
               setClicked(true);
             }}
           >
@@ -35,6 +42,7 @@ const OtherNewsChannel: FC = () => {
           <Channel
             onClick={(e) => {
               e.preventDefault();
+              dispatch(unTickOtherNews());
               setClicked(false);
             }}
           >

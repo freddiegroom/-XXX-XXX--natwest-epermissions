@@ -1,11 +1,11 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 export interface ProductChoiceState {
-  choice: string[];
+  choice: string;
 }
 
 const initialState: ProductChoiceState = {
-  choice: [""],
+  choice: "",
 };
 
 export const productChoiceSlice = createSlice({
@@ -13,7 +13,7 @@ export const productChoiceSlice = createSlice({
   initialState,
   reducers: {
     selectChoice: (state, action) => {
-      state.choice.push(action.payload);
+      state.choice = action.payload;
     },
   },
 });

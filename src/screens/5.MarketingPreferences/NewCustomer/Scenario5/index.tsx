@@ -5,16 +5,23 @@ import ContentContainer from "../../../../components/ContentContainer";
 import ExperimentContainer from "../../../../components/ExperimentContainer";
 import Footer from "../../../../components/Footer";
 import Header from "../../../../components/Header";
-import { HeadingText, RedText } from "../../../../components/Text/Text.style";
+import {
+  HeadingText,
+  RedText,
+  SmallPaddingDiv,
+} from "../../../../components/Text/Text.style";
 import TTEmailChannel from "../../../../components/TickBoxChannels/TwoTickChannel/TTEmailChannel";
 import TTPostChannel from "../../../../components/TickBoxChannels/TwoTickChannel/TTPostChannel";
 import TTSocialMediaChannel from "../../../../components/TickBoxChannels/TwoTickChannel/TTSocialMediaChannel";
 import TTTelephoneChannel from "../../../../components/TickBoxChannels/TwoTickChannel/TTTelephoneChannel";
 import TTTextMessageChannel from "../../../../components/TickBoxChannels/TwoTickChannel/TTTextMessageChannel";
 import { DesktopYesNoContainer } from "../../../../components/TickBoxChannels/TwoTickChannel/TwoTickChannel.styles";
+import { usePageDuration } from "../../../../hooks/usePageDuration";
 import cupSaucer from "../../../../images/cup-saucer.png";
 
 const Scenario5: FC = () => {
+  const stopPageTiming = usePageDuration("marketing-preferences-5");
+
   const [textClick, setTextClick] = useState(3);
   const [emailClick, setEmailClick] = useState(3);
   const [telephoneClick, setTelephoneClick] = useState(3);
@@ -31,6 +38,8 @@ const Scenario5: FC = () => {
           never share your details with other NatWest group companies or third
           parties for marketing purposes without your permission.
         </p>
+        <SmallPaddingDiv />
+
         <HeadingText>Are you happy for us to contact you by:</HeadingText>
         <DesktopYesNoContainer>
           <p>YES</p>
@@ -76,7 +85,10 @@ const Scenario5: FC = () => {
           telephoneClick !== 3 &&
           postClick !== 3 &&
           socialMediaClick !== 3 && (
-            <NextButton routeAddress={"/PrivacyPermissions"} />
+            <NextButton
+              routeAddress={"/PrivacyPermissions"}
+              pageTimeFunc={stopPageTiming}
+            />
           )}
       </ContentContainer>
       <Footer />

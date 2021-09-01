@@ -1,4 +1,4 @@
-import React, { useState, FC } from "react";
+import React, { FC } from "react";
 import {
   Channel,
   ChannelText,
@@ -15,6 +15,7 @@ import {
   tickEmail,
   unTickEmail,
 } from "../../../../screens/5.MarketingPreferences/MarketingPreferencesSlice";
+import { store } from "../../../../redux/store";
 
 interface OTEmailChannelProps {
   state: any;
@@ -27,7 +28,8 @@ const OTEmailChannel: FC<OTEmailChannelProps> = ({
   setState,
   hideSubText,
 }) => {
-  // const [clicked, setClicked] = useState(false);
+  console.log(store);
+
   const dispatch = useDispatch();
   const clickFunc = () => {
     dispatch(tickEmail());
@@ -37,17 +39,18 @@ const OTEmailChannel: FC<OTEmailChannelProps> = ({
     dispatch(unTickEmail());
     setState(0);
   };
+
   return (
     <>
       {state === 0 && (
         <ChannelWrapper>
-          <Channel
-            onClick={(e) => {
-              e.preventDefault();
-              clickFunc();
-            }}
-          >
-            <ClickBox>
+          <Channel>
+            <ClickBox
+              onClick={(e) => {
+                e.preventDefault();
+                clickFunc();
+              }}
+            >
               <img src={checkbox} alt=""></img>
             </ClickBox>
             <ChannelText>
@@ -62,13 +65,13 @@ const OTEmailChannel: FC<OTEmailChannelProps> = ({
       )}
       {state === 1 && (
         <ChannelWrapper>
-          <Channel
-            onClick={(e) => {
-              e.preventDefault();
-              unClickFunc();
-            }}
-          >
-            <ClickedBox>
+          <Channel>
+            <ClickedBox
+              onClick={(e) => {
+                e.preventDefault();
+                unClickFunc();
+              }}
+            >
               <img src={tickedCheckbox} alt=""></img>
             </ClickedBox>
             <ChannelText>

@@ -22,18 +22,22 @@ import { HeadingText, RegularText } from "../../../components/Text/Text.style";
 import { selectChoice } from "../productChoiceSlice";
 import { useDispatch } from "react-redux";
 import creditCard from "../../../images/credit-card-logo.png";
+import { usePageDuration } from "../../../hooks/usePageDuration";
 
 const CurrentAccount: FC = () => {
   useScrollToTop();
   const history = useHistory();
   const dispatch = useDispatch();
+  const stopDuration = usePageDuration("product_choice_current_account");
 
   const handleNextPage = (route: string) => {
+    stopDuration();
     history.push(route);
   };
 
   const nextPageFunc = (product: string) => {
     dispatch(selectChoice(product));
+    stopDuration();
     handleNextPage("/PersonalDetails");
   };
   return (

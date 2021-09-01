@@ -27,8 +27,8 @@ const OTTextMessageChannel: FC<OTEmailChannelProps> = ({
   setState,
   hideSubText,
 }) => {
-  // const [clicked, setClicked] = useState(false);
   const dispatch = useDispatch();
+
   const clickFunc = () => {
     dispatch(tickTextMessage());
     setState(1);
@@ -41,13 +41,13 @@ const OTTextMessageChannel: FC<OTEmailChannelProps> = ({
     <>
       {state === 0 && (
         <ChannelWrapper>
-          <Channel
-            onClick={(e) => {
-              e.preventDefault();
-              clickFunc();
-            }}
-          >
-            <ClickBox>
+          <Channel>
+            <ClickBox
+              onClick={(e) => {
+                e.preventDefault();
+                clickFunc();
+              }}
+            >
               <img src={checkbox} alt=""></img>
             </ClickBox>
             <ChannelText>
@@ -62,13 +62,13 @@ const OTTextMessageChannel: FC<OTEmailChannelProps> = ({
       )}
       {state === 1 && (
         <ChannelWrapper>
-          <Channel
-            onClick={(e) => {
-              e.preventDefault();
-              unClickFunc();
-            }}
-          >
-            <ClickedBox>
+          <Channel>
+            <ClickedBox
+              onClick={(e) => {
+                e.preventDefault();
+                unClickFunc();
+              }}
+            >
               <img src={tickedCheckbox} alt=""></img>
             </ClickedBox>
             <ChannelText>

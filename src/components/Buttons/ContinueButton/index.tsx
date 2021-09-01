@@ -2,27 +2,18 @@ import React, { FC } from "react";
 import { NextButtonStyle, NextButtonContainer } from "./NextButton.style";
 import bottomBevel from "../../../images/bottom-bevel.png";
 import largebottomBevel from "../../../images/large-bottom-bevel.png";
-import { useHistory } from "react-router-dom";
 
 export interface NextButtonProps {
-  routeAddress: string;
-  pageTimeFunc: any;
+  continueFunction: any;
 }
 
-const NextButton: FC<NextButtonProps> = ({ routeAddress, pageTimeFunc }) => {
-  const history = useHistory();
-  const handleNextPage = (route: string) => {
-    pageTimeFunc();
-    history.push(route);
-  };
-
-  console.log(routeAddress);
+const ContinueButton: FC<NextButtonProps> = ({ continueFunction }) => {
   return (
     <NextButtonContainer>
       <NextButtonStyle
         onClick={(e) => {
           e.preventDefault();
-          handleNextPage(`${routeAddress}`);
+          continueFunction();
         }}
       >
         Next
@@ -33,4 +24,4 @@ const NextButton: FC<NextButtonProps> = ({ routeAddress, pageTimeFunc }) => {
   );
 };
 
-export default NextButton;
+export default ContinueButton;

@@ -1,21 +1,36 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 export interface MarketingPreferencesState {
-  offersAndUpdates: number[];
-  textMessage: number[];
-  email: number[];
-  telephone: number[];
-  post: number[];
-  socialMedia: number[];
+  // initialOffersAndUpdates: number;
+  offersAndUpdates: number;
+  initialTextMessage: number;
+  textMessage: number;
+  initialEmail: number;
+  email: number;
+  initialTelephone: number;
+  telephone: number;
+  initialPost: number;
+  post: number;
+  initialSocialMedia: number;
+  socialMedia: number;
+  selectAll: number;
+  selectNone: number;
 }
 
 const initialState: MarketingPreferencesState = {
-  offersAndUpdates: [],
-  textMessage: [],
-  email: [],
-  telephone: [],
-  post: [],
-  socialMedia: [],
+  offersAndUpdates: -77,
+  initialTextMessage: -77,
+  textMessage: -77,
+  initialEmail: -77,
+  email: -77,
+  initialTelephone: -77,
+  telephone: -77,
+  initialPost: -77,
+  post: -77,
+  initialSocialMedia: -77,
+  socialMedia: -77,
+  selectAll: 0,
+  selectNone: 0,
 };
 
 export const marketingPreferencesSlice = createSlice({
@@ -23,55 +38,61 @@ export const marketingPreferencesSlice = createSlice({
   initialState,
   reducers: {
     tickOAU: (state) => {
-      state.offersAndUpdates.push(1);
+      state.offersAndUpdates = 1;
     },
     unTickOAU: (state) => {
-      state.offersAndUpdates.push(0);
+      state.offersAndUpdates = 0;
     },
     tickTextMessage: (state) => {
-      state.textMessage.push(1);
+      state.textMessage = 1;
     },
     unTickTextMessage: (state) => {
-      state.textMessage.push(0);
+      state.textMessage = 0;
     },
-    setRandomTextMessage: (state, action) => {
-      state.textMessage.push(action.payload);
+    saveTextMessage: (state, action) => {
+      state.initialTextMessage = action.payload;
     },
     tickEmail: (state) => {
-      state.email.push(1);
+      state.email = 1;
     },
     unTickEmail: (state) => {
-      state.email.push(0);
+      state.email = 0;
     },
-    setRandomEmail: (state, action) => {
-      state.email.push(action.payload);
+    saveEmail: (state, action) => {
+      state.initialEmail = action.payload;
     },
     tickTelephone: (state) => {
-      state.telephone.push(1);
+      state.telephone = 1;
     },
     unTickTelephone: (state) => {
-      state.telephone.push(0);
+      state.telephone = 0;
     },
-    setRandomTelephone: (state, action) => {
-      state.telephone.push(action.payload);
+    saveTelephone: (state, action) => {
+      state.initialTelephone = action.payload;
     },
     tickPost: (state) => {
-      state.post.push(1);
+      state.post = 1;
     },
     unTickPost: (state) => {
-      state.post.push(0);
+      state.post = 0;
     },
-    setRandomPost: (state, action) => {
-      state.post.push(action.payload);
+    savePost: (state, action) => {
+      state.initialPost = action.payload;
     },
     tickSocialMedia: (state) => {
-      state.socialMedia.push(1);
+      state.socialMedia = 1;
     },
     unTickSocialMedia: (state) => {
-      state.socialMedia.push(0);
+      state.socialMedia = 0;
     },
-    setRandomSocialMedia: (state, action) => {
-      state.socialMedia.push(action.payload);
+    saveSocialMedia: (state, action) => {
+      state.initialSocialMedia = action.payload;
+    },
+    selectAll: (state) => {
+      state.selectAll++;
+    },
+    selectNone: (state) => {
+      state.selectNone++;
     },
   },
 });
@@ -81,19 +102,21 @@ export const {
   unTickOAU,
   tickTextMessage,
   unTickTextMessage,
-  setRandomTextMessage,
+  saveTextMessage,
   tickEmail,
   unTickEmail,
-  setRandomEmail,
+  saveEmail,
   tickTelephone,
   unTickTelephone,
-  setRandomTelephone,
+  saveTelephone,
   tickPost,
   unTickPost,
-  setRandomPost,
+  savePost,
   tickSocialMedia,
   unTickSocialMedia,
-  setRandomSocialMedia,
+  saveSocialMedia,
+  selectAll,
+  selectNone,
 } = marketingPreferencesSlice.actions;
 
 export default marketingPreferencesSlice.reducer;

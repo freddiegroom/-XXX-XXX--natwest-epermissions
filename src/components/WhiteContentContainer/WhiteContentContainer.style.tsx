@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const ContentContainerStyle = styled.div`
   display: flex;
   justify-content: center;
-  width: 600px;
+  width: 100%;
   // @media only screen and (max-width: 859px) {
   //   width: 100%;
   // }
@@ -18,18 +18,25 @@ export const ContentContainerStyle = styled.div`
 `;
 
 export const Container = styled.div`
-  width: 600px;
+  width: 975px;
   p {
-    padding: 4px 0;
+    padding: 2px 0;
     margin: 0;
   }
 
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 975px) {
     width: 100%;
     padding-left: 8px;
     display: flex;
     flex-direction: column;
     // align-items: center;
    }
+  }
+
+  .extraPadding {
+    padding-bottom: 16px;
+  }
+  .extraExtraPadding {
+    padding-bottom: 32px;
   }
 `;

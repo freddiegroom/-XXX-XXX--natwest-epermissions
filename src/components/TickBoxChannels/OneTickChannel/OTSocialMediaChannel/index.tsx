@@ -42,13 +42,13 @@ const OTSocialMediaChannel: FC<OTEmailChannelProps> = ({
     <>
       {state === 0 && (
         <ChannelWrapper>
-          <Channel
-            onClick={(e) => {
-              e.preventDefault();
-              clickFunc();
-            }}
-          >
-            <ClickBox>
+          <Channel>
+            <ClickBox
+              onClick={(e) => {
+                e.preventDefault();
+                clickFunc();
+              }}
+            >
               <img src={checkbox} alt=""></img>
             </ClickBox>
             <ChannelText>

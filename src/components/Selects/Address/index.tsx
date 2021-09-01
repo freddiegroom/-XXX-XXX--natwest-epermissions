@@ -6,6 +6,8 @@ import {
   SelectorContainer,
 } from "../selects.styles";
 import chevronDown from "../../../images/icon-chev-down.png";
+import { useDispatch } from "react-redux";
+import { saveAddress } from "../../../screens/2.PersonalDetails/personalDetailsSlice";
 
 interface AddressProps {
   state?: number;
@@ -13,10 +15,12 @@ interface AddressProps {
 }
 
 const Address: FC<AddressProps> = ({ state, setState }) => {
+  const dispatch = useDispatch();
   const [address, setAddress] = useState("Please choose...");
 
   const clickFunc = (titleString: string) => {
     setState(2);
+    dispatch(saveAddress(titleString));
     setAddress(titleString);
   };
   return (

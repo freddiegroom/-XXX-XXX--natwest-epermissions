@@ -22,11 +22,13 @@ import { HeadingText } from "../../../components/Text/Text.style";
 import { selectChoice } from "../productChoiceSlice";
 import { useDispatch } from "react-redux";
 import loan from "../../../images/loan.png";
+import { usePageDuration } from "../../../hooks/usePageDuration";
 
 const Loan: FC = () => {
   useScrollToTop();
   const history = useHistory();
   const dispatch = useDispatch();
+  const stopPageTiming = usePageDuration("product_choice_loan");
 
   const handleNextPage = (route: string) => {
     history.push(route);
@@ -34,6 +36,7 @@ const Loan: FC = () => {
 
   const nextPageFunc = (product: string) => {
     dispatch(selectChoice(product));
+    stopPageTiming();
     handleNextPage("/PersonalDetails");
   };
   return (

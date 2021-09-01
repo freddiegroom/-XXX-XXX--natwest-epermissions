@@ -24,7 +24,7 @@ const DebugConditionSelector: FC = () => {
   const [debugCondition, SetDebugCondition] = useState(1);
   return (
     <>
-      <ConditionSelectorStyle>
+      <ConditionSelectorStyle onClick={(e) => e.preventDefault()}>
         conditions
         <button
           className={debugCondition === 1 ? "redButton" : "none"}

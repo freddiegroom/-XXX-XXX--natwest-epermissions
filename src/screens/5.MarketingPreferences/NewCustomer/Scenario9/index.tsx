@@ -4,15 +4,22 @@ import ContentContainer from "../../../../components/ContentContainer";
 import ExperimentContainer from "../../../../components/ExperimentContainer";
 import Footer from "../../../../components/Footer";
 import Header from "../../../../components/Header";
-import { BoldText, HeadingText } from "../../../../components/Text/Text.style";
+import {
+  BoldText,
+  HeadingText,
+  SmallPaddingDiv,
+} from "../../../../components/Text/Text.style";
 import OTEmailChannel from "../../../../components/TickBoxChannels/OneTickChannel/OTEmailChannel";
 import OTPostChannel from "../../../../components/TickBoxChannels/OneTickChannel/OTPostChannel";
 import OTSocialMediaChannel from "../../../../components/TickBoxChannels/OneTickChannel/OTSocialMediaChannel";
 import OTTelephoneChannel from "../../../../components/TickBoxChannels/OneTickChannel/OTTelephoneChannel";
 import OTTextMessageChannel from "../../../../components/TickBoxChannels/OneTickChannel/OTTextMessageChannel";
+import { usePageDuration } from "../../../../hooks/usePageDuration";
 import cupSaucer from "../../../../images/cup-saucer.png";
 
 const Scenario9: FC = () => {
+  const stopPageTiming = usePageDuration("marketing-preferences-9");
+
   const [textClick, setTextClick] = useState(0);
   const [emailClick, setEmailClick] = useState(0);
   const [telephoneClick, setTelephoneClick] = useState(0);
@@ -28,6 +35,7 @@ const Scenario9: FC = () => {
           that may benefit you. We wouldn’t want you to miss out, so please
           select below all of the ways you’re happy for us to stay in touch.
         </p>
+        <SmallPaddingDiv />
         <HeadingText>
           Please tick the boxes if you <BoldText>want</BoldText> to receive
           offers and updates.
@@ -49,7 +57,10 @@ const Scenario9: FC = () => {
           may still see ads on your social media feed if you have accepted
           targeting cookies through your browser.
         </p>
-        <NextButton routeAddress="/PrivacyPermissions" />
+        <NextButton
+          routeAddress="/PrivacyPermissions"
+          pageTimeFunc={stopPageTiming}
+        />
       </ContentContainer>
       <Footer />
     </ExperimentContainer>

@@ -19,22 +19,26 @@ const Condition19: FC = () => {
       <ScrollToTop />
       <Switch>
         <Route exact path="/">
-          <button
-            onClick={(e) => {
-              e.preventDefault();
-              setDebugProduct("current account");
-            }}
-          >
-            current account
-          </button>
-          <button
-            onClick={(e) => {
-              e.preventDefault();
-              setDebugProduct("loan");
-            }}
-          >
-            loan
-          </button>
+          {debug && (
+            <>
+              <button
+                onClick={(e) => {
+                  e.preventDefault();
+                  setDebugProduct("current account");
+                }}
+              >
+                current account
+              </button>
+              <button
+                onClick={(e) => {
+                  e.preventDefault();
+                  setDebugProduct("loan");
+                }}
+              >
+                loan
+              </button>
+            </>
+          )}
           {/* <FirstScreen /> */}
           {!debug && product === "current account" && <CurrentAccount />}
           {!debug && product === "loan" && <Loan />}

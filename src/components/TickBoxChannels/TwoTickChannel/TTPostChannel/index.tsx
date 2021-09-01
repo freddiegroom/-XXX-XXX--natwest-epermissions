@@ -68,7 +68,7 @@ const TTPostChannel: FC<TTPostChannelProps> = ({
             <ChannelText>
               <p>Post</p>
               {!hideSubText && (
-                <p className="sub">1 Example Road, Edinburgh. EH1 1HE</p>
+                <p className="sub">1 Example Road, Edinburgh, EH1 1HE</p>
               )}{" "}
             </ChannelText>
             <PostImg>
@@ -105,7 +105,7 @@ const TTPostChannel: FC<TTPostChannelProps> = ({
             <ChannelText>
               <p>Post</p>
               {!hideSubText && (
-                <p className="sub">1 Example Road, Edinburgh. EH1 1HE</p>
+                <p className="sub">1 Example Road, Edinburgh, EH1 1HE</p>
               )}{" "}
             </ChannelText>
             <PostImg>
@@ -142,7 +142,7 @@ const TTPostChannel: FC<TTPostChannelProps> = ({
             <ChannelText>
               <p>Post</p>
               {!hideSubText && (
-                <p className="sub">1 Example Road, Edinburgh. EH1 1HE</p>
+                <p className="sub">1 Example Road, Edinburgh, EH1 1HE</p>
               )}
             </ChannelText>
             <PostImg>

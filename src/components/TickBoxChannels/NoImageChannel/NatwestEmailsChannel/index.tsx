@@ -8,8 +8,14 @@ import {
 } from "../NoImageChannel.styles";
 import tickedCheckbox from "../../../../images/tick-checkbox.png";
 import checkbox from "../../../../images/checkbox.png";
+import { useDispatch } from "react-redux";
+import {
+  tickNatwestEmails,
+  unTickNatwestEmails,
+} from "../../../../screens/6.PrivacyPermissions/PrivacyPermissionsSlice";
 
 const NatwestEmailsChannel: FC = () => {
+  const dispatch = useDispatch();
   const [clicked, setClicked] = useState(false);
   return (
     <>
@@ -18,6 +24,7 @@ const NatwestEmailsChannel: FC = () => {
           <Channel
             onClick={(e) => {
               e.preventDefault();
+              dispatch(tickNatwestEmails());
               setClicked(true);
             }}
           >
@@ -38,6 +45,7 @@ const NatwestEmailsChannel: FC = () => {
           <Channel
             onClick={(e) => {
               e.preventDefault();
+              dispatch(unTickNatwestEmails());
               setClicked(false);
             }}
           >

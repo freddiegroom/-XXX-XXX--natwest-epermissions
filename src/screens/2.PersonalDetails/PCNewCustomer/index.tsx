@@ -14,13 +14,17 @@ import Address from "../../../components/Selects/Address";
 import AddressDate from "../../../components/MultipleInputs/AddressDate";
 import DOB from "../../../components/MultipleInputs/DOB";
 import WhiteContentContainer from "../../../components/WhiteContentContainer";
-import { HeadingText, RedText } from "../../../components/Text/Text.style";
+import { RedText } from "../../../components/Text/Text.style";
 import CountryNationality from "../../../components/Selects/CountryNationality";
 import FakeNextButton from "../../../components/Buttons/FakeNextButton";
 import { useScrollToTop } from "../../../hooks/useScrollToTop";
+import { usePageDuration } from "../../../hooks/usePageDuration";
 
 const PCNewCustomer: FC = () => {
   useScrollToTop();
+
+  const stopPageTiming = usePageDuration("personal_details_new_customer");
+
   const [titleClick, setTitleClick] = useState();
   const [firstNameClick, setFirstNameClick] = useState();
   const [lastNameClick, setLastNameClick] = useState();
@@ -123,7 +127,12 @@ const PCNewCustomer: FC = () => {
           postcodeClick &&
           addressClick === 2 &&
           addressMMClick &&
-          addressYYYYClick && <NextButton routeAddress={"/AccountDetails"} />}
+          addressYYYYClick && (
+            <NextButton
+              routeAddress={"/AccountDetails"}
+              pageTimeFunc={stopPageTiming}
+            />
+          )}
       </WhiteContentContainer>
       <WhiteFooter />
     </ExperimentContainer>

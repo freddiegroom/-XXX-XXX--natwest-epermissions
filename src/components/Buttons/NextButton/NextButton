@@ -10,7 +10,7 @@ export default {
 interface StoryProps {}
 
 const Template: Story = () => {
-  return <NextButton routeAddress="/PrivacyPermissions" />;
+  return <NextButton routeAddress="/PrivacyPermissions" pageTimeFunc={stopPageTiming} />;
 };
 
 export const Basic = Template.bind({});

@@ -10,13 +10,13 @@ export const ContentContainerStyle = styled.div`
 `;
 
 export const Container = styled.div`
-  max-width: 800px;
+  width: 975px;
   padding: 1em 1em 2em 1em;
   p {
     padding: 0.5em 0;
     margin: 0;
   }
-  @media only screen and (max-width: 799px) {
+  @media only screen and (max-width: 975px) {
     width: 90%;
     padding: 0;
   }

@@ -4,15 +4,22 @@ import ContentContainer from "../../../../components/ContentContainer";
 import ExperimentContainer from "../../../../components/ExperimentContainer";
 import Footer from "../../../../components/Footer";
 import Header from "../../../../components/Header";
-import { BoldText, HeadingText } from "../../../../components/Text/Text.style";
+import {
+  BoldText,
+  HeadingText,
+  SmallPaddingDiv,
+} from "../../../../components/Text/Text.style";
 import OTEmailChannel from "../../../../components/TickBoxChannels/OneTickChannel/OTEmailChannel";
 import OTPostChannel from "../../../../components/TickBoxChannels/OneTickChannel/OTPostChannel";
 import OTSocialMediaChannel from "../../../../components/TickBoxChannels/OneTickChannel/OTSocialMediaChannel";
 import OTTelephoneChannel from "../../../../components/TickBoxChannels/OneTickChannel/OTTelephoneChannel";
 import OTTextMessageChannel from "../../../../components/TickBoxChannels/OneTickChannel/OTTextMessageChannel";
+import { usePageDuration } from "../../../../hooks/usePageDuration";
 import cupSaucer from "../../../../images/cup-saucer.png";
 
 const Scenario11: FC = () => {
+  const stopPageTiming = usePageDuration("marketing-preferences-11");
+
   const [textClick, setTextClick] = useState(1);
   const [emailClick, setEmailClick] = useState(1);
   const [telephoneClick, setTelephoneClick] = useState(1);
@@ -28,6 +35,7 @@ const Scenario11: FC = () => {
           never share your details with other NatWest group companies or third
           parties for marketing purposes without your permission.
         </p>
+        <SmallPaddingDiv />
         <HeadingText>
           Please <BoldText>untick</BoldText> the boxes if you{" "}
           <BoldText>don't</BoldText> want to receive offers and updates.
@@ -49,7 +57,10 @@ const Scenario11: FC = () => {
           may still see ads on your social media feed if you have accepted
           targeting cookies through your browser.
         </p>
-        <NextButton routeAddress="/PrivacyPermissions" />
+        <NextButton
+          routeAddress="/PrivacyPermissions"
+          pageTimeFunc={stopPageTiming}
+        />
       </ContentContainer>
       <Footer />
     </ExperimentContainer>

@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import { useDispatch } from "react-redux";
-import NextButton from "../../components/Buttons/NextButton";
+
 import ContentContainer from "../../components/ContentContainer";
 import ExperimentContainer from "../../components/ExperimentContainer";
 import Footer from "../../components/Footer";
@@ -9,12 +9,28 @@ import { BoldText, HeadingText } from "../../components/Text/Text.style";
 import NatwestEmailsChannel from "../../components/TickBoxChannels/NoImageChannel/NatwestEmailsChannel";
 import OtherNewsChannel from "../../components/TickBoxChannels/NoImageChannel/OtherNewsChannel";
 import ThirdPartyChannel from "../../components/TickBoxChannels/NoImageChannel/ThirdPartyChannel";
+import { useEFSContinue } from "../../hooks/useEFSContinue";
+import { usePageDuration } from "../../hooks/usePageDuration";
 import cupSaucer from "../../images/cup-saucer.png";
 import { PrivacySpan } from "./PrivacyPermissions.styles";
 import { clickPrivacyNotice } from "./PrivacyPermissionsSlice";
+import bottomBevel from "../../images/bottom-bevel.png";
+import largebottomBevel from "../../images/large-bottom-bevel.png";
+import {
+  NextButtonContainer,
+  NextButtonStyle,
+} from "../../components/Buttons/NextButton/NextButton.style";
 
 const PrivacyPermissions: FC = () => {
   const dispatch = useDispatch();
+  const { EFSSubmit } = useEFSContinue();
+  const stopPageTiming = usePageDuration("privacy_permissions");
+
+  const handleFinishExperiment = (e: any) => {
+    e.preventDefault();
+    stopPageTiming();
+    setTimeout(() => EFSSubmit(), 20);
+  };
   return (
     <ExperimentContainer>
       <Header image={cupSaucer}>News and offers</Header>
@@ -48,7 +64,21 @@ const PrivacyPermissions: FC = () => {
           </PrivacySpan>{" "}
         </p>
         <NatwestEmailsChannel />
-        <NextButton routeAddress="/" />
+        {/* <NextButton routeAddress="/" pageTimeFunc={stopPageTiming} /> */}
+        {/* <button onClick={handleFinishExperiment}>
+          continue button placeholder
+        </button> */}
+        <NextButtonContainer>
+          <NextButtonStyle
+            onClick={(e) => {
+              handleFinishExperiment(e);
+            }}
+          >
+            Next
+          </NextButtonStyle>
+          <img className="smallBevel" src={bottomBevel} alt="" />
+          <img className="largeBevel" src={largebottomBevel} alt="" />
+        </NextButtonContainer>
       </ContentContainer>
       <Footer />
     </ExperimentContainer>

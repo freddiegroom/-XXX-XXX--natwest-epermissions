@@ -10,6 +10,8 @@ import OTTelephoneChannel from "../../../../components/TickBoxChannels/OneTickCh
 import OTPostChannel from "../../../../components/TickBoxChannels/OneTickChannel/OTPostChannel";
 import OTSocialMediaChannel from "../../../../components/TickBoxChannels/OneTickChannel/OTSocialMediaChannel";
 import {
+  selectAll,
+  selectNone,
   tickEmail,
   tickPost,
   tickSocialMedia,
@@ -28,9 +30,16 @@ import {
 } from "./Scenario6.styles";
 import { useDispatch } from "react-redux";
 import cupSaucer from "../../../../images/cup-saucer.png";
-import { BoldText, HeadingText } from "../../../../components/Text/Text.style";
+import {
+  BoldText,
+  HeadingText,
+  SmallPaddingDiv,
+} from "../../../../components/Text/Text.style";
+import { usePageDuration } from "../../../../hooks/usePageDuration";
 
 const Scenario6: FC = () => {
+  const stopPageTiming = usePageDuration("marketing-preferences-6");
+
   const [textClick, setTextClick] = useState(0);
   const [emailClick, setEmailClick] = useState(0);
   const [telephoneClick, setTelephoneClick] = useState(0);
@@ -73,6 +82,8 @@ const Scenario6: FC = () => {
           never share your details with other NatWest group companies or third
           parties for marketing purposes without your permission.
         </p>
+        <SmallPaddingDiv />
+
         <HeadingText>
           Please tick the boxes if you <BoldText>want</BoldText> to receive
           offers and updates.
@@ -98,6 +109,7 @@ const Scenario6: FC = () => {
           <SelectAllButton
             onClick={(e) => {
               e.preventDefault();
+              dispatch(selectAll());
               selectAllFunction();
             }}
           >
@@ -106,13 +118,17 @@ const Scenario6: FC = () => {
           <SelectNoneButton
             onClick={(e) => {
               e.preventDefault();
+              dispatch(selectNone());
               selectNoneFunction();
             }}
           >
             <BoldText>Select None</BoldText>
           </SelectNoneButton>
         </SelectButtonsContainer>
-        <NextButton routeAddress="/PrivacyPermissions" />
+        <NextButton
+          routeAddress="/PrivacyPermissions"
+          pageTimeFunc={stopPageTiming}
+        />
       </ContentContainer>
       <Footer />
     </ExperimentContainer>

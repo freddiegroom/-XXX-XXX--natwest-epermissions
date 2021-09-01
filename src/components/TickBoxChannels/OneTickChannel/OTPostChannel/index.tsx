@@ -1,4 +1,4 @@
-import React, { useState, FC } from "react";
+import React, { FC } from "react";
 import {
   Channel,
   ChannelText,
@@ -41,19 +41,19 @@ const OTPostChannel: FC<OTEmailChannelProps> = ({
     <>
       {state === 0 && (
         <ChannelWrapper>
-          <Channel
-            onClick={(e) => {
-              e.preventDefault();
-              clickFunc();
-            }}
-          >
-            <ClickBox>
+          <Channel>
+            <ClickBox
+              onClick={(e) => {
+                e.preventDefault();
+                clickFunc();
+              }}
+            >
               <img src={checkbox} alt=""></img>
             </ClickBox>
             <ChannelText>
               <p>Post</p>
               {!hideSubText && (
-                <p className="sub">1 Example Road, Edinburgh. EH1 1HE</p>
+                <p className="sub">1 Example Road, Edinburgh, EH1 1HE</p>
               )}
             </ChannelText>
             <PostImg>
@@ -64,19 +64,19 @@ const OTPostChannel: FC<OTEmailChannelProps> = ({
       )}
       {state === 1 && (
         <ChannelWrapper>
-          <Channel
-            onClick={(e) => {
-              e.preventDefault();
-              unClickFunc();
-            }}
-          >
-            <ClickedBox>
+          <Channel>
+            <ClickedBox
+              onClick={(e) => {
+                e.preventDefault();
+                unClickFunc();
+              }}
+            >
               <img src={tickedCheckbox} alt=""></img>
             </ClickedBox>
             <ChannelText>
               <p>Post</p>
               {!hideSubText && (
-                <p className="sub">1 Example Road, Edinburgh. EH1 1HE</p>
+                <p className="sub">1 Example Road, Edinburgh, EH1 1HE</p>
               )}
             </ChannelText>
             <PostImg>

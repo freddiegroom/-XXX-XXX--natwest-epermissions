@@ -22,7 +22,6 @@ export const HeadingText = styled.p`
     line-height: 28px;
     padding-left: 8px;
     width: 95%;
-    margin: 8px 0;
   }
 `;
 
@@ -38,6 +37,10 @@ export const BoldText = styled.span`
 
 export const PaddingDiv = styled.div`
   height: 32px;
+  width: 100%; ;
+`;
+export const SmallPaddingDiv = styled.div`
+  height: 16px;
   width: 100%;
 `;
 
