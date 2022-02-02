@@ -9,7 +9,7 @@ import nwLogo from "../../images/nw-logo.png";
 // import otherLogo from "../../images/credit-card-logo.png";
 
 interface HeaderImageProps {
-  image?: any;
+  image?: string;
 }
 
 const Header: FC<HeaderImageProps> = ({ children, image }) => {

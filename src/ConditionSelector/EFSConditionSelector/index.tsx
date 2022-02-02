@@ -25,7 +25,6 @@ const EFSConditionSelector: FC = () => {
 
   return (
     <>
-      {" "}
       {condition === 1 && <Condition1 />}
       {condition === 2 && <Condition2 />}
       {condition === 3 && <Condition3 />}

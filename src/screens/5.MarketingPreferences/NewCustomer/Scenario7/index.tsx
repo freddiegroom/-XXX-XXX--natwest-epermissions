@@ -18,6 +18,11 @@ import OTTextMessageChannel from "../../../../components/TickBoxChannels/OneTick
 import { usePageDuration } from "../../../../hooks/usePageDuration";
 import cupSaucer from "../../../../images/cup-saucer.png";
 
+// export const ScenarioContext = React.createContext({
+//   email: 0,
+//   text: 0,
+// });
+
 const Scenario7: FC = () => {
   const stopPageTiming = usePageDuration("marketing-preferences-7");
 
@@ -26,7 +31,18 @@ const Scenario7: FC = () => {
   const [telephoneClick, setTelephoneClick] = useState(0);
   const [postClick, setPostClick] = useState(0);
   const [socialMediaClick, setSocialMediaClick] = useState(0);
+
+  // const reducer = (state, action) => {
+  //   switch (action.type) {
+  //     case: 'email':
+  //       return {...state, email: action.value}
+  //   }
+  // }
+
+  // const [state, dispatch] = useReducer(reducer, { email: 0})
+
   return (
+    // <ScenarioContext.Provider>
     <ExperimentContainer>
       <Header image={cupSaucer}>News and offers</Header>
       <ContentContainer>
@@ -42,6 +58,8 @@ const Scenario7: FC = () => {
           Please tick the boxes if you <BoldText>want</BoldText> to receive
           offers and updates.
         </HeadingText>
+        {/* <OTEmailChannel state={state.email} setState={x => dispatch({type: 'email', value: x}) */}
+        {/* <OTEmailChannel initialState={0} /> */}
         <OTEmailChannel state={emailClick} setState={setEmailClick} />
         <OTTextMessageChannel state={textClick} setState={setTextClick} />
         <OTPostChannel state={postClick} setState={setPostClick} />
@@ -66,6 +84,7 @@ const Scenario7: FC = () => {
       </ContentContainer>
       <Footer />
     </ExperimentContainer>
+    // </ScenarioContext.Provider>
   );
 };
 
