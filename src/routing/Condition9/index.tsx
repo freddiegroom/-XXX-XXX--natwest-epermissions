@@ -8,7 +8,6 @@ import PCNewCustomer from "../../screens/2.PersonalDetails/PCNewCustomer/index";
 import AccountDetailsBlank from "../../screens/3.AccountDetails/AccountDetails";
 import PermissionsInfo from "../../screens/4.PermissionsInfo";
 import Scenario17 from "../../screens/5.MarketingPreferences/ExistingCustomer/Scenario17";
-import Scenario1 from "../../screens/5.MarketingPreferences/NewCustomer/Scenario1";
 import PrivacyPermissions from "../../screens/6.PrivacyPermissions";
 import ScrollToTop from "../ScrollToTop";
 
