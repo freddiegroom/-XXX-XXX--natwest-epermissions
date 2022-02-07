@@ -9,6 +9,7 @@ import PermissionsInfo from "../../screens/4.PermissionsInfo";
 import Scenario4 from "../../screens/5.MarketingPreferences/NewCustomer/Scenario4";
 import PrivacyPermissions from "../../screens/6.PrivacyPermissions";
 import ScrollToTop from "../ScrollToTop";
+import PrivacyPopUp from "../../screens/7.PrivacyPopUp/index";
 
 const Condition4: FC = () => {
   const { product = "current account", debug } = useEFSData();
@@ -59,6 +60,12 @@ const Condition4: FC = () => {
         </Route>
         <Route path="/PrivacyPermissions">
           <PrivacyPermissions />
+        </Route>
+        <Route path="/PrivacyPopUp">
+          <PrivacyPopUp />
+        </Route>
+        <Route path="/PrivacyPopUp">
+          <PrivacyPopUp />
         </Route>
       </Switch>
     </Router>

@@ -15,7 +15,6 @@ const Condition1: FC = () => {
   const [debugProduct, setDebugProduct] = useState("loan");
   return (
     <Router>
-      {" "}
       <ScrollToTop />
       <Switch>
         <Route exact path="/">
@@ -58,12 +57,14 @@ const Condition1: FC = () => {
           <PermissionsInfo />
         </Route>
         <Route path="/MarketingPreferences">
-          {" "}
           <Scenario1 />
         </Route>
         <Route path="/PrivacyPermissions">
           {" "}
           <PrivacyPermissions />
+        </Route>
+        <Route path="/PrivacyPopUp">
+          <p>This is a privacy pop up</p>
         </Route>
       </Switch>
     </Router>

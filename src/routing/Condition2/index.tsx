@@ -8,6 +8,7 @@ import AccountDetailsBlank from "../../screens/3.AccountDetails/AccountDetails";
 import PermissionsInfo from "../../screens/4.PermissionsInfo";
 import Scenario2 from "../../screens/5.MarketingPreferences/NewCustomer/Scenario2";
 import PrivacyPermissions from "../../screens/6.PrivacyPermissions";
+import PrivacyPopUp from "../../screens/7.PrivacyPopUp";
 import ScrollToTop from "../ScrollToTop";
 
 const Condition2: FC = () => {
@@ -59,6 +60,9 @@ const Condition2: FC = () => {
         </Route>
         <Route path="/PrivacyPermissions">
           <PrivacyPermissions />
+        </Route>
+        <Route path="/PrivacyPopUp">
+          <PrivacyPopUp />
         </Route>
       </Switch>
     </Router>

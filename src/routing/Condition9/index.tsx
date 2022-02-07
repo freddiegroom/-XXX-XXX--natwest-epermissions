@@ -7,6 +7,7 @@ import PCExistingCustomer from "../../screens/2.PersonalDetails/PCExistingCustom
 import PermissionsInfo from "../../screens/4.PermissionsInfo";
 import Scenario9 from "../../screens/5.MarketingPreferences/ExistingCustomer/Scenario9";
 import PrivacyPermissions from "../../screens/6.PrivacyPermissions";
+import PrivacyPopUp from "../../screens/7.PrivacyPopUp";
 import ScrollToTop from "../ScrollToTop";
 
 const Condition9: FC = () => {
@@ -38,7 +39,6 @@ const Condition9: FC = () => {
               </button>
             </>
           )}
-          {/* <FirstScreen /> */}
           {!debug && product === "current account" && <CurrentAccount />}
           {!debug && product === "loan" && <Loan />}
           {debug && debugProduct === "current account" && <CurrentAccount />}
@@ -55,6 +55,9 @@ const Condition9: FC = () => {
         </Route>
         <Route path="/PrivacyPermissions">
           <PrivacyPermissions />
+        </Route>
+        <Route path="/PrivacyPopUp">
+          <PrivacyPopUp />
         </Route>
       </Switch>
     </Router>

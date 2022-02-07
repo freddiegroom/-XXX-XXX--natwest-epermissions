@@ -24,7 +24,7 @@ import largebottomBevel from "../../../../images/large-bottom-bevel.png";
 const Scenario6: FC = () => {
   const { EFSSubmit } = useEFSContinue();
 
-  const stopPageTiming = usePageDuration("marketing-preferences-8");
+  const stopPageTiming = usePageDuration("marketing-preferences-6");
 
   const handleFinishExperiment = (e: any) => {
     e.preventDefault();

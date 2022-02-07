@@ -7,6 +7,7 @@ import PCExistingCustomer from "../../screens/2.PersonalDetails/PCExistingCustom
 import PermissionsInfo from "../../screens/4.PermissionsInfo";
 import Scenario7 from "../../screens/5.MarketingPreferences/ExistingCustomer/Scenario7";
 import PrivacyPermissions from "../../screens/6.PrivacyPermissions";
+import PrivacyPopUp from "../../screens/7.PrivacyPopUp";
 import ScrollToTop from "../ScrollToTop";
 
 const Condition7: FC = () => {
@@ -55,6 +56,9 @@ const Condition7: FC = () => {
         </Route>
         <Route path="/PrivacyPermissions">
           <PrivacyPermissions />
+        </Route>
+        <Route path="/PrivacyPopUp">
+          <PrivacyPopUp />
         </Route>
       </Switch>
     </Router>

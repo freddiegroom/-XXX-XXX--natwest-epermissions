@@ -6,7 +6,6 @@ import ExperimentContainer from "../../../../components/ExperimentContainer";
 import Footer from "../../../../components/Footer";
 import Header from "../../../../components/Header";
 import {
-  BoldText,
   HeadingText,
   SmallPaddingDiv,
 } from "../../../../components/Text/Text.style";
@@ -25,7 +24,7 @@ import {
 } from "../../MarketingPreferencesSlice";
 
 const Scenario10: FC = () => {
-  const stopPageTiming = usePageDuration("marketing-preferences-17");
+  const stopPageTiming = usePageDuration("marketing-preferences-10");
 
   const pickRandomFunc = () => {
     return Math.floor(Math.random() * 2);

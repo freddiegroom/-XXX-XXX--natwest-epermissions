@@ -20,17 +20,24 @@ import {
   NextButtonContainer,
   NextButtonStyle,
 } from "../../components/Buttons/NextButton/NextButton.style";
+import { useHistory } from "react-router-dom";
 
 const PrivacyPermissions: FC = () => {
   const dispatch = useDispatch();
   const { EFSSubmit } = useEFSContinue();
   const stopPageTiming = usePageDuration("privacy_permissions");
+  const history = useHistory();
+
+  const handleNextPage = (route: string) => {
+    history.push(route);
+  };
 
   const handleFinishExperiment = (e: any) => {
     e.preventDefault();
     stopPageTiming();
     setTimeout(() => EFSSubmit(), 20);
   };
+
   return (
     <ExperimentContainer>
       <Header image={cupSaucer}>News and offers</Header>
@@ -58,16 +65,13 @@ const PrivacyPermissions: FC = () => {
             onClick={(e) => {
               e.preventDefault();
               dispatch(clickPrivacyNotice());
+              handleNextPage("/PrivacyPopUp");
             }}
           >
             Privacy Notice.
           </PrivacySpan>{" "}
         </p>
         <NatwestEmailsChannel />
-        {/* <NextButton routeAddress="/" pageTimeFunc={stopPageTiming} /> */}
-        {/* <button onClick={handleFinishExperiment}>
-          continue button placeholder
-        </button> */}
         <NextButtonContainer>
           <NextButtonStyle
             onClick={(e) => {
