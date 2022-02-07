@@ -12,7 +12,6 @@ import {
 } from "../../../../components/Text/Text.style";
 import TTEmailChannel from "../../../../components/TickBoxChannels/TwoTickChannel/TTEmailChannel";
 import TTPostChannel from "../../../../components/TickBoxChannels/TwoTickChannel/TTPostChannel";
-import TTSocialMediaChannel from "../../../../components/TickBoxChannels/TwoTickChannel/TTSocialMediaChannel";
 import TTTelephoneChannel from "../../../../components/TickBoxChannels/TwoTickChannel/TTTelephoneChannel";
 import TTTextMessageChannel from "../../../../components/TickBoxChannels/TwoTickChannel/TTTextMessageChannel";
 import { DesktopYesNoContainer } from "../../../../components/TickBoxChannels/TwoTickChannel/TwoTickChannel.styles";
@@ -21,13 +20,12 @@ import cupSaucer from "../../../../images/cup-saucer.png";
 import {
   saveEmail,
   savePost,
-  saveSocialMedia,
   saveTelephone,
   saveTextMessage,
 } from "../../MarketingPreferencesSlice";
 
-const Scenario17: FC = () => {
-  const stopPageTiming = usePageDuration("marketing-preferences-17");
+const Scenario9: FC = () => {
+  const stopPageTiming = usePageDuration("marketing-preferences-9");
 
   const pickRandomFunc = () => {
     return Math.floor(Math.random() * 2);
@@ -38,19 +36,16 @@ const Scenario17: FC = () => {
   let initialEmail = useMemo(() => pickRandomFunc(), []);
   let initialTelephone = useMemo(() => pickRandomFunc(), []);
   let initialPost = useMemo(() => pickRandomFunc(), []);
-  let initialSocialMedia = useMemo(() => pickRandomFunc(), []);
 
   useEffect(() => {
     dispatch(saveTextMessage(initialTextMessage));
     dispatch(saveEmail(initialEmail));
     dispatch(saveTelephone(initialTelephone));
     dispatch(savePost(initialPost));
-    dispatch(saveSocialMedia(initialSocialMedia));
   }, [
     dispatch,
     initialEmail,
     initialPost,
-    initialSocialMedia,
     initialTelephone,
     initialTextMessage,
   ]);
@@ -59,7 +54,6 @@ const Scenario17: FC = () => {
   const [emailClick, setEmailClick] = useState(initialEmail);
   const [telephoneClick, setTelephoneClick] = useState(initialTelephone);
   const [postClick, setPostClick] = useState(initialPost);
-  const [socialMediaClick, setSocialMediaClick] = useState(initialSocialMedia);
   return (
     <ExperimentContainer>
       <Header image={cupSaucer}>News and offers</Header>
@@ -73,7 +67,8 @@ const Scenario17: FC = () => {
         <SmallPaddingDiv />
         <HeadingText>
           Please review your existing preferences and choose if you are{" "}
-          <BoldText>happy</BoldText> for us to contact you by{" "}
+          <BoldText>happy</BoldText> for us to send you information about
+          products, services and offers by:
         </HeadingText>
         <DesktopYesNoContainer>
           <p>YES</p>
@@ -86,10 +81,7 @@ const Scenario17: FC = () => {
           setState={setTelephoneClick}
         />
         <TTPostChannel state={postClick} setState={setPostClick} />
-        <TTSocialMediaChannel
-          state={socialMediaClick}
-          setState={setSocialMediaClick}
-        />
+
         <p>
           *We use data to match you with your social media profile so we can
           display relevant offers to you on your social media pages. Note, you
@@ -106,4 +98,4 @@ const Scenario17: FC = () => {
   );
 };
 
-export default Scenario17;
+export default Scenario9;

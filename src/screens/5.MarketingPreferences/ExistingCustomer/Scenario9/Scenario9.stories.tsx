@@ -1,19 +1,19 @@
 import React from "react";
 import { Story, Meta } from "@storybook/react/types-6-0";
+import Scenario9 from ".";
 import { HashRouter as Router } from "react-router-dom";
-import Condition9 from ".";
 
 export default {
-  title: "Routes/Condition9",
-  component: Condition9,
+  title: "screens/Marketing Preferences/Existing Customers/Scenario 9",
+  component: Scenario9,
 } as Meta;
 
-// interface StoryProps {}
+interface StoryProps {}
 
 const Template: Story = () => {
   return (
     <Router>
-      <Condition9 />
+      <Scenario9 />;
     </Router>
   );
 };

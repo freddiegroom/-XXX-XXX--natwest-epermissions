@@ -21,10 +21,10 @@ import cupSaucer from "../../../../images/cup-saucer.png";
 import bottomBevel from "../../../../images/bottom-bevel.png";
 import largebottomBevel from "../../../../images/large-bottom-bevel.png";
 
-const Scenario15: FC = () => {
+const Scenario6: FC = () => {
   const { EFSSubmit } = useEFSContinue();
 
-  const stopPageTiming = usePageDuration("marketing-preferences-15");
+  const stopPageTiming = usePageDuration("marketing-preferences-8");
 
   const handleFinishExperiment = (e: any) => {
     e.preventDefault();
@@ -93,7 +93,6 @@ const Scenario15: FC = () => {
           want to get these offers and updates.
         </OffersAndUpdates>
         <PaddingDiv />
-        {/* <NextButton routeAddress="/" pageTimeFunc={stopPageTiming} /> */}
         <NextButtonContainer>
           <NextButtonStyle
             onClick={(e) => {
@@ -111,4 +110,4 @@ const Scenario15: FC = () => {
   );
 };
 
-export default Scenario15;
+export default Scenario6;

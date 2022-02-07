@@ -4,9 +4,7 @@ import { HashRouter as Router, Switch, Route } from "react-router-dom";
 import CurrentAccount from "../../screens/1.ProductChoice/current-account";
 import Loan from "../../screens/1.ProductChoice/loan/index";
 import PCExistingCustomer from "../../screens/2.PersonalDetails/PCExistingCustomer";
-import AccountDetails from "../../screens/3.AccountDetails/AccountDetails";
-import PermissionsInfo from "../../screens/4.PermissionsInfo";
-import Scenario15 from "../../screens/5.MarketingPreferences/ExistingCustomer/Scenario15";
+import Scenario6 from "../../screens/5.MarketingPreferences/ExistingCustomer/Scenario6";
 import PrivacyPermissions from "../../screens/6.PrivacyPermissions";
 import ScrollToTop from "../ScrollToTop";
 
@@ -51,7 +49,7 @@ const Condition6: FC = () => {
           <AccountDetails debugCondition={15} />
         </Route> */}
         <Route path="/MarketingPreferences">
-          <Scenario15 />
+          <Scenario6 />
         </Route>
         <Route path="/PrivacyPermissions">
           <PrivacyPermissions />

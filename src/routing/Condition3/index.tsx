@@ -6,7 +6,7 @@ import Loan from "../../screens/1.ProductChoice/loan/index";
 import PCNewCustomer from "../../screens/2.PersonalDetails/PCNewCustomer/index";
 import AccountDetailsBlank from "../../screens/3.AccountDetails/AccountDetails";
 import PermissionsInfo from "../../screens/4.PermissionsInfo";
-import Scenario5 from "../../screens/5.MarketingPreferences/NewCustomer/Scenario5";
+import Scenario3 from "../../screens/5.MarketingPreferences/NewCustomer/Scenario3";
 import PrivacyPermissions from "../../screens/6.PrivacyPermissions";
 import ScrollToTop from "../ScrollToTop";
 
@@ -55,7 +55,7 @@ const Condition3: FC = () => {
           <PermissionsInfo />
         </Route>
         <Route path="/MarketingPreferences">
-          <Scenario5 />
+          <Scenario3 />
         </Route>
         <Route path="/PrivacyPermissions">
           <PrivacyPermissions />

@@ -1,13 +1,13 @@
-import React, { FC, useState } from "react";
-import FakeNextButton from "../../../../components/Buttons/FakeNextButton";
+import React, { FC, useEffect, useMemo, useState } from "react";
+import { useDispatch } from "react-redux";
 import NextButton from "../../../../components/Buttons/NextButton";
 import ContentContainer from "../../../../components/ContentContainer";
 import ExperimentContainer from "../../../../components/ExperimentContainer";
 import Footer from "../../../../components/Footer";
 import Header from "../../../../components/Header";
 import {
+  BoldText,
   HeadingText,
-  RedText,
   SmallPaddingDiv,
 } from "../../../../components/Text/Text.style";
 import TTEmailChannel from "../../../../components/TickBoxChannels/TwoTickChannel/TTEmailChannel";
@@ -17,15 +17,43 @@ import TTTextMessageChannel from "../../../../components/TickBoxChannels/TwoTick
 import { DesktopYesNoContainer } from "../../../../components/TickBoxChannels/TwoTickChannel/TwoTickChannel.styles";
 import { usePageDuration } from "../../../../hooks/usePageDuration";
 import cupSaucer from "../../../../images/cup-saucer.png";
+import {
+  saveEmail,
+  savePost,
+  saveTelephone,
+  saveTextMessage,
+} from "../../MarketingPreferencesSlice";
 
-const Scenario5: FC = () => {
-  const stopPageTiming = usePageDuration("marketing-preferences-5");
+const Scenario10: FC = () => {
+  const stopPageTiming = usePageDuration("marketing-preferences-17");
 
-  const [textClick, setTextClick] = useState(3);
-  const [emailClick, setEmailClick] = useState(3);
-  const [telephoneClick, setTelephoneClick] = useState(3);
-  const [postClick, setPostClick] = useState(3);
-  const [fillMessage, setFillMessage] = useState("");
+  const pickRandomFunc = () => {
+    return Math.floor(Math.random() * 2);
+  };
+
+  const dispatch = useDispatch();
+  let initialTextMessage = useMemo(() => pickRandomFunc(), []);
+  let initialEmail = useMemo(() => pickRandomFunc(), []);
+  let initialTelephone = useMemo(() => pickRandomFunc(), []);
+  let initialPost = useMemo(() => pickRandomFunc(), []);
+
+  useEffect(() => {
+    dispatch(saveTextMessage(initialTextMessage));
+    dispatch(saveEmail(initialEmail));
+    dispatch(saveTelephone(initialTelephone));
+    dispatch(savePost(initialPost));
+  }, [
+    dispatch,
+    initialEmail,
+    initialPost,
+    initialTelephone,
+    initialTextMessage,
+  ]);
+
+  const [textClick, setTextClick] = useState(initialTextMessage);
+  const [emailClick, setEmailClick] = useState(initialEmail);
+  const [telephoneClick, setTelephoneClick] = useState(initialTelephone);
+  const [postClick, setPostClick] = useState(initialPost);
   return (
     <ExperimentContainer>
       <Header image={cupSaucer}>News and offers</Header>
@@ -37,7 +65,6 @@ const Scenario5: FC = () => {
           parties for marketing purposes without your permission.
         </p>
         <SmallPaddingDiv />
-
         <HeadingText>Are you happy for us to contact you by:</HeadingText>
         <DesktopYesNoContainer>
           <p>YES</p>
@@ -50,40 +77,14 @@ const Scenario5: FC = () => {
           setState={setTelephoneClick}
         />
         <TTPostChannel state={postClick} setState={setPostClick} />
-        <p>
-          *We use data to match you with your social media profile so we can
-          display relevant offers to you on your social media pages. Note, you
-          may still see ads on your social media feed if you have accepted
-          targeting cookies through your browser.
-        </p>
-        {!(
-          textClick !== 3 &&
-          emailClick !== 3 &&
-          telephoneClick !== 3 &&
-          postClick !== 3
-        ) && (
-          <>
-            {fillMessage && (
-              <RedText>Please make your choices to continue</RedText>
-            )}
-            <FakeNextButton setState={setFillMessage}>
-              scroll to top
-            </FakeNextButton>
-          </>
-        )}
-
-        {textClick !== 3 &&
-          emailClick !== 3 &&
-          telephoneClick !== 3 &&
-          postClick !== 3 && (
-            <NextButton
-              routeAddress={"/PrivacyPermissions"}
-              pageTimeFunc={stopPageTiming}
-            />
-          )}
+        <NextButton
+          routeAddress="/PrivacyPermissions"
+          pageTimeFunc={stopPageTiming}
+        />
       </ContentContainer>
       <Footer />
     </ExperimentContainer>
   );
 };
-export default Scenario5;
+
+export default Scenario10;

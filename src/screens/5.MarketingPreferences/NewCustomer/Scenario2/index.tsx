@@ -18,8 +18,8 @@ import { DesktopYesNoContainer } from "../../../../components/TickBoxChannels/Tw
 import { usePageDuration } from "../../../../hooks/usePageDuration";
 import cupSaucer from "../../../../images/cup-saucer.png";
 
-const Scenario5: FC = () => {
-  const stopPageTiming = usePageDuration("marketing-preferences-5");
+const Scenario2: FC = () => {
+  const stopPageTiming = usePageDuration("marketing-preferences-2");
 
   const [textClick, setTextClick] = useState(3);
   const [emailClick, setEmailClick] = useState(3);
@@ -86,4 +86,5 @@ const Scenario5: FC = () => {
     </ExperimentContainer>
   );
 };
-export default Scenario5;
+
+export default Scenario2;

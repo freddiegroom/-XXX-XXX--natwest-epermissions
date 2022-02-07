@@ -1,5 +1,4 @@
 import React, { FC } from "react";
-import NextButton from "../../../../components/Buttons/NextButton";
 import ExperimentContainer from "../../../../components/ExperimentContainer";
 import Header from "../../../../components/Header";
 import {

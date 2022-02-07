@@ -1,11 +1,11 @@
 import React from "react";
 import { Story, Meta } from "@storybook/react/types-6-0";
-import Scenario17 from ".";
+import Scenario4 from ".";
 import { HashRouter as Router } from "react-router-dom";
 
 export default {
-  title: "screens/Marketing Preferences/Existing Customers/Scenario 17",
-  component: Scenario17,
+  title: "screens/Marketing Preferences/New Customers/Scenario 4",
+  component: Scenario4,
 } as Meta;
 
 interface StoryProps {}
@@ -13,7 +13,7 @@ interface StoryProps {}
 const Template: Story = () => {
   return (
     <Router>
-      <Scenario17 />;
+      <Scenario4 />;
     </Router>
   );
 };
