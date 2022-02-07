@@ -15,7 +15,6 @@ const ConditionSelector: FC = () => {
   };
 
   conditionFunction();
-  console.log(debug);
   return (
     <>
       {debug === 1 && <DebugConditionSelector />}

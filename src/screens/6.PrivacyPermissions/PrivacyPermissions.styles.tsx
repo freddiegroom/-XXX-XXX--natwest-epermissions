@@ -24,4 +24,5 @@ export const FormBlank = styled.div`
 
 export const PrivacySpan = styled.span`
   text-decoration: underline;
+  cursor: pointer;
 `;

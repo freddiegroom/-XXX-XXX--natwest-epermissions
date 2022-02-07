@@ -6,7 +6,7 @@ import Loan from "../../screens/1.ProductChoice/loan/index";
 import PCNewCustomer from "../../screens/2.PersonalDetails/PCNewCustomer/index";
 import AccountDetailsBlank from "../../screens/3.AccountDetails/AccountDetails";
 import PermissionsInfo from "../../screens/4.PermissionsInfo";
-import Scenario3 from "../../screens/5.MarketingPreferences/NewCustomer/Scenario3";
+import Scenario5 from "../../screens/5.MarketingPreferences/NewCustomer/Scenario5";
 import PrivacyPermissions from "../../screens/6.PrivacyPermissions";
 import ScrollToTop from "../ScrollToTop";
 
@@ -15,8 +15,8 @@ const Condition3: FC = () => {
   const [debugProduct, setDebugProduct] = useState("loan");
   return (
     <Router>
-      {" "}
       <ScrollToTop />
+
       <Switch>
         <Route exact path="/">
           {debug && (
@@ -49,13 +49,13 @@ const Condition3: FC = () => {
           <PCNewCustomer />
         </Route>
         <Route path="/AccountDetails">
-          <AccountDetailsBlank debugCondition={3} />
+          <AccountDetailsBlank debugCondition={5} />
         </Route>
         <Route path="/PermissionsInfo">
           <PermissionsInfo />
         </Route>
         <Route path="/MarketingPreferences">
-          <Scenario3 />
+          <Scenario5 />
         </Route>
         <Route path="/PrivacyPermissions">
           <PrivacyPermissions />

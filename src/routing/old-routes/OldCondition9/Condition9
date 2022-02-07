@@ -1,0 +1,21 @@
+import React from "react";
+import { Story, Meta } from "@storybook/react/types-6-0";
+import { HashRouter as Router } from "react-router-dom";
+importOldCondition9 from ".";
+
+export default {
+  title: "Routes/Condition9",
+  component:OldCondition9,
+} as Meta;
+
+interface StoryProps {}
+
+const Template: Story = () => {
+  return (
+    <Router>
+      <Condition9 />
+    </Router>
+  );
+};
+
+export const Basic = Template.bind({});

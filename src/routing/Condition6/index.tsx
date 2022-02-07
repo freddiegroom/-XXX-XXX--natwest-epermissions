@@ -3,10 +3,10 @@ import React, { FC, useState } from "react";
 import { HashRouter as Router, Switch, Route } from "react-router-dom";
 import CurrentAccount from "../../screens/1.ProductChoice/current-account";
 import Loan from "../../screens/1.ProductChoice/loan/index";
-import PCNewCustomer from "../../screens/2.PersonalDetails/PCNewCustomer/index";
-import AccountDetailsBlank from "../../screens/3.AccountDetails/AccountDetails";
+import PCExistingCustomer from "../../screens/2.PersonalDetails/PCExistingCustomer";
+import AccountDetails from "../../screens/3.AccountDetails/AccountDetails";
 import PermissionsInfo from "../../screens/4.PermissionsInfo";
-import Scenario6 from "../../screens/5.MarketingPreferences/NewCustomer/Scenario6";
+import Scenario15 from "../../screens/5.MarketingPreferences/ExistingCustomer/Scenario15";
 import PrivacyPermissions from "../../screens/6.PrivacyPermissions";
 import ScrollToTop from "../ScrollToTop";
 
@@ -15,8 +15,8 @@ const Condition6: FC = () => {
   const [debugProduct, setDebugProduct] = useState("loan");
   return (
     <Router>
+      {" "}
       <ScrollToTop />
-
       <Switch>
         <Route exact path="/">
           {debug && (
@@ -39,23 +39,19 @@ const Condition6: FC = () => {
               </button>
             </>
           )}
-          {/* <FirstScreen /> */}
           {!debug && product === "current account" && <CurrentAccount />}
           {!debug && product === "loan" && <Loan />}
           {debug && debugProduct === "current account" && <CurrentAccount />}
           {debug && debugProduct === "loan" && <Loan />}
         </Route>
         <Route path="/PersonalDetails">
-          <PCNewCustomer />
+          <PCExistingCustomer debugCondition={15} />
         </Route>
-        <Route path="/AccountDetails">
-          <AccountDetailsBlank debugCondition={6} />
-        </Route>
-        <Route path="/PermissionsInfo">
-          <PermissionsInfo />
-        </Route>
+        {/* <Route path="/AccountDetails">
+          <AccountDetails debugCondition={15} />
+        </Route> */}
         <Route path="/MarketingPreferences">
-          <Scenario6 />
+          <Scenario15 />
         </Route>
         <Route path="/PrivacyPermissions">
           <PrivacyPermissions />

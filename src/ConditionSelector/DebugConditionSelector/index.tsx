@@ -1,15 +1,6 @@
 import React, { FC, useState } from "react";
 import Condition1 from "../../routing/Condition1";
 import Condition10 from "../../routing/Condition10";
-import Condition11 from "../../routing/Condition11";
-import Condition12 from "../../routing/Condition12";
-import Condition13 from "../../routing/Condition13";
-import Condition14 from "../../routing/Condition14";
-import Condition15 from "../../routing/Condition15";
-import Condition16 from "../../routing/Condition16";
-import Condition17 from "../../routing/Condition17";
-import Condition18 from "../../routing/Condition18";
-import Condition19 from "../../routing/Condition19";
 import Condition2 from "../../routing/Condition2";
 import Condition3 from "../../routing/Condition3";
 import Condition4 from "../../routing/Condition4";
@@ -116,87 +107,6 @@ const DebugConditionSelector: FC = () => {
         >
           10
         </button>
-        <button
-          className={debugCondition === 11 ? "redButton" : "none"}
-          onClick={(e) => {
-            e.preventDefault();
-            SetDebugCondition(11);
-          }}
-        >
-          11
-        </button>
-        <button
-          className={debugCondition === 12 ? "redButton" : "none"}
-          onClick={(e) => {
-            e.preventDefault();
-            SetDebugCondition(12);
-          }}
-        >
-          12
-        </button>
-        <button
-          className={debugCondition === 13 ? "redButton" : "none"}
-          onClick={(e) => {
-            e.preventDefault();
-            SetDebugCondition(13);
-          }}
-        >
-          13
-        </button>
-        <button
-          className={debugCondition === 14 ? "redButton" : "none"}
-          onClick={(e) => {
-            e.preventDefault();
-            SetDebugCondition(14);
-          }}
-        >
-          14
-        </button>
-        <button
-          className={debugCondition === 15 ? "redButton" : "none"}
-          onClick={(e) => {
-            e.preventDefault();
-            SetDebugCondition(15);
-          }}
-        >
-          15
-        </button>
-        <button
-          className={debugCondition === 16 ? "redButton" : "none"}
-          onClick={(e) => {
-            e.preventDefault();
-            SetDebugCondition(16);
-          }}
-        >
-          16
-        </button>
-        <button
-          className={debugCondition === 17 ? "redButton" : "none"}
-          onClick={(e) => {
-            e.preventDefault();
-            SetDebugCondition(17);
-          }}
-        >
-          17
-        </button>
-        <button
-          className={debugCondition === 18 ? "redButton" : "none"}
-          onClick={(e) => {
-            e.preventDefault();
-            SetDebugCondition(18);
-          }}
-        >
-          18
-        </button>
-        <button
-          className={debugCondition === 19 ? "redButton" : "none"}
-          onClick={(e) => {
-            e.preventDefault();
-            SetDebugCondition(19);
-          }}
-        >
-          19
-        </button>
       </ConditionSelectorStyle>
 
       {debugCondition === 1 && <Condition1 />}
@@ -209,15 +119,6 @@ const DebugConditionSelector: FC = () => {
       {debugCondition === 8 && <Condition8 />}
       {debugCondition === 9 && <Condition9 />}
       {debugCondition === 10 && <Condition10 />}
-      {debugCondition === 11 && <Condition11 />}
-      {debugCondition === 12 && <Condition12 />}
-      {debugCondition === 13 && <Condition13 />}
-      {debugCondition === 14 && <Condition14 />}
-      {debugCondition === 15 && <Condition15 />}
-      {debugCondition === 16 && <Condition16 />}
-      {debugCondition === 17 && <Condition17 />}
-      {debugCondition === 18 && <Condition18 />}
-      {debugCondition === 19 && <Condition19 />}
     </>
   );
 };
