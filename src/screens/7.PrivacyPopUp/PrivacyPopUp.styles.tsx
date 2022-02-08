@@ -4,6 +4,10 @@ export const SectionHeading = styled.p`
   color: #42145f;
   font-size: 34px;
   font-family: RNHouseSans-regular !important;
+  padding: 16px 0 !important;
+  @media only screen and (max-width: 600px) {
+    padding: 16px !important;
+  }
 `;
 
 export const SquareList = styled.ul`
@@ -12,11 +16,19 @@ export const SquareList = styled.ul`
 
 export const SquareBullet = styled.li`
   &:before {
-    content: "\\25AA"; /* Add content: \\2022 is the CSS Code/unicode for a bullet */
-    color: #42145f; /* Change the color */
-    font-weight: bold; /* If you want it to be bold */
-    display: inline-block; /* Needed to add space between the bullet and the text */
-    width: 1em; /* Also needed for space (tweak if needed) */
-    margin-left: -1em; /* Also needed for space (tweak if needed) */
+    content: "\\25AA";
+    color: #42145f;
+    font-weight: bold;
+    display: inline-block;
+    width: 1.5em;
+    margin-left: -1.5em;
   }
+  //   margin-left: 1em;
+  padding: 0.25em 0;
+`;
+
+export const ListP = styled.p`
+  margin: 0;
+  padding: 0.25em 0 !important;
+  margin-left: 1.5em;
 `;

@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import React, { FC, useEffect, useMemo, useState } from "react";
 import { useDispatch } from "react-redux";
 
 import ContentContainer from "../../components/ContentContainer";
@@ -7,8 +7,6 @@ import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import { BoldText, HeadingText } from "../../components/Text/Text.style";
 import NatwestEmailsChannel from "../../components/TickBoxChannels/NoImageChannel/NatwestEmailsChannel";
-import OtherNewsChannel from "../../components/TickBoxChannels/NoImageChannel/OtherNewsChannel";
-import ThirdPartyChannel from "../../components/TickBoxChannels/NoImageChannel/ThirdPartyChannel";
 import { useEFSContinue } from "../../hooks/useEFSContinue";
 import { usePageDuration } from "../../hooks/usePageDuration";
 import cupSaucer from "../../images/cup-saucer.png";
@@ -21,12 +19,25 @@ import {
   NextButtonStyle,
 } from "../../components/Buttons/NextButton/NextButton.style";
 import { useHistory } from "react-router-dom";
+import { DesktopYesNoContainer } from "../../components/TickBoxChannels/TwoTickChannel/TwoTickChannel.styles";
+import TTOtherNewsChannel from "../../components/TickBoxChannels/TwoTickChannel/TTOtherNewsChannel";
+import TTThirdPartyChannel from "../../components/TickBoxChannels/TwoTickChannel/TTThirdPartyChannel";
+import TTNatwestEmailsChannel from "../../components/TickBoxChannels/TwoTickChannel/TTNatwestEmailsChannel";
 
-const PrivacyPermissions: FC = () => {
-  const dispatch = useDispatch();
+interface PrivacyPermissionsProps {
+  hideSubText?: boolean;
+}
+
+const PrivacyPermissions: FC<PrivacyPermissionsProps> = ({ hideSubText }) => {
   const { EFSSubmit } = useEFSContinue();
   const stopPageTiming = usePageDuration("privacy_permissions");
   const history = useHistory();
+
+  const dispatch = useDispatch();
+
+  const [otherNewsClick, setOtherNewsClick] = useState(0);
+  const [thirdPartyClick, setThirdPartyClick] = useState(0);
+  const [natwestEmails, setNatwestEmails] = useState(0);
 
   const handleNextPage = (route: string) => {
     history.push(route);
@@ -53,8 +64,20 @@ const PrivacyPermissions: FC = () => {
           Please tick the box if you<BoldText>&nbsp;want&nbsp;</BoldText>
           to hear from us about:
         </HeadingText>
-        <OtherNewsChannel />
-        <ThirdPartyChannel />
+        <DesktopYesNoContainer>
+          <p>YES</p>
+          <p>NO</p>
+        </DesktopYesNoContainer>
+        <TTOtherNewsChannel
+          state={otherNewsClick}
+          setState={setOtherNewsClick}
+          hideSubText={hideSubText}
+        />
+        <TTThirdPartyChannel
+          state={thirdPartyClick}
+          setState={setThirdPartyClick}
+          hideSubText={hideSubText}
+        />
         <HeadingText>How can we use your information?</HeadingText>
         <p>
           We use cookies in emails to help us understand your interests and how
@@ -71,7 +94,10 @@ const PrivacyPermissions: FC = () => {
             Privacy Notice.
           </PrivacySpan>{" "}
         </p>
-        <NatwestEmailsChannel />
+        <TTNatwestEmailsChannel
+          state={natwestEmails}
+          setState={setNatwestEmails}
+        />
         <NextButtonContainer>
           <NextButtonStyle
             onClick={(e) => {

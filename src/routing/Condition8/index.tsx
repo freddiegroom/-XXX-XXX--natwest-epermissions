@@ -55,7 +55,7 @@ const Condition8: FC = () => {
           <Scenario8 />
         </Route>
         <Route path="/PrivacyPermissions">
-          <PrivacyPermissions />
+          <PrivacyPermissions hideSubText />
         </Route>
         <Route path="/PrivacyPopUp">
           <PrivacyPopUp />

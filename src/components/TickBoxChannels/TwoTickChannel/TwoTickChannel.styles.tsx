@@ -91,6 +91,40 @@ export const ChannelText = styled.div`
     align-self: flex-start;
   }
 `;
+export const ChannelTextWide = styled.div`
+  padding-left: 32px;
+  @media only screen and (max-width: 600px) {
+    padding-left: 24px;
+  }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 20px;
+  line-height: 28px;
+  p {
+    margin: 0;
+    padding: 0;
+    width: 400px;
+    padding-right: 24px;
+    @media only screen and (max-width: 600px) {
+      width: 100%;
+      font-size: 20px;
+      line-height: 28px;
+    }
+  }
+  .sub {
+    color: #666666;
+    font-size: 16px;
+    line-height: 20px;
+  }
+  @media only screen and (max-width: 600px) {
+    order: 999;
+    width: 100%;
+    align-self: flex-start;
+  }
+
+  height: 150px;
+`;
 
 export const EmailImg = styled.div`
   display: flex;

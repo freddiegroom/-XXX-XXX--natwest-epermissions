@@ -6,6 +6,7 @@ import Header from "../../components/Header";
 import BackButton from "../../components/Buttons/BackButton";
 import ContentContainer from "../../components/ContentContainer";
 import {
+  ListP,
   SectionHeading,
   SquareBullet,
   SquareList,
@@ -96,21 +97,21 @@ const PrivacyPopUp = () => {
               some of our services
             </SquareBullet>
             <SquareBullet>Credit reference agencies, so we can:</SquareBullet>
-            <p>
+            <ListP>
               {" "}
               – Do a credit check – this can affect your credit score (we don’t
               do one if you’re just opening a savings account)
-            </p>
-            <p>
+            </ListP>
+            <ListP>
               – Do an identity check – this could be done on you and anyone else
               who’s linked to the account, but it doesn’t affect your credit
               score
-            </p>
-            <p>
+            </ListP>
+            <ListP>
               – Protect you and comply with laws – we must share info with other
               organisations in certain situations, about how you manage your
               account
-            </p>
+            </ListP>
             <SquareBullet>
               Fraud prevention agencies, so we can also record any identified or
               suspected fraud, which could mean we, or others, may refuse to
