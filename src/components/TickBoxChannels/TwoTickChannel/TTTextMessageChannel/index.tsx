@@ -28,7 +28,6 @@ const TTTextMessageChannel: FC<TTTextMessageChannelProps> = ({
   setState,
   hideSubText,
 }) => {
-  // const [clicked, setClicked] = useState(false);
   const dispatch = useDispatch();
   const clickFunc = () => {
     dispatch(tickTextMessage());
