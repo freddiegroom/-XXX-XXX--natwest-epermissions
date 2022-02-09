@@ -58,12 +58,6 @@ const Scenario9: FC = () => {
     <ExperimentContainer>
       <Header image={cupSaucer}>News and offers</Header>
       <ContentContainer>
-        <p>
-          We'd like to keep you informed about NatWest products, services and
-          offers we think may be helpful to you. We won’t bombard you and we’ll
-          never share your details with other NatWest group companies or third
-          parties for marketing purposes without your permission.
-        </p>
         <SmallPaddingDiv />
         <HeadingText>
           Please review your existing preferences and choose if you are{" "}

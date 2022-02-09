@@ -87,7 +87,7 @@ const TTOtherNewsChannel: FC<TTOtherNewsChannelProps> = ({
                       handleNextPage("/AboutUsPopUp");
                     }}
                   >
-                    Privacy Notice.
+                    'About Us'
                   </PrivacySpan>{" "}
                 </p>
               )}

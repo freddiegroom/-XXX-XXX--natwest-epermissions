@@ -1,34 +1,37 @@
 import React, { FC, useState } from "react";
 import { useDispatch } from "react-redux";
 
-import ContentContainer from "../../components/ContentContainer";
-import ExperimentContainer from "../../components/ExperimentContainer";
-import Footer from "../../components/Footer";
-import Header from "../../components/Header";
-import { BoldText, HeadingText } from "../../components/Text/Text.style";
-import { useEFSContinue } from "../../hooks/useEFSContinue";
-import { usePageDuration } from "../../hooks/usePageDuration";
-import cupSaucer from "../../images/cup-saucer.png";
+import ContentContainer from "../../../components/ContentContainer";
+import ExperimentContainer from "../../../components/ExperimentContainer";
+import Footer from "../../../components/Footer";
+import Header from "../../../components/Header";
+import { HeadingText } from "../../../components/Text/Text.style";
+import { useEFSContinue } from "../../../hooks/useEFSContinue";
+import { usePageDuration } from "../../../hooks/usePageDuration";
+import cupSaucer from "../../../images/cup-saucer.png";
 import { PrivacySpan, RegularText, RedText } from "./PrivacyPermissions.styles";
 import { clickPrivacyNotice } from "./PrivacyPermissionsSlice";
-import bottomBevel from "../../images/bottom-bevel.png";
-import largebottomBevel from "../../images/large-bottom-bevel.png";
+import bottomBevel from "../../../images/bottom-bevel.png";
+import largebottomBevel from "../../../images/large-bottom-bevel.png";
+// import largebottomBevel from "../../../images/large-bottom-bevel.png";
 import {
   NextButtonContainer,
   NextButtonStyle,
-} from "../../components/Buttons/NextButton/NextButton.style";
+} from "../../../components/Buttons/NextButton/NextButton.style";
 import { useHistory } from "react-router-dom";
-import { DesktopYesNoContainer } from "../../components/TickBoxChannels/TwoTickChannel/TwoTickChannel.styles";
-import TTOtherNewsChannel from "../../components/TickBoxChannels/TwoTickChannel/TTOtherNewsChannel";
-import TTThirdPartyChannel from "../../components/TickBoxChannels/TwoTickChannel/TTThirdPartyChannel";
-import TTNatwestEmailsChannel from "../../components/TickBoxChannels/TwoTickChannel/TTNatwestEmailsChannel";
-import FakeNextButton from "../../components/Buttons/FakeNextButton";
+import { DesktopYesNoContainer } from "../../../components/TickBoxChannels/TwoTickChannel/TwoTickChannel.styles";
+import TTOtherNewsChannel from "../../../components/TickBoxChannels/TwoTickChannel/TTOtherNewsChannel";
+import TTThirdPartyChannel from "../../../components/TickBoxChannels/TwoTickChannel/TTThirdPartyChannel";
+import TTNatwestEmailsChannel from "../../../components/TickBoxChannels/TwoTickChannel/TTNatwestEmailsChannel";
+import FakeNextButton from "../../../components/Buttons/FakeNextButton";
 
-interface PrivacyPermissionsProps {
+interface PrivacyPermissions1Props {
   hideSubText?: boolean;
 }
 
-const PrivacyPermissions: FC<PrivacyPermissionsProps> = ({ hideSubText }) => {
+const PrivacyPermissions510: FC<PrivacyPermissions1Props> = ({
+  hideSubText,
+}) => {
   const { EFSSubmit } = useEFSContinue();
   const stopPageTiming = usePageDuration("privacy_permissions");
   const history = useHistory();
@@ -54,13 +57,6 @@ const PrivacyPermissions: FC<PrivacyPermissionsProps> = ({ hideSubText }) => {
     <ExperimentContainer>
       <Header image={cupSaucer}>News and offers</Header>
       <ContentContainer>
-        <RegularText>
-          We can also tell you about valuable news and offers from other NatWest
-          group companies and carefully selected third parties. You’ll{" "}
-          <BoldText>hear directly from us</BoldText> and we{" "}
-          <BoldText>won’t share your data</BoldText> with third parties for
-          their own marketing.
-        </RegularText>
         <HeadingText>Are you happy for us to contact you about:</HeadingText>
         <DesktopYesNoContainer>
           <p>YES</p>
@@ -76,6 +72,10 @@ const PrivacyPermissions: FC<PrivacyPermissionsProps> = ({ hideSubText }) => {
           setState={setThirdPartyClick}
           hideSubText={hideSubText}
         />
+        <RegularText>
+          You’ll hear directly from us and we won’t share your data with third
+          parties for their own marketing.
+        </RegularText>
         <HeadingText>How can we use your information?</HeadingText>
         <RegularText>
           We use cookies in emails to help us understand your interests and how
@@ -130,4 +130,4 @@ const PrivacyPermissions: FC<PrivacyPermissionsProps> = ({ hideSubText }) => {
   );
 };
 
-export default PrivacyPermissions;
+export default PrivacyPermissions510;

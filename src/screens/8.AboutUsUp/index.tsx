@@ -12,19 +12,19 @@ import {
   AboutUsHeading,
   AboutUsText,
 } from "./AboutUsPopUp.styles";
-import NWGroup from "./natwest-group-logo-singl-article.png";
-import Natwest from "./natwest.png";
-import RBS from "./rbs.png";
-import Ulsterbank from "./ulsterbank.png";
-import Coutts from "./coutts.png";
-import ChildAndCo from "./child-and-co.png";
-import Drummonds from "./drummonds.png";
-import Holts from "./holts-military-banking.png";
-import IOM from "./isle-of-man-bank.png";
-import Lombard from "./lombard.png";
-import NatWest from "./nat-west.png";
-import RBSInternational from "./rbs-internatinal.png";
-import FreeAgent from "./freeagent-logo.jpg";
+import NWGroup from "./images/natwest-group-logo-singl-article.png";
+import Natwest from "./images/natwest.png";
+import RBS from "./images/rbs.png";
+import Ulsterbank from "./images/ulsterbank.png";
+import Coutts from "./images/coutts.png";
+import ChildAndCo from "./images/child-and-co.png";
+import Drummonds from "./images/drummonds.png";
+import Holts from "./images/holts-military-banking.png";
+import IOM from "./images/isle-of-man-bank.png";
+import Lombard from "./images/lombard.png";
+import NatWest from "./images/nat-west.png";
+import RBSInternational from "./images/rbs-internatinal.png";
+import FreeAgent from "./images/freeagent-logo.jpg";
 
 const AboutUsPopUp = () => {
   const stopDuration = usePageDuration("privacy_pop_up");

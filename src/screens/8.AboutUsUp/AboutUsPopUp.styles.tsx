@@ -23,9 +23,13 @@ export const AboutUsHeading = styled.h3`
   margin: 0;
   font-size: 28px;
   padding: 16px 0;
+  font-family: RNHouseSans-Regular !important;
 `;
 
 export const AboutUsText = styled.p`
   padding: 0 !important;
   line-height: 24px;
+  color: #646068;
+  font-size: 18px;
+  font-family: RNHouseSans-Regular !important;
 `;
