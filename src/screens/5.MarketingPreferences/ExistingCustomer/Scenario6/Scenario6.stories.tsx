@@ -8,8 +8,6 @@ export default {
   component: Scenario6,
 } as Meta;
 
-interface StoryProps {}
-
 const Template: Story = () => {
   return (
     <Router>

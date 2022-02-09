@@ -35,18 +35,15 @@ import TTEmailChannel from "../../../../components/TickBoxChannels/TwoTickChanne
 import TTTelephoneChannel from "../../../../components/TickBoxChannels/TwoTickChannel/TTTelephoneChannel";
 import TTPostChannel from "../../../../components/TickBoxChannels/TwoTickChannel/TTPostChannel";
 import { DesktopYesNoContainer } from "../../../../components/TickBoxChannels/TwoTickChannel/TwoTickChannel.styles";
+import { pickRandomFunc } from "../../functions";
 
 const Scenario8: FC = () => {
   const stopPageTiming = usePageDuration("marketing-preferences-8");
   const dispatch = useDispatch();
-  const pickRandomFunc = () => {
-    return Math.floor(Math.random() * 2);
-  };
-
-  let initialTextMessage = useMemo(() => pickRandomFunc(), []);
-  let initialEmail = useMemo(() => pickRandomFunc(), []);
-  let initialTelephone = useMemo(() => pickRandomFunc(), []);
-  let initialPost = useMemo(() => pickRandomFunc(), []);
+  let initialTextMessage = useMemo(() => pickRandomFunc(15), []);
+  let initialEmail = useMemo(() => pickRandomFunc(20), []);
+  let initialTelephone = useMemo(() => pickRandomFunc(60), []);
+  let initialPost = useMemo(() => pickRandomFunc(60), []);
 
   useEffect(() => {
     dispatch(saveTextMessage(initialTextMessage));
