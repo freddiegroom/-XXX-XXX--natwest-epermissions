@@ -26,3 +26,13 @@ export const PrivacySpan = styled.span`
   text-decoration: underline;
   cursor: pointer;
 `;
+
+export const RegularText = styled.p`
+  @media only screen and (max-width: 600px) {
+    padding: 8px 16px !important;
+  }
+`;
+
+export const RedText = styled.p`
+  color: red;
+`;

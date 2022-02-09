@@ -1,4 +1,4 @@
-import React, { FC, useState } from "react";
+import React, { FC, useEffect, useMemo, useState } from "react";
 import ExperimentContainer from "../../../../components/ExperimentContainer";
 import Footer from "../../../../components/Footer";
 import Header from "../../../../components/Header";
@@ -6,6 +6,10 @@ import NextButton from "../../../../components/Buttons/NextButton/index";
 import ContentContainer from "../../../../components/ContentContainer";
 
 import {
+  saveEmail,
+  savePost,
+  saveTelephone,
+  saveTextMessage,
   selectAll,
   selectNone,
   tickEmail,
@@ -30,15 +34,36 @@ import TTTextMessageChannel from "../../../../components/TickBoxChannels/TwoTick
 import TTEmailChannel from "../../../../components/TickBoxChannels/TwoTickChannel/TTEmailChannel";
 import TTTelephoneChannel from "../../../../components/TickBoxChannels/TwoTickChannel/TTTelephoneChannel";
 import TTPostChannel from "../../../../components/TickBoxChannels/TwoTickChannel/TTPostChannel";
+import { DesktopYesNoContainer } from "../../../../components/TickBoxChannels/TwoTickChannel/TwoTickChannel.styles";
 
 const Scenario8: FC = () => {
   const stopPageTiming = usePageDuration("marketing-preferences-8");
-
-  const [textClick, setTextClick] = useState(0);
-  const [emailClick, setEmailClick] = useState(0);
-  const [telephoneClick, setTelephoneClick] = useState(0);
-  const [postClick, setPostClick] = useState(0);
   const dispatch = useDispatch();
+  const pickRandomFunc = () => {
+    return Math.floor(Math.random() * 2);
+  };
+
+  let initialTextMessage = useMemo(() => pickRandomFunc(), []);
+  let initialEmail = useMemo(() => pickRandomFunc(), []);
+  let initialTelephone = useMemo(() => pickRandomFunc(), []);
+  let initialPost = useMemo(() => pickRandomFunc(), []);
+
+  useEffect(() => {
+    dispatch(saveTextMessage(initialTextMessage));
+    dispatch(saveEmail(initialEmail));
+    dispatch(saveTelephone(initialTelephone));
+    dispatch(savePost(initialPost));
+  }, [
+    dispatch,
+    initialEmail,
+    initialPost,
+    initialTelephone,
+    initialTextMessage,
+  ]);
+  const [textClick, setTextClick] = useState(initialTextMessage);
+  const [emailClick, setEmailClick] = useState(initialEmail);
+  const [telephoneClick, setTelephoneClick] = useState(initialTelephone);
+  const [postClick, setPostClick] = useState(initialPost);
 
   const selectAllFunction = () => {
     setTextClick(1);
@@ -76,6 +101,10 @@ const Scenario8: FC = () => {
           <BoldText>happy</BoldText> for us to send you information about
           products, services and offers by:
         </HeadingText>
+        <DesktopYesNoContainer>
+          <p>YES</p>
+          <p>NO</p>
+        </DesktopYesNoContainer>
         <TTTextMessageChannel state={textClick} setState={setTextClick} />
         <TTEmailChannel state={emailClick} setState={setEmailClick} />
         <TTTelephoneChannel

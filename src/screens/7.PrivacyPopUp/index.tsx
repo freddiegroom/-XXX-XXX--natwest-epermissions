@@ -19,6 +19,10 @@ const PrivacyPopUp = () => {
     <ExperimentContainer>
       <Header>Privacy Permissions</Header>
       <ContentContainer>
+        <BackButton
+          routeAddress="/PrivacyPermissions"
+          pageTimeFunc={stopDuration}
+        />
         <div>
           <SectionHeading>Intro</SectionHeading>
           <p>

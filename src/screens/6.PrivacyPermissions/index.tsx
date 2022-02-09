@@ -1,4 +1,4 @@
-import React, { FC, useEffect, useMemo, useState } from "react";
+import React, { FC, useState } from "react";
 import { useDispatch } from "react-redux";
 
 import ContentContainer from "../../components/ContentContainer";
@@ -6,11 +6,10 @@ import ExperimentContainer from "../../components/ExperimentContainer";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import { BoldText, HeadingText } from "../../components/Text/Text.style";
-import NatwestEmailsChannel from "../../components/TickBoxChannels/NoImageChannel/NatwestEmailsChannel";
 import { useEFSContinue } from "../../hooks/useEFSContinue";
 import { usePageDuration } from "../../hooks/usePageDuration";
 import cupSaucer from "../../images/cup-saucer.png";
-import { PrivacySpan } from "./PrivacyPermissions.styles";
+import { PrivacySpan, RegularText, RedText } from "./PrivacyPermissions.styles";
 import { clickPrivacyNotice } from "./PrivacyPermissionsSlice";
 import bottomBevel from "../../images/bottom-bevel.png";
 import largebottomBevel from "../../images/large-bottom-bevel.png";
@@ -23,6 +22,8 @@ import { DesktopYesNoContainer } from "../../components/TickBoxChannels/TwoTickC
 import TTOtherNewsChannel from "../../components/TickBoxChannels/TwoTickChannel/TTOtherNewsChannel";
 import TTThirdPartyChannel from "../../components/TickBoxChannels/TwoTickChannel/TTThirdPartyChannel";
 import TTNatwestEmailsChannel from "../../components/TickBoxChannels/TwoTickChannel/TTNatwestEmailsChannel";
+import FakeNextButton from "../../components/Buttons/FakeNextButton";
+import NextButton from "../../components/Buttons/NextButton";
 
 interface PrivacyPermissionsProps {
   hideSubText?: boolean;
@@ -35,9 +36,10 @@ const PrivacyPermissions: FC<PrivacyPermissionsProps> = ({ hideSubText }) => {
 
   const dispatch = useDispatch();
 
-  const [otherNewsClick, setOtherNewsClick] = useState(0);
-  const [thirdPartyClick, setThirdPartyClick] = useState(0);
-  const [natwestEmails, setNatwestEmails] = useState(0);
+  const [otherNewsClick, setOtherNewsClick] = useState(3);
+  const [thirdPartyClick, setThirdPartyClick] = useState(3);
+  const [natwestEmails, setNatwestEmails] = useState(3);
+  const [fillMessage, setFillMessage] = useState("");
 
   const handleNextPage = (route: string) => {
     history.push(route);
@@ -53,13 +55,13 @@ const PrivacyPermissions: FC<PrivacyPermissionsProps> = ({ hideSubText }) => {
     <ExperimentContainer>
       <Header image={cupSaucer}>News and offers</Header>
       <ContentContainer>
-        <p>
+        <RegularText>
           We’d also like to tell you about valuable news and offers from other
           NatWest group companies and carefully selected third parties. The
           NatWest group includes NatWest Group Plc and its subsidiaries. You’ll
           hear directly from us and we won’t share your data with third parties
           for their own marketing.{" "}
-        </p>
+        </RegularText>
         <HeadingText>
           Please tick the box if you<BoldText>&nbsp;want&nbsp;</BoldText>
           to hear from us about:
@@ -79,7 +81,7 @@ const PrivacyPermissions: FC<PrivacyPermissionsProps> = ({ hideSubText }) => {
           hideSubText={hideSubText}
         />
         <HeadingText>How can we use your information?</HeadingText>
-        <p>
+        <RegularText>
           We use cookies in emails to help us understand your interests and how
           you interact with our emails. It also helps us to identify delivery
           problems and log when emails are opened. For more information see
@@ -93,22 +95,39 @@ const PrivacyPermissions: FC<PrivacyPermissionsProps> = ({ hideSubText }) => {
           >
             Privacy Notice.
           </PrivacySpan>{" "}
-        </p>
+        </RegularText>
         <TTNatwestEmailsChannel
           state={natwestEmails}
           setState={setNatwestEmails}
         />
-        <NextButtonContainer>
-          <NextButtonStyle
-            onClick={(e) => {
-              handleFinishExperiment(e);
-            }}
-          >
-            Next
-          </NextButtonStyle>
-          <img className="smallBevel" src={bottomBevel} alt="" />
-          <img className="largeBevel" src={largebottomBevel} alt="" />
-        </NextButtonContainer>
+        {!(
+          otherNewsClick !== 3 &&
+          thirdPartyClick !== 3 &&
+          natwestEmails !== 3
+        ) && (
+          <>
+            {fillMessage && (
+              <RedText>Please make your choices to continue</RedText>
+            )}
+            <FakeNextButton setState={setFillMessage}>
+              scroll to top
+            </FakeNextButton>
+          </>
+        )}
+
+        {otherNewsClick !== 3 && thirdPartyClick !== 3 && natwestEmails !== 3 && (
+          <NextButtonContainer>
+            <NextButtonStyle
+              onClick={(e) => {
+                handleFinishExperiment(e);
+              }}
+            >
+              Next
+            </NextButtonStyle>
+            <img className="smallBevel" src={bottomBevel} alt="" />
+            <img className="largeBevel" src={largebottomBevel} alt="" />
+          </NextButtonContainer>
+        )}
       </ContentContainer>
       <Footer />
     </ExperimentContainer>

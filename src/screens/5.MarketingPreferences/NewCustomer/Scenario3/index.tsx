@@ -34,14 +34,15 @@ import TTTextMessageChannel from "../../../../components/TickBoxChannels/TwoTick
 import TTEmailChannel from "../../../../components/TickBoxChannels/TwoTickChannel/TTEmailChannel";
 import TTTelephoneChannel from "../../../../components/TickBoxChannels/TwoTickChannel/TTTelephoneChannel";
 import TTPostChannel from "../../../../components/TickBoxChannels/TwoTickChannel/TTPostChannel";
+import { DesktopYesNoContainer } from "../../../../components/TickBoxChannels/TwoTickChannel/TwoTickChannel.styles";
 
 const Scenario3: FC = () => {
   const stopPageTiming = usePageDuration("marketing-preferences-3");
 
-  const [textClick, setTextClick] = useState(0);
-  const [emailClick, setEmailClick] = useState(0);
-  const [telephoneClick, setTelephoneClick] = useState(0);
-  const [postClick, setPostClick] = useState(0);
+  const [textClick, setTextClick] = useState(3);
+  const [emailClick, setEmailClick] = useState(3);
+  const [telephoneClick, setTelephoneClick] = useState(3);
+  const [postClick, setPostClick] = useState(3);
   const dispatch = useDispatch();
 
   const selectAllFunction = () => {
@@ -77,6 +78,10 @@ const Scenario3: FC = () => {
         </p>
         <SmallPaddingDiv />
         <HeadingText>Are you happy for us to contact you by:</HeadingText>
+        <DesktopYesNoContainer>
+          <p>YES</p>
+          <p>NO</p>
+        </DesktopYesNoContainer>
         <TTTextMessageChannel state={textClick} setState={setTextClick} />
         <TTEmailChannel state={emailClick} setState={setEmailClick} />
         <TTTelephoneChannel

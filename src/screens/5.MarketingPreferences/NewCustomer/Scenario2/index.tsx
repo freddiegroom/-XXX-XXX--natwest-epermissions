@@ -50,12 +50,6 @@ const Scenario2: FC = () => {
           setState={setTelephoneClick}
         />
         <TTPostChannel state={postClick} setState={setPostClick} />
-        <p>
-          *We use data to match you with your social media profile so we can
-          display relevant offers to you on your social media pages. Note, you
-          may still see ads on your social media feed if you have accepted
-          targeting cookies through your browser.
-        </p>
         {!(
           textClick !== 3 &&
           emailClick !== 3 &&

@@ -107,6 +107,7 @@ export const ChannelTextWide = styled.div`
     width: 400px;
     padding-right: 24px;
     @media only screen and (max-width: 600px) {
+      padding-right: 0;
       width: 100%;
       font-size: 20px;
       line-height: 28px;

@@ -17,6 +17,8 @@ import {
   tickEmail,
   unTickEmail,
 } from "../../../../screens/5.MarketingPreferences/MarketingPreferencesSlice";
+import { PrivacySpan } from "../../../../screens/6.PrivacyPermissions/PrivacyPermissions.styles";
+import { useHistory } from "react-router-dom";
 
 interface TTOtherNewsChannelProps {
   state: any;
@@ -30,6 +32,10 @@ const TTOtherNewsChannel: FC<TTOtherNewsChannelProps> = ({
   hideSubText,
 }) => {
   // const [clicked, setClicked] = useState(false);
+  const history = useHistory();
+  const handleNextPage = (route: string) => {
+    history.push(route);
+  };
   const dispatch = useDispatch();
   const clickFunc = () => {
     dispatch(tickEmail());
@@ -73,7 +79,16 @@ const TTOtherNewsChannel: FC<TTOtherNewsChannelProps> = ({
                 <p className="sub">
                   Products, services and offers from other members of NatWest
                   Group plc. More information about the NatWest group can be
-                  found at NatWestGroup.com by clicking on ‘About Us’
+                  found at NatWestGroup.com by clicking on{" "}
+                  <PrivacySpan
+                    onClick={(e) => {
+                      e.preventDefault();
+                      // dispatch(clickAboutUsNotice());
+                      handleNextPage("/AboutUsPopUp");
+                    }}
+                  >
+                    Privacy Notice.
+                  </PrivacySpan>{" "}
                 </p>
               )}
             </ChannelTextWide>
