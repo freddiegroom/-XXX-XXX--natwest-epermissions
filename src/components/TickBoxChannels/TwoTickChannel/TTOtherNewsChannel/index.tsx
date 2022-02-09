@@ -1,17 +1,14 @@
 import React, { FC } from "react";
 import {
   Channel,
-  ChannelText,
   ChannelWrapper,
   ClickBox,
   ClickedBox,
-  EmailImg,
   YesNoContainer,
   ChannelTextWide,
 } from "../TwoTickChannel.styles";
 import tickedCheckbox from "../../../../images/tick-checkbox.png";
 import checkbox from "../../../../images/checkbox.png";
-import email from "../../../../images/email.png";
 import { useDispatch } from "react-redux";
 import {
   tickEmail,
