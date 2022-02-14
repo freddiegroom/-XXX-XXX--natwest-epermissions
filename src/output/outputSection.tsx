@@ -78,6 +78,7 @@ export const OutputSection: FC = () => {
     outputMarketingPreferencesSelectNone,
     //PrivacyPermissions
     outputPrivacyPermissionsPrivacyNotice,
+    outputPrivacyPermissionsAboutUsNotice,
     outputPrivacyPermissionsOtherNews,
     outputPrivacyPermissionsThirdParty,
     outputPrivacyPermissionsNatwestEmails,
@@ -206,6 +207,11 @@ export const OutputSection: FC = () => {
         varname={outputPrivacyPermissionsPrivacyNotice}
         value={`${outputData.privacyPermissions.privacyNotice}`}
         label="privacy permissions privacy notice"
+      />
+      <OutputLine
+        varname={outputPrivacyPermissionsAboutUsNotice}
+        value={`${outputData.privacyPermissions.aboutUsNotice}`}
+        label="privacy permissions about us notice"
       />
       <OutputLine
         varname={outputPrivacyPermissionsOtherNews}

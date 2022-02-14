@@ -34,6 +34,7 @@ const selectOutput = createSelector(
       },
       privacyPermissions: {
         privacyNotice: state.PrivacyPermissionsSlice.privacyNotice,
+        aboutUsNotice: state.PrivacyPermissionsSlice.aboutUsNotice,
         otherNews: state.PrivacyPermissionsSlice.otherNews,
         thirdParty: state.PrivacyPermissionsSlice.thirdParty,
         natwestEmails: state.PrivacyPermissionsSlice.natwestEmails,

@@ -17,6 +17,10 @@ import {
   tickEmail,
   unTickEmail,
 } from "../../../../screens/5.MarketingPreferences/MarketingPreferencesSlice";
+import {
+  tickThirdParty,
+  unTickThirdParty,
+} from "../../../../screens/6.PrivacyPermissions/PrivacyPermissionsSlice";
 
 interface TTThirdPartyChannelProps {
   state: any;
@@ -32,11 +36,11 @@ const TTThirdPartyChannel: FC<TTThirdPartyChannelProps> = ({
   // const [clicked, setClicked] = useState(false);
   const dispatch = useDispatch();
   const clickFunc = () => {
-    dispatch(tickEmail());
+    dispatch(tickThirdParty());
     setState(1);
   };
   const unClickFunc = () => {
-    dispatch(unTickEmail());
+    dispatch(unTickThirdParty());
     setState(0);
   };
   return (

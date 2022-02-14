@@ -10,6 +10,11 @@ import Condition7 from "../../routing/Condition7";
 import Condition8 from "../../routing/Condition8";
 import Condition9 from "../../routing/Condition9";
 import { ConditionSelectorStyle } from "./DebugConditionSelector.style";
+import InLife1 from "../../screens/InLife/InLife1";
+import InLife2 from "../../screens/InLife/InLife2/index";
+import InLife3 from "../../screens/InLife/InLife3/index";
+import InLife4 from "../../screens/InLife/InLife4/index";
+import InLife5 from "../../screens/InLife/InLife5/index";
 
 const DebugConditionSelector: FC = () => {
   const [debugCondition, SetDebugCondition] = useState(1);
@@ -107,6 +112,51 @@ const DebugConditionSelector: FC = () => {
         >
           10
         </button>
+        {/* <button
+          className={debugCondition === 11 ? "redButton" : "none"}
+          onClick={(e) => {
+            e.preventDefault();
+            SetDebugCondition(11);
+          }}
+        >
+          InLife 1
+        </button>
+        <button
+          className={debugCondition === 12 ? "redButton" : "none"}
+          onClick={(e) => {
+            e.preventDefault();
+            SetDebugCondition(12);
+          }}
+        >
+          InLife 2
+        </button>
+        <button
+          className={debugCondition === 13 ? "redButton" : "none"}
+          onClick={(e) => {
+            e.preventDefault();
+            SetDebugCondition(13);
+          }}
+        >
+          InLife 3
+        </button>
+        <button
+          className={debugCondition === 14 ? "redButton" : "none"}
+          onClick={(e) => {
+            e.preventDefault();
+            SetDebugCondition(14);
+          }}
+        >
+          InLife 4
+        </button>
+        <button
+          className={debugCondition === 15 ? "redButton" : "none"}
+          onClick={(e) => {
+            e.preventDefault();
+            SetDebugCondition(15);
+          }}
+        >
+          InLife 5
+        </button> */}
       </ConditionSelectorStyle>
 
       {debugCondition === 1 && <Condition1 />}
@@ -119,6 +169,11 @@ const DebugConditionSelector: FC = () => {
       {debugCondition === 8 && <Condition8 />}
       {debugCondition === 9 && <Condition9 />}
       {debugCondition === 10 && <Condition10 />}
+      {/* {debugCondition === 11 && <InLife1 />}
+      {debugCondition === 12 && <InLife2 />}
+      {debugCondition === 13 && <InLife3 />}
+      {debugCondition === 14 && <InLife4 />}
+      {debugCondition === 15 && <InLife5 />} */}
     </>
   );
 };

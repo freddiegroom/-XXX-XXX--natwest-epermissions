@@ -16,6 +16,10 @@ import {
   tickEmail,
   unTickEmail,
 } from "../../../../screens/5.MarketingPreferences/MarketingPreferencesSlice";
+import {
+  tickNatwestEmails,
+  unTickNatwestEmails,
+} from "../../../../screens/6.PrivacyPermissions/PrivacyPermissionsSlice";
 
 interface TTNatwestEmailsChannelProps {
   state: any;
@@ -29,11 +33,11 @@ const TTNatwestEmailsChannel: FC<TTNatwestEmailsChannelProps> = ({
   // const [clicked, setClicked] = useState(false);
   const dispatch = useDispatch();
   const clickFunc = () => {
-    dispatch(tickEmail());
+    dispatch(tickNatwestEmails());
     setState(1);
   };
   const unClickFunc = () => {
-    dispatch(unTickEmail());
+    dispatch(unTickNatwestEmails());
     setState(0);
   };
   return (

@@ -29,7 +29,7 @@ const BackButton: FC<BackButtonProps> = ({ routeAddress, pageTimeFunc }) => {
           handleNextPage(`${routeAddress}`);
         }}
       >
-        Back to Survey
+        Back
       </BackButtonStyle>
       <LargeBevel src={largebottomBevel} />
     </BackButtonContainer>

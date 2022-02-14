@@ -10,12 +10,13 @@ import {
 import tickedCheckbox from "../../../../images/tick-checkbox.png";
 import checkbox from "../../../../images/checkbox.png";
 import { useDispatch } from "react-redux";
-import {
-  tickEmail,
-  unTickEmail,
-} from "../../../../screens/5.MarketingPreferences/MarketingPreferencesSlice";
 import { PrivacySpan } from "../../../../screens/6.PrivacyPermissions/PrivacyPermissions.styles";
 import { useHistory } from "react-router-dom";
+import {
+  clickAboutUsNotice,
+  tickOtherNews,
+  unTickOtherNews,
+} from "../../../../screens/6.PrivacyPermissions/PrivacyPermissionsSlice";
 
 interface TTOtherNewsChannelProps {
   state: any;
@@ -35,11 +36,11 @@ const TTOtherNewsChannel: FC<TTOtherNewsChannelProps> = ({
   };
   const dispatch = useDispatch();
   const clickFunc = () => {
-    dispatch(tickEmail());
+    dispatch(tickOtherNews());
     setState(1);
   };
   const unClickFunc = () => {
-    dispatch(unTickEmail());
+    dispatch(unTickOtherNews());
     setState(0);
   };
   return (
@@ -80,7 +81,7 @@ const TTOtherNewsChannel: FC<TTOtherNewsChannelProps> = ({
                   <PrivacySpan
                     onClick={(e) => {
                       e.preventDefault();
-                      // dispatch(clickAboutUsNotice());
+                      dispatch(clickAboutUsNotice());
                       handleNextPage("/AboutUsPopUp");
                     }}
                   >

@@ -10,6 +10,11 @@ import Condition6 from "../../routing/Condition6";
 import Condition7 from "../../routing/Condition7";
 import Condition8 from "../../routing/Condition8";
 import Condition9 from "../../routing/Condition9";
+import InLife1 from "../../screens/InLife/InLife1";
+import InLife2 from "../../screens/InLife/InLife2";
+import InLife3 from "../../screens/InLife/InLife3";
+import InLife4 from "../../screens/InLife/InLife4";
+import InLife5 from "../../screens/InLife/InLife5";
 
 const EFSConditionSelector: FC = () => {
   const { condition } = useEFSData();
@@ -26,6 +31,11 @@ const EFSConditionSelector: FC = () => {
       {condition === 8 && <Condition8 />}
       {condition === 9 && <Condition9 />}
       {condition === 10 && <Condition10 />}
+      {/* {condition === 11 && <InLife1 />}
+      {condition === 12 && <InLife2 />}
+      {condition === 13 && <InLife3 />}
+      {condition === 14 && <InLife4 />}
+      {condition === 15 && <InLife5 />} */}
     </>
   );
 };
