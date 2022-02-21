@@ -1,27 +1,28 @@
 import React, { FC, useState } from "react";
-import Condition1 from "../../routing/Condition1";
-import Condition10 from "../../routing/Condition10";
-import Condition2 from "../../routing/Condition2";
-import Condition3 from "../../routing/Condition3";
-import Condition4 from "../../routing/Condition4";
-import Condition5 from "../../routing/Condition5";
-import Condition6 from "../../routing/Condition6";
-import Condition7 from "../../routing/Condition7";
-import Condition8 from "../../routing/Condition8";
-import Condition9 from "../../routing/Condition9";
+// import Condition1 from "../../routing/Condition1";
+// import Condition10 from "../../routing/Condition10";
+// import Condition2 from "../../routing/Condition2";
+// import Condition3 from "../../routing/Condition3";
+// import Condition4 from "../../routing/Condition4";
+// import Condition5 from "../../routing/Condition5";
+// import Condition6 from "../../routing/Condition6";
+// import Condition7 from "../../routing/Condition7";
+// import Condition8 from "../../routing/Condition8";
+// import Condition9 from "../../routing/Condition9";
 import { ConditionSelectorStyle } from "./DebugConditionSelector.style";
 import InLife1 from "../../screens/InLife/InLife1";
 import InLife2 from "../../screens/InLife/InLife2/index";
 import InLife3 from "../../screens/InLife/InLife3/index";
 import InLife4 from "../../screens/InLife/InLife4/index";
 import InLife5 from "../../screens/InLife/InLife5/index";
+// import InLife1Container from "../../screens/InLife/InLife1/InLife1Container";
 
 const DebugConditionSelector: FC = () => {
   const [debugCondition, SetDebugCondition] = useState(1);
   return (
     <>
       <ConditionSelectorStyle onClick={(e) => e.preventDefault()}>
-        conditions
+        Scenarios{" "}
         <button
           className={debugCondition === 1 ? "redButton" : "none"}
           onClick={(e) => {
@@ -67,7 +68,7 @@ const DebugConditionSelector: FC = () => {
         >
           5
         </button>
-        <button
+        {/* <button
           className={debugCondition === 6 ? "redButton" : "none"}
           onClick={(e) => {
             e.preventDefault();
@@ -111,7 +112,7 @@ const DebugConditionSelector: FC = () => {
           }}
         >
           10
-        </button>
+        </button> */}
         {/* <button
           className={debugCondition === 11 ? "redButton" : "none"}
           onClick={(e) => {
@@ -158,7 +159,7 @@ const DebugConditionSelector: FC = () => {
           InLife 5
         </button> */}
       </ConditionSelectorStyle>
-
+      {/* 
       {debugCondition === 1 && <Condition1 />}
       {debugCondition === 2 && <Condition2 />}
       {debugCondition === 3 && <Condition3 />}
@@ -168,12 +169,12 @@ const DebugConditionSelector: FC = () => {
       {debugCondition === 7 && <Condition7 />}
       {debugCondition === 8 && <Condition8 />}
       {debugCondition === 9 && <Condition9 />}
-      {debugCondition === 10 && <Condition10 />}
-      {/* {debugCondition === 11 && <InLife1 />}
-      {debugCondition === 12 && <InLife2 />}
-      {debugCondition === 13 && <InLife3 />}
-      {debugCondition === 14 && <InLife4 />}
-      {debugCondition === 15 && <InLife5 />} */}
+      {debugCondition === 10 && <Condition10 />} */}
+      {debugCondition === 1 && <InLife1 />}
+      {debugCondition === 2 && <InLife2 />}
+      {debugCondition === 3 && <InLife3 />}
+      {debugCondition === 4 && <InLife4 />}
+      {debugCondition === 5 && <InLife5 />}
     </>
   );
 };

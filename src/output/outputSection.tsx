@@ -57,41 +57,42 @@ export const OutputSection: FC = () => {
     outputReduxStore,
     outputPageDurations,
     // Product Choice
-    outputProductChoiceChoice,
-    // personalDetails: {
-    outputPersonalDetailsTitle,
-    outputPersonalDetailsNationality,
-    outputPersonalDetailsAddress,
-    // marketingPreferences
-    outputMarketingPreferencesOffersAndUpdates,
-    outputMarketingPreferencesInitialTextMessage,
-    outputMarketingPreferencesTextMessage,
-    outputMarketingPreferencesInitialEmail,
-    outputMarketingPreferencesEmail,
-    outputMarketingPreferencesInitialTelephone,
-    outputMarketingPreferencesTelephone,
-    outputMarketingPreferencesInitialPost,
-    outputMarketingPreferencesPost,
-    outputMarketingPreferencesInitialSocialMedia,
-    outputMarketingPreferencesSocialMedia,
-    outputMarketingPreferencesSelectAll,
-    outputMarketingPreferencesSelectNone,
-    //PrivacyPermissions
-    outputPrivacyPermissionsPrivacyNotice,
-    outputPrivacyPermissionsAboutUsNotice,
-    outputPrivacyPermissionsOtherNews,
-    outputPrivacyPermissionsThirdParty,
-    outputPrivacyPermissionsNatwestEmails,
+    // outputProductChoiceChoice,
+    // // personalDetails: {
+    // outputPersonalDetailsTitle,
+    // outputPersonalDetailsNationality,
+    // outputPersonalDetailsAddress,
+    // // marketingPreferences
+    // outputMarketingPreferencesOffersAndUpdates,
+    // outputMarketingPreferencesInitialTextMessage,
+    // outputMarketingPreferencesTextMessage,
+    // outputMarketingPreferencesInitialEmail,
+    // outputMarketingPreferencesEmail,
+    // outputMarketingPreferencesInitialTelephone,
+    // outputMarketingPreferencesTelephone,
+    // outputMarketingPreferencesInitialPost,
+    // outputMarketingPreferencesPost,
+    // outputMarketingPreferencesInitialSocialMedia,
+    // outputMarketingPreferencesSocialMedia,
+    // outputMarketingPreferencesSelectAll,
+    // outputMarketingPreferencesSelectNone,
+    // //PrivacyPermissions
+    // outputPrivacyPermissionsPrivacyNotice,
+    // outputPrivacyPermissionsAboutUsNotice,
+    // outputPrivacyPermissionsOtherNews,
+    // outputPrivacyPermissionsThirdParty,
+    // outputPrivacyPermissionsNatwestEmails,
   } = useEFSData();
 
   const outputData = useSelector(selectOutput);
 
   const reduxStores = useSelector((state: RootState) =>
     JSON.stringify({
-      productChoice: state.productChoiceSlice,
-      personalDetails: state.personalDetailsSlice,
-      marketingPrefs: state.MarketingPreferencesSlice,
-      privacyPermissions: state.PrivacyPermissionsSlice,
+      // productChoice: state.productChoiceSlice,
+      // personalDetails: state.personalDetailsSlice,
+      // marketingPrefs: state.MarketingPreferencesSlice,
+      // privacyPermissions: state.PrivacyPermissionsSlice,
+      inLife: state.InLifeSlice,
       durations: state.pageDuration,
     })
   );
@@ -114,14 +115,14 @@ export const OutputSection: FC = () => {
         value={JSON.stringify(outputData.durations)}
         label="page durations (secs)"
       />
-      {/* Product Choice */}
+      {/* Product Choice
       <OutputLine
         varname={outputProductChoiceChoice}
         value={`${outputData.productChoice.choice}`}
         label="chosen product"
       />
       {/* Personal Details */}
-      <OutputLine
+      {/* <OutputLine
         varname={outputPersonalDetailsTitle}
         value={`${outputData.personalDetails.title}`}
         label="personal details title"
@@ -137,7 +138,7 @@ export const OutputSection: FC = () => {
         label="personal details address"
       />
       {/* MarketingPreferences */}
-      <OutputLine
+      {/* <OutputLine
         varname={outputMarketingPreferencesOffersAndUpdates}
         value={`${outputData.marketingPreferences.offersAndUpdates}`}
         label="marketing preferences offers and updates"
@@ -201,9 +202,9 @@ export const OutputSection: FC = () => {
         varname={outputMarketingPreferencesSelectNone}
         value={`${outputData.marketingPreferences.selectNone}`}
         label="marketing preferences select none"
-      />
+      /> */}
       {/* Privacy Permissions */}
-      <OutputLine
+      {/* <OutputLine
         varname={outputPrivacyPermissionsPrivacyNotice}
         value={`${outputData.privacyPermissions.privacyNotice}`}
         label="privacy permissions privacy notice"
@@ -227,7 +228,7 @@ export const OutputSection: FC = () => {
         varname={outputPrivacyPermissionsNatwestEmails}
         value={`${outputData.privacyPermissions.natwestEmails}`}
         label="privacy permissions natwest emails"
-      />
+      /> */}
     </>
   );
 };
