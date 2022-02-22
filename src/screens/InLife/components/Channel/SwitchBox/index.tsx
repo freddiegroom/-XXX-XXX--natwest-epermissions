@@ -20,20 +20,20 @@ const SwitchBox: FC<SwitchBoxProps> = ({
   const dispatch = useDispatch();
   const handleTruthyClick = () => {
     setState(0);
-    dispatch(tickRedux());
+    dispatch(unTickRedux());
   };
 
   const handleFalseyClick = () => {
     setState(1);
-    dispatch(unTickRedux());
+    dispatch(tickRedux());
   };
   return (
     <SwitchBoxWrapper>
       {!!state && (
-        <SwitchBoxImg src={trueSwitch} onClick={() => handleFalseyClick()} />
+        <SwitchBoxImg src={trueSwitch} onClick={() => handleTruthyClick()} />
       )}
       {!state && (
-        <SwitchBoxImg src={falseSwitch} onClick={() => handleTruthyClick()} />
+        <SwitchBoxImg src={falseSwitch} onClick={() => handleFalseyClick()} />
       )}
     </SwitchBoxWrapper>
   );

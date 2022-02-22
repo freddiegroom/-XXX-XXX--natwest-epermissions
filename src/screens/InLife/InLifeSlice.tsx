@@ -43,7 +43,7 @@ export const InLifeSlice = createSlice({
       state.mobileAppPrompts = 0;
     },
     saveMobileAppPrompts: (state, action) => {
-      state.mobileAppPrompts = action.payload;
+      state.initialMobileAppPrompts = action.payload;
     },
     tickTextMessage: (state) => {
       state.textMessage = 1;

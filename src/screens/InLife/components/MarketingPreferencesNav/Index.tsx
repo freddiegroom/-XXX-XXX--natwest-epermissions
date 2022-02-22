@@ -4,7 +4,7 @@ import { MarketingPreferencesNavWrapper } from "./MarketingPreferencesNav.styles
 const MarketingPreferencesNav = () => {
   return (
     <MarketingPreferencesNavWrapper>
-      <p>Your Marketing preferences</p>
+      <p>Your marketing preferences</p>
     </MarketingPreferencesNavWrapper>
   );
 };

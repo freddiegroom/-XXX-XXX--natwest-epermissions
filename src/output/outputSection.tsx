@@ -56,42 +56,24 @@ export const OutputSection: FC = () => {
     outputCondition,
     outputReduxStore,
     outputPageDurations,
-    // Product Choice
-    // outputProductChoiceChoice,
-    // // personalDetails: {
-    // outputPersonalDetailsTitle,
-    // outputPersonalDetailsNationality,
-    // outputPersonalDetailsAddress,
-    // // marketingPreferences
-    // outputMarketingPreferencesOffersAndUpdates,
-    // outputMarketingPreferencesInitialTextMessage,
-    // outputMarketingPreferencesTextMessage,
-    // outputMarketingPreferencesInitialEmail,
-    // outputMarketingPreferencesEmail,
-    // outputMarketingPreferencesInitialTelephone,
-    // outputMarketingPreferencesTelephone,
-    // outputMarketingPreferencesInitialPost,
-    // outputMarketingPreferencesPost,
-    // outputMarketingPreferencesInitialSocialMedia,
-    // outputMarketingPreferencesSocialMedia,
-    // outputMarketingPreferencesSelectAll,
-    // outputMarketingPreferencesSelectNone,
-    // //PrivacyPermissions
-    // outputPrivacyPermissionsPrivacyNotice,
-    // outputPrivacyPermissionsAboutUsNotice,
-    // outputPrivacyPermissionsOtherNews,
-    // outputPrivacyPermissionsThirdParty,
-    // outputPrivacyPermissionsNatwestEmails,
+    outputInLifeInitialMobileAppPrompts,
+    outputInLifeMobileAppPrompts,
+    outputInLifeInitialTextMessage,
+    outputInLifeTextMessage,
+    outputInLifeInitialEmail,
+    outputInLifeEmail,
+    outputInLifeInitialTelephone,
+    outputInLifeTelephone,
+    outputInLifeInitialPost,
+    outputInLifePost,
+    outputInLifeInitialSocialMedia,
+    outputInLifeSocialMedia,
   } = useEFSData();
 
   const outputData = useSelector(selectOutput);
 
   const reduxStores = useSelector((state: RootState) =>
     JSON.stringify({
-      // productChoice: state.productChoiceSlice,
-      // personalDetails: state.personalDetailsSlice,
-      // marketingPrefs: state.MarketingPreferencesSlice,
-      // privacyPermissions: state.PrivacyPermissionsSlice,
       inLife: state.InLifeSlice,
       durations: state.pageDuration,
     })
@@ -115,120 +97,67 @@ export const OutputSection: FC = () => {
         value={JSON.stringify(outputData.durations)}
         label="page durations (secs)"
       />
-      {/* Product Choice
+      {/*InLife */}
       <OutputLine
-        varname={outputProductChoiceChoice}
-        value={`${outputData.productChoice.choice}`}
-        label="chosen product"
-      />
-      {/* Personal Details */}
-      {/* <OutputLine
-        varname={outputPersonalDetailsTitle}
-        value={`${outputData.personalDetails.title}`}
-        label="personal details title"
+        varname={outputInLifeInitialMobileAppPrompts}
+        value={`${outputData.inLife.initialMobileAppPrompts}`}
+        label="in life INITIAL mobile app prompts"
       />
       <OutputLine
-        varname={outputPersonalDetailsNationality}
-        value={`${outputData.personalDetails.countryNationality}`}
-        label="personal details nationality"
+        varname={outputInLifeMobileAppPrompts}
+        value={`${outputData.inLife.mobileAppPrompts}`}
+        label="in life mobile app prompts"
       />
       <OutputLine
-        varname={outputPersonalDetailsAddress}
-        value={`${outputData.personalDetails.address}`}
-        label="personal details address"
-      />
-      {/* MarketingPreferences */}
-      {/* <OutputLine
-        varname={outputMarketingPreferencesOffersAndUpdates}
-        value={`${outputData.marketingPreferences.offersAndUpdates}`}
-        label="marketing preferences offers and updates"
+        varname={outputInLifeInitialTextMessage}
+        value={`${outputData.inLife.initialTextMessage}`}
+        label="in life INITIAL text message"
       />
       <OutputLine
-        varname={outputMarketingPreferencesInitialTextMessage}
-        value={`${outputData.marketingPreferences.initialTextMessage}`}
-        label="marketing preferences INITIAL text message"
+        varname={outputInLifeTextMessage}
+        value={`${outputData.inLife.textMessage}`}
+        label="in life text message"
       />
       <OutputLine
-        varname={outputMarketingPreferencesTextMessage}
-        value={`${outputData.marketingPreferences.textMessage}`}
-        label="marketing preferences text message"
+        varname={outputInLifeInitialEmail}
+        value={`${outputData.inLife.initialEmail}`}
+        label="in life INITIAL email"
       />
       <OutputLine
-        varname={outputMarketingPreferencesInitialEmail}
-        value={`${outputData.marketingPreferences.initialEmail}`}
-        label="marketing preferences INITIAL email"
+        varname={outputInLifeEmail}
+        value={`${outputData.inLife.email}`}
+        label="in life email"
       />
       <OutputLine
-        varname={outputMarketingPreferencesEmail}
-        value={`${outputData.marketingPreferences.email}`}
-        label="marketing preferences email"
+        varname={outputInLifeInitialTelephone}
+        value={`${outputData.inLife.initialTelephone}`}
+        label="in life INITIAL telephone"
       />
       <OutputLine
-        varname={outputMarketingPreferencesInitialTelephone}
-        value={`${outputData.marketingPreferences.initialTelephone}`}
-        label="marketing preferences INITIAL telephone"
+        varname={outputInLifeTelephone}
+        value={`${outputData.inLife.telephone}`}
+        label="in life telephone"
       />
       <OutputLine
-        varname={outputMarketingPreferencesTelephone}
-        value={`${outputData.marketingPreferences.telephone}`}
-        label="marketing preferences telephone"
+        varname={outputInLifeInitialPost}
+        value={`${outputData.inLife.initialPost}`}
+        label="in life INITIAL post"
       />
       <OutputLine
-        varname={outputMarketingPreferencesInitialPost}
-        value={`${outputData.marketingPreferences.initialPost}`}
-        label="marketing preferences INITIAL post"
+        varname={outputInLifePost}
+        value={`${outputData.inLife.post}`}
+        label="in life post"
       />
       <OutputLine
-        varname={outputMarketingPreferencesPost}
-        value={`${outputData.marketingPreferences.post}`}
-        label="marketing preferences post"
+        varname={outputInLifeInitialSocialMedia}
+        value={`${outputData.inLife.initialSocialMedia}`}
+        label="in life INITIAL social media"
       />
       <OutputLine
-        varname={outputMarketingPreferencesInitialSocialMedia}
-        value={`${outputData.marketingPreferences.initialSocialMedia}`}
-        label="marketing preferences INITIAL social media"
+        varname={outputInLifeSocialMedia}
+        value={`${outputData.inLife.socialMedia}`}
+        label="in life social media"
       />
-      <OutputLine
-        varname={outputMarketingPreferencesSocialMedia}
-        value={`${outputData.marketingPreferences.socialMedia}`}
-        label="marketing preferences social media"
-      />
-      <OutputLine
-        varname={outputMarketingPreferencesSelectAll}
-        value={`${outputData.marketingPreferences.selectAll}`}
-        label="marketing preferences select all"
-      />
-      <OutputLine
-        varname={outputMarketingPreferencesSelectNone}
-        value={`${outputData.marketingPreferences.selectNone}`}
-        label="marketing preferences select none"
-      /> */}
-      {/* Privacy Permissions */}
-      {/* <OutputLine
-        varname={outputPrivacyPermissionsPrivacyNotice}
-        value={`${outputData.privacyPermissions.privacyNotice}`}
-        label="privacy permissions privacy notice"
-      />
-      <OutputLine
-        varname={outputPrivacyPermissionsAboutUsNotice}
-        value={`${outputData.privacyPermissions.aboutUsNotice}`}
-        label="privacy permissions about us notice"
-      />
-      <OutputLine
-        varname={outputPrivacyPermissionsOtherNews}
-        value={`${outputData.privacyPermissions.otherNews}`}
-        label="privacy permissions other news"
-      />
-      <OutputLine
-        varname={outputPrivacyPermissionsThirdParty}
-        value={`${outputData.privacyPermissions.thirdParty}`}
-        label="privacy permissions third party"
-      />
-      <OutputLine
-        varname={outputPrivacyPermissionsNatwestEmails}
-        value={`${outputData.privacyPermissions.natwestEmails}`}
-        label="privacy permissions natwest emails"
-      /> */}
     </>
   );
 };

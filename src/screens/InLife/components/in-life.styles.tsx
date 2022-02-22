@@ -11,5 +11,5 @@ export const ContentContainer = styled.div`
 
 export const InLifeText = styled.p`
   margin: 0;
-  padding: 0 16px 16px 16px;
+  padding: 8px 16px;
 `;

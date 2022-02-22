@@ -15,6 +15,7 @@ import InLife2 from "../../screens/InLife/InLife2/index";
 import InLife3 from "../../screens/InLife/InLife3/index";
 import InLife4 from "../../screens/InLife/InLife4/index";
 import InLife5 from "../../screens/InLife/InLife5/index";
+import InLife2Route from "../../screens/InLife/InLife2/InLife2Route";
 // import InLife1Container from "../../screens/InLife/InLife1/InLife1Container";
 
 const DebugConditionSelector: FC = () => {
@@ -171,7 +172,7 @@ const DebugConditionSelector: FC = () => {
       {debugCondition === 9 && <Condition9 />}
       {debugCondition === 10 && <Condition10 />} */}
       {debugCondition === 1 && <InLife1 />}
-      {debugCondition === 2 && <InLife2 />}
+      {debugCondition === 2 && <InLife2Route />}
       {debugCondition === 3 && <InLife3 />}
       {debugCondition === 4 && <InLife4 />}
       {debugCondition === 5 && <InLife5 />}

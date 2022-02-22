@@ -1,10 +1,10 @@
 import React from "react";
 import { SubmitButtonStyled, SubmitButtonWrapper } from "./SubmitButton.styles";
 
-const SubmitButton = (finishExperiment: any) => {
+const SubmitButton = (handleFinishExperiment: any) => {
   return (
     <SubmitButtonWrapper>
-      <SubmitButtonStyled onClick={(e) => finishExperiment(e)}>
+      <SubmitButtonStyled onClick={handleFinishExperiment}>
         Submit
       </SubmitButtonStyled>
     </SubmitButtonWrapper>

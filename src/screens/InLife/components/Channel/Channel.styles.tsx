@@ -1,5 +1,29 @@
 import styled from "styled-components";
 
+export const ChannelGroupWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  width: 90%;
+  background-color: white;
+  margin: 2px 0;
+  // padding: 0 16px;
+`;
+
+export const ChannelGroup = styled.div`
+  width: 95%;
+  background-color: white;
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  // padding: 16px 10px;
+`;
+export const ChannelGroupDivider = styled.div`
+  width: 95%;
+  height: 2px;
+  background-color: #e0e0e0;
+`;
+
 export const ChannelWrapper = styled.div`
   display: flex;
   justify-content: center;

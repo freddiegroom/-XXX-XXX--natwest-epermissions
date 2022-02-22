@@ -7,5 +7,6 @@ export const MarketingPreferencesNavWrapper = styled.div`
     padding: 16px;
     color: #42145f;
     font-family: RNHouseSans-Regular !important;
+    text-align: center;
   }
 `;

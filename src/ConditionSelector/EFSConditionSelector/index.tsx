@@ -11,7 +11,7 @@ import React, { FC } from "react";
 // import Condition8 from "../../routing/Condition8";
 // import Condition9 from "../../routing/Condition9";
 import InLife1 from "../../screens/InLife/InLife1";
-import InLife2 from "../../screens/InLife/InLife2";
+import InLife2Route from "../../screens/InLife/InLife2/InLife2Route";
 import InLife3 from "../../screens/InLife/InLife3";
 import InLife4 from "../../screens/InLife/InLife4";
 import InLife5 from "../../screens/InLife/InLife5";
@@ -32,7 +32,7 @@ const EFSConditionSelector: FC = () => {
       {condition === 9 && <Condition9 />}
       {condition === 10 && <Condition10 />} */}
       {condition === 1 && <InLife1 />}
-      {condition === 2 && <InLife2 />}
+      {condition === 2 && <InLife2Route />}
       {condition === 3 && <InLife3 />}
       {condition === 4 && <InLife4 />}
       {condition === 5 && <InLife5 />}

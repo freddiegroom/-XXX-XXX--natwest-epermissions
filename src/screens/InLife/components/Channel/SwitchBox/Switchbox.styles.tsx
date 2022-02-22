@@ -12,6 +12,7 @@ export const SwitchBoxWrapper = styled.div`
 export const SwitchBoxImg = styled.img`
   width: 51px;
   height: 31px;
+  cursor: pointer;
 `;
 
 export const SwitchBoxLabel = styled.p`

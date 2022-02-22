@@ -1,5 +1,6 @@
 import React, { useMemo, useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
+import { saveCondition } from "../../../ConditionSelector/ConditionSelectorSlice";
 import { useEFSContinue } from "../../../hooks/useEFSContinue";
 import { usePageDuration } from "../../../hooks/usePageDuration";
 import { pickRandomFunc } from "../../5.MarketingPreferences/functions";
@@ -10,9 +11,13 @@ import InLifeHeader from "../components/InLifeHeader";
 import MarketingPreferencesNav from "../components/MarketingPreferencesNav/Index";
 import PaymentSwitch from "../components/PaymentSwitch";
 import PhoneWrapper from "../components/PhoneWrapper";
-import SubmitButton from "../components/SubmitButton";
+import {
+  SubmitButtonStyled,
+  SubmitButtonWrapper,
+} from "../components/SubmitButton/SubmitButton.styles";
 import {
   saveEmail,
+  saveMobileAppPrompts,
   savePost,
   saveTelephone,
   saveTextMessage,
@@ -32,27 +37,30 @@ const InLife1 = () => {
   const dispatch = useDispatch();
   const { EFSSubmit } = useEFSContinue();
 
-  const stopPageTiming = usePageDuration("marketing-preferences-6");
+  const stopPageTiming = usePageDuration("in-life-1");
 
+  dispatch(saveCondition("scenario-1"));
   const handleFinishExperiment = (e: any) => {
     e.preventDefault();
     stopPageTiming();
     setTimeout(() => EFSSubmit(), 20);
   };
 
-  let initialMobileAppPrompts = useMemo(() => pickRandomFunc(15), []);
+  let initialMobileAppPrompts = useMemo(() => pickRandomFunc(50), []);
   let initialTextMessage = useMemo(() => pickRandomFunc(15), []);
   let initialEmail = useMemo(() => pickRandomFunc(20), []);
   let initialTelephone = useMemo(() => pickRandomFunc(60), []);
   let initialPost = useMemo(() => pickRandomFunc(60), []);
 
   useEffect(() => {
+    dispatch(saveMobileAppPrompts(initialMobileAppPrompts));
     dispatch(saveTextMessage(initialTextMessage));
     dispatch(saveEmail(initialEmail));
     dispatch(saveTelephone(initialTelephone));
     dispatch(savePost(initialPost));
   }, [
     dispatch,
+    initialMobileAppPrompts,
     initialEmail,
     initialPost,
     initialTelephone,
@@ -92,6 +100,7 @@ const InLife1 = () => {
           setState={setMobileAppPrompts}
           tickRedux={tickMobileAppPrompts}
           unTickRedux={unTickMobileAppPrompts}
+          switchBox
         />
         <Channel
           text="Text Message"
@@ -99,6 +108,7 @@ const InLife1 = () => {
           setState={setTextMessage}
           tickRedux={tickTextMessage}
           unTickRedux={unTickTextMessage}
+          switchBox
         />
         <Channel
           text="Email"
@@ -106,6 +116,7 @@ const InLife1 = () => {
           setState={setEmail}
           tickRedux={tickEmail}
           unTickRedux={unTickEmail}
+          switchBox
         />
         <Channel
           text="Post"
@@ -113,6 +124,7 @@ const InLife1 = () => {
           setState={setPost}
           tickRedux={tickPost}
           unTickRedux={unTickPost}
+          switchBox
         />
         <Channel
           text="Telephone"
@@ -120,33 +132,13 @@ const InLife1 = () => {
           setState={setTelephone}
           tickRedux={tickTelephone}
           unTickRedux={unTickTelephone}
+          switchBox
         />
-        <SubmitButton finishExperiment={handleFinishExperiment} />
-        {/* {!(
-          textClick !== 3 &&
-          emailClick !== 3 &&
-          telephoneClick !== 3 &&
-          postClick !== 3
-        ) && (
-          <>
-            {fillMessage && (
-              <RedText>Please make your choices to continue</RedText>
-            )}
-            <FakeNextButton setState={setFillMessage}>
-              scroll to top
-            </FakeNextButton>
-          </>
-        )}
-
-        {textClick !== 3 &&
-          emailClick !== 3 &&
-          telephoneClick !== 3 &&
-          postClick !== 3 && (
-            <NextButton
-              routeAddress={"/PrivacyPermissions"}
-              pageTimeFunc={stopPageTiming}
-            />
-          )} */}
+        <SubmitButtonWrapper>
+          <SubmitButtonStyled onClick={(e) => handleFinishExperiment(e)}>
+            Submit
+          </SubmitButtonStyled>
+        </SubmitButtonWrapper>
       </ContentContainer>
       <Footer />
     </PhoneWrapper>
