@@ -1,4 +1,5 @@
 import React, { FC, useState } from "react";
+import { useDispatch } from "react-redux";
 import {
   ChannelAccordionStyle,
   ChannelAccordionWrapper,
@@ -9,18 +10,25 @@ import {
 interface ChannelAccordionProps {
   openText?: string;
   closedText?: string;
+  accordionRedux?: any;
 }
 
 const ChannelAccordion: FC<ChannelAccordionProps> = ({
   openText,
   closedText,
+  accordionRedux,
 }) => {
+  const dispatch = useDispatch();
   const [open, setOpen] = useState(0);
+  const handleOpen = () => {
+    setOpen(1);
+    dispatch(accordionRedux());
+  };
   return (
     <ChannelAccordionWrapper>
       {!open && (
         <>
-          <ChannelAccordionStyle onClick={() => setOpen(1)}>
+          <ChannelAccordionStyle onClick={() => handleOpen()}>
             {closedText}
           </ChannelAccordionStyle>
           <ChannelAccordionImage>+</ChannelAccordionImage>

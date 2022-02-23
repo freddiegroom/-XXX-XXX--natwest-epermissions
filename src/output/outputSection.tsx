@@ -68,6 +68,9 @@ export const OutputSection: FC = () => {
     outputInLifePost,
     outputInLifeInitialSocialMedia,
     outputInLifeSocialMedia,
+    outputInLifeClickPrivacyPermissions,
+    outputInLifeOpenAccordionMobileApp,
+    outputInLifeOpenAccordionSocialMedia,
   } = useEFSData();
 
   const outputData = useSelector(selectOutput);
@@ -157,6 +160,21 @@ export const OutputSection: FC = () => {
         varname={outputInLifeSocialMedia}
         value={`${outputData.inLife.socialMedia}`}
         label="in life social media"
+      />
+      <OutputLine
+        varname={outputInLifeClickPrivacyPermissions}
+        value={`${outputData.inLife.clickPrivacyPermissions}`}
+        label="in life click privacy permissions"
+      />
+      <OutputLine
+        varname={outputInLifeOpenAccordionMobileApp}
+        value={`${outputData.inLife.openAccordionMobileApp}`}
+        label="in life open accordion mobile app"
+      />
+      <OutputLine
+        varname={outputInLifeOpenAccordionSocialMedia}
+        value={`${outputData.inLife.openAccordionSocialMedia}`}
+        label="in life click open accordion social media"
       />
     </>
   );

@@ -23,6 +23,7 @@ interface ChannelProps {
   openAccordionText?: string;
   closedAccordionText?: string;
   group?: boolean;
+  accordionRedux?: any;
 }
 
 const Channel: FC<ChannelProps> = ({
@@ -36,6 +37,7 @@ const Channel: FC<ChannelProps> = ({
   openAccordionText,
   closedAccordionText,
   group,
+  accordionRedux,
 }) => {
   return (
     <>
@@ -68,6 +70,7 @@ const Channel: FC<ChannelProps> = ({
               <ChannelAccordion
                 closedText={closedAccordionText}
                 openText={openAccordionText}
+                accordionRedux={accordionRedux}
               />
             )}
           </ChannelContainer>
@@ -101,6 +104,7 @@ const Channel: FC<ChannelProps> = ({
             <ChannelAccordion
               closedText={closedAccordionText}
               openText={openAccordionText}
+              accordionRedux={accordionRedux}
             />
           )}
         </ChannelContainer>

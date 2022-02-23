@@ -37,7 +37,7 @@ export const BackButtonContainer = styled.div`
   flex-direction: column;
   width: 205px;
   @media only screen and (max-width: 600px) {
-    margin: 32px 16px;
+    margin: 8px;
   }
   margin: 32px 0;
 `;

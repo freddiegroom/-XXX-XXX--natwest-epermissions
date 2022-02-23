@@ -24,6 +24,9 @@ const selectOutput = createSelector(
         post: state.InLifeSlice.post,
         initialSocialMedia: state.InLifeSlice.initialSocialMedia,
         socialMedia: state.InLifeSlice.socialMedia,
+        clickPrivacyPermissions: state.InLifeSlice.clickPrivacyPermissions,
+        openAccordionMobileApp: state.InLifeSlice.openAccordionMobileApp,
+        openAccordionSocialMedia: state.InLifeSlice.openAccordionSocialMedia,
       },
     };
   }

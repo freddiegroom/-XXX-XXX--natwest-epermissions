@@ -15,6 +15,9 @@ export interface InLifeState {
   post: number;
   initialSocialMedia: number;
   socialMedia: number;
+  clickPrivacyPermissions: number;
+  openAccordionMobileApp: number;
+  openAccordionSocialMedia: number;
 }
 
 const initialState: InLifeState = {
@@ -30,6 +33,9 @@ const initialState: InLifeState = {
   post: -77,
   initialSocialMedia: -77,
   socialMedia: -77,
+  clickPrivacyPermissions: 0,
+  openAccordionMobileApp: 0,
+  openAccordionSocialMedia: 0,
 };
 
 export const InLifeSlice = createSlice({
@@ -90,6 +96,15 @@ export const InLifeSlice = createSlice({
     saveSocialMedia: (state, action) => {
       state.initialSocialMedia = action.payload;
     },
+    clickPrivacyPermissions: (state) => {
+      state.clickPrivacyPermissions = 1;
+    },
+    clickOpenAccordionMobileApp: (state) => {
+      state.openAccordionMobileApp = 1;
+    },
+    clickOpenAccordionSocialMedia: (state) => {
+      state.openAccordionSocialMedia = 1;
+    },
   },
 });
 
@@ -112,6 +127,9 @@ export const {
   tickSocialMedia,
   unTickSocialMedia,
   saveSocialMedia,
+  clickPrivacyPermissions,
+  clickOpenAccordionMobileApp,
+  clickOpenAccordionSocialMedia,
 } = InLifeSlice.actions;
 
 export default InLifeSlice.reducer;

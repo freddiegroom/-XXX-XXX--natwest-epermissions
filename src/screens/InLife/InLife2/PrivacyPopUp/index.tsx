@@ -9,6 +9,7 @@ import {
   SectionHeading,
   SquareBullet,
   SquareList,
+  PrivacyP,
 } from "./PrivacyPopUp.styles";
 
 const PrivacyPopUp = () => {
@@ -18,31 +19,28 @@ const PrivacyPopUp = () => {
     <PhoneWrapper>
       <Header>Privacy Permissions</Header>
       <ContentContainer>
-        <BackButton
-          routeAddress="/PrivacyPermissions"
-          pageTimeFunc={stopDuration}
-        />
+        <BackButton routeAddress="/" pageTimeFunc={stopDuration} />
         <div>
           <SectionHeading>Intro</SectionHeading>
-          <p>
+          <PrivacyP>
             Intro National Westminster Bank plc is responsible for protecting
             your personal info as carefully as we protect your money.
-          </p>
-          <p>
+          </PrivacyP>
+          <PrivacyP>
             This summary explains how we collect and use your personal info to
             help you and our business. We suggest downloading this page.
-          </p>
+          </PrivacyP>
         </div>
         <div>
           <SectionHeading>
             How we get your info and what we use it for
           </SectionHeading>
-          <p>
+          <PrivacyP>
             Your info helps protect you and us from fraud. It also helps us
             check it’s really you. We may also ask you to consider using other
             identification methods like biometrics (your fingerprint or voice).
-          </p>
-          <p>We collect your info in different ways, like:</p>
+          </PrivacyP>
+          <PrivacyP>We collect your info in different ways, like:</PrivacyP>
           <SquareList>
             <SquareBullet>
               Collecting basic info such as name, address and phone number from
@@ -56,7 +54,7 @@ const PrivacyPopUp = () => {
               credit reference agencies or public sources)
             </SquareBullet>
           </SquareList>
-          <p>We use your info in different ways, like:</p>
+          <PrivacyP>We use your info in different ways, like:</PrivacyP>
           <SquareList>
             <SquareBullet>
               Using your health info to help you access our services more
@@ -78,7 +76,7 @@ const PrivacyPopUp = () => {
         </div>
         <div>
           <SectionHeading>Why do you share my info?</SectionHeading>
-          <p>We share your info so we can:</p>
+          <PrivacyP>We share your info so we can:</PrivacyP>
           <SquareList>
             <SquareBullet>Protect you</SquareBullet>
             <SquareBullet>Check your identity</SquareBullet>
@@ -93,7 +91,7 @@ const PrivacyPopUp = () => {
         </div>
         <div>
           <SectionHeading>Who do you share it with?</SectionHeading>
-          <p>We share your info with:</p>
+          <PrivacyP>We share your info with:</PrivacyP>
           <SquareList>
             <SquareBullet>
               Other companies in our group and our business partners who provide
@@ -129,11 +127,11 @@ const PrivacyPopUp = () => {
         </div>
         <div>
           <SectionHeading>Your rights</SectionHeading>
-          <p>
+          <PrivacyP>
             We need your info to provide you with the right products and
             services for you, but you have clear rights over what we do with
             that info. They’re not all included here but you’re able to:
-          </p>
+          </PrivacyP>
           <SquareList>
             <SquareBullet>Get a copy of your personal info</SquareBullet>
             <SquareBullet>Ask us to correct or update wrong info</SquareBullet>
@@ -156,14 +154,14 @@ const PrivacyPopUp = () => {
         </div>
         <div>
           <SectionHeading>How long do you keep my info?</SectionHeading>
-          <p>
+          <PrivacyP>
             We don’t keep your info for longer than we need to, which is usually
             up to ten years after you close all your accounts.
-          </p>
-          <p>
+          </PrivacyP>
+          <PrivacyP>
             Sometimes we need to keep it longer (for example due to an
             investigation by the police).
-          </p>
+          </PrivacyP>
         </div>
         <BackButton routeAddress="/" pageTimeFunc={stopDuration} />
       </ContentContainer>

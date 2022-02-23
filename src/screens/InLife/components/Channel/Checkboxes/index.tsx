@@ -19,32 +19,35 @@ const CheckBox: FC<CheckBoxProps> = ({
   unTickRedux,
 }) => {
   const dispatch = useDispatch();
+  const handleTruthyClick = () => {
+    setState(0);
+    dispatch(unTickRedux());
+  };
 
-  const clickToTruthy = () => {};
+  const handleFalseyClick = () => {
+    setState(1);
+    dispatch(tickRedux());
+  };
 
   return (
     <CheckBoxWrapper>
       {/* <CheckBoxImg src={trueSwitch} /> */}
       {/* <CheckBoxImg src={falseSwitch} /> */}
       <CheckBoxImg />
-      {state === 1 && (
-        <CheckBoxImg src={fullCheckbox} onClick={() => setState(0)} />
-      )}
+      {state === 1 && <CheckBoxImg src={fullCheckbox} />}
       {state === 0 && (
-        <CheckBoxImg src={emptyCheckbox} onClick={() => setState(1)} />
+        <CheckBoxImg src={emptyCheckbox} onClick={() => handleFalseyClick()} />
       )}
       {state === 3 && (
-        <CheckBoxImg src={emptyCheckbox} onClick={() => setState(1)} />
+        <CheckBoxImg src={emptyCheckbox} onClick={() => handleFalseyClick()} />
       )}
       <CheckBoxLabel>Yes</CheckBoxLabel>
       {state === 1 && (
-        <CheckBoxImg src={emptyCheckbox} onClick={() => setState(0)} />
+        <CheckBoxImg src={emptyCheckbox} onClick={() => handleTruthyClick()} />
       )}
-      {state === 0 && (
-        <CheckBoxImg src={fullCheckbox} onClick={() => setState(1)} />
-      )}
+      {state === 0 && <CheckBoxImg src={fullCheckbox} />}
       {state === 3 && (
-        <CheckBoxImg src={emptyCheckbox} onClick={() => setState(0)} />
+        <CheckBoxImg src={emptyCheckbox} onClick={() => handleTruthyClick()} />
       )}
       <CheckBoxLabel>No</CheckBoxLabel>
     </CheckBoxWrapper>

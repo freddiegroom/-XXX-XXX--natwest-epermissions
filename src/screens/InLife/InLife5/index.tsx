@@ -21,6 +21,8 @@ import {
   SubmitButtonWrapper,
 } from "../components/SubmitButton/SubmitButton.styles";
 import {
+  clickOpenAccordionMobileApp,
+  clickOpenAccordionSocialMedia,
   saveEmail,
   saveMobileAppPrompts,
   savePost,
@@ -102,6 +104,7 @@ const InLife5 = () => {
           setState={setMobileAppPrompts}
           tickRedux={tickMobileAppPrompts}
           unTickRedux={unTickMobileAppPrompts}
+          accordionRedux={clickOpenAccordionMobileApp}
         />
         <Channel
           text="Social media"
@@ -111,6 +114,7 @@ const InLife5 = () => {
           setState={setSocialMedia}
           tickRedux={tickSocialMedia}
           unTickRedux={unTickSocialMedia}
+          accordionRedux={clickOpenAccordionSocialMedia}
         />
         <ChannelGroupWrapper>
           <ChannelGroup>
