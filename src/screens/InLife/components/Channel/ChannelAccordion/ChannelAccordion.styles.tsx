@@ -21,4 +21,5 @@ export const ChannelAccordionImagePurple = styled.p`
   font-size: 16px;
   padding: 0 8px;
   color: #6200d0;
+  cursor: pointer;
 `;

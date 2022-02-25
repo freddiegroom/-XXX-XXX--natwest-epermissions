@@ -31,7 +31,9 @@ const ChannelAccordion: FC<ChannelAccordionProps> = ({
           <ChannelAccordionStyle onClick={() => handleOpen()}>
             {closedText}
           </ChannelAccordionStyle>
-          <ChannelAccordionImage>+</ChannelAccordionImage>
+          <ChannelAccordionImage onClick={() => handleOpen()}>
+            +
+          </ChannelAccordionImage>
         </>
       )}
       {!!open && (
@@ -39,7 +41,9 @@ const ChannelAccordion: FC<ChannelAccordionProps> = ({
           <ChannelAccordionStyle onClick={() => setOpen(0)}>
             {openText}
           </ChannelAccordionStyle>
-          <ChannelAccordionImagePurple>-</ChannelAccordionImagePurple>
+          <ChannelAccordionImagePurple onClick={() => setOpen(0)}>
+            -
+          </ChannelAccordionImagePurple>
         </>
       )}
     </ChannelAccordionWrapper>

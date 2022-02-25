@@ -1,5 +1,6 @@
 import React, { useMemo, useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
+import { RedText } from "../../../components/Text/Text.style";
 import { saveCondition } from "../../../ConditionSelector/ConditionSelectorSlice";
 import { useEFSContinue } from "../../../hooks/useEFSContinue";
 import { usePageDuration } from "../../../hooks/usePageDuration";
@@ -55,7 +56,7 @@ const InLife4 = () => {
     setTimeout(() => EFSSubmit(), 20);
   };
 
-  let initialMobileAppPrompts = useMemo(() => pickRandomFunc(50), []);
+  let initialMobileAppPrompts = useMemo(() => pickRandomFunc(60), []);
   let initialTextMessage = useMemo(() => pickRandomFunc(15), []);
   let initialEmail = useMemo(() => pickRandomFunc(20), []);
   let initialTelephone = useMemo(() => pickRandomFunc(60), []);
@@ -84,6 +85,8 @@ const InLife4 = () => {
   const [email, setEmail] = useState(initialEmail);
   const [post, setPost] = useState(initialTelephone);
   const [telephone, setTelephone] = useState(initialPost);
+
+  const [fillMessage, setFillMessage] = useState("");
 
   return (
     <PhoneWrapper>
@@ -159,11 +162,37 @@ const InLife4 = () => {
           unTickRedux={unTickSocialMedia}
           accordionRedux={clickOpenAccordionSocialMedia}
         />
-        <SubmitButtonWrapper>
+        {/* <SubmitButtonWrapper>
           <SubmitButtonStyled onClick={(e) => handleFinishExperiment(e)}>
             Submit
           </SubmitButtonStyled>
-        </SubmitButtonWrapper>
+        </SubmitButtonWrapper> */}
+
+        {!(socialMedia !== 3) && (
+          <>
+            {fillMessage && (
+              <RedText>Please make your choices to continue</RedText>
+            )}
+            <SubmitButtonWrapper>
+              <SubmitButtonStyled
+                onClick={(e) => {
+                  setFillMessage("1");
+                  e.preventDefault();
+                }}
+              >
+                Submit
+              </SubmitButtonStyled>
+            </SubmitButtonWrapper>
+          </>
+        )}
+
+        {!!(socialMedia !== 3) && (
+          <SubmitButtonWrapper>
+            <SubmitButtonStyled onClick={(e) => handleFinishExperiment(e)}>
+              Submit
+            </SubmitButtonStyled>
+          </SubmitButtonWrapper>
+        )}
       </ContentContainer>
       <Footer />
     </PhoneWrapper>

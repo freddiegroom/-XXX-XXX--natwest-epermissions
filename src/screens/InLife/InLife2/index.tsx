@@ -52,7 +52,7 @@ const InLife2 = () => {
     setTimeout(() => EFSSubmit(), 20);
   };
 
-  let initialMobileAppPrompts = useMemo(() => pickRandomFunc(50), []);
+  let initialMobileAppPrompts = useMemo(() => pickRandomFunc(60), []);
   let initialTextMessage = useMemo(() => pickRandomFunc(15), []);
   let initialEmail = useMemo(() => pickRandomFunc(20), []);
   let initialTelephone = useMemo(() => pickRandomFunc(60), []);
