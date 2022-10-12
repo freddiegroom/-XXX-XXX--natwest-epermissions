@@ -1,8 +1,8 @@
 import React, { FC } from "react";
-// import ChooseButton from "../../../components/Buttons/ChooseButton";
-import ExperimentContainer from "../../../components/e-permissions/ExperimentContainer";
-import WhiteFooter from "../../../components/e-permissions/WhiteFooter";
-import Header from "../../../components/e-permissions/Header";
+// import ChooseButton from "components/Buttons/ChooseButton";
+import ExperimentContainer from "components/e-permissions/ExperimentContainer";
+import WhiteFooter from "components/e-permissions/WhiteFooter";
+import Header from "components/e-permissions/Header";
 import {
   CardList,
   CardSubtitle,
@@ -21,7 +21,7 @@ import { useHistory } from "react-router-dom";
 import {
   HeadingText,
   RegularText,
-} from "../../../components/e-permissions/Text/Text.style";
+} from "components/e-permissions/Text/Text.style";
 import { selectChoice } from "../productChoiceSlice";
 import { useDispatch } from "react-redux";
 import creditCard from "images/credit-card-logo.png";

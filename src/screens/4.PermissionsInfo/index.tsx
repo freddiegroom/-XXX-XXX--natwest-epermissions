@@ -1,13 +1,13 @@
 import React, { FC } from "react";
-import NextButton from "../../components/e-permissions/Buttons/NextButton";
-import ExperimentContainer from "../../components/e-permissions/ExperimentContainer";
-import Header from "../../components/e-permissions/Header";
+import NextButton from "components/e-permissions/Buttons/NextButton";
+import ExperimentContainer from "components/e-permissions/ExperimentContainer";
+import Header from "components/e-permissions/Header";
 import {
   HeadingText,
   SmallPaddingDiv,
-} from "../../components/e-permissions/Text/Text.style";
-import WhiteContentContainer from "../../components/e-permissions/WhiteContentContainer";
-import WhiteFooter from "../../components/e-permissions/WhiteFooter";
+} from "components/e-permissions/Text/Text.style";
+import WhiteContentContainer from "components/e-permissions/WhiteContentContainer";
+import WhiteFooter from "components/e-permissions/WhiteFooter";
 import { usePageDuration } from "../../hooks/usePageDuration";
 import cupSaucer from "images/cup-saucer.png";
 

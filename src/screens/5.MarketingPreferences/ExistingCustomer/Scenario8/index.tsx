@@ -1,9 +1,9 @@
 import React, { FC, useEffect, useMemo, useState } from "react";
-import ExperimentContainer from "../../../../components/e-permissions/ExperimentContainer";
-import Footer from "../../../../components/e-permissions/Footer";
-import Header from "../../../../components/e-permissions/Header";
-import NextButton from "../../../../components/e-permissions/Buttons/NextButton/index";
-import ContentContainer from "../../../../components/e-permissions/ContentContainer";
+import ExperimentContainer from "components/e-permissions/ExperimentContainer";
+import Footer from "components/e-permissions/Footer";
+import Header from "components/e-permissions/Header";
+import NextButton from "components/e-permissions/Buttons/NextButton/index";
+import ContentContainer from "components/e-permissions/ContentContainer";
 
 import {
   saveEmail,
@@ -31,13 +31,13 @@ import cupSaucer from "images/cup-saucer.png";
 import {
   BoldText,
   HeadingText,
-} from "../../../../components/e-permissions/Text/Text.style";
+} from "components/e-permissions/Text/Text.style";
 import { usePageDuration } from "../../../../hooks/usePageDuration";
-import TTTextMessageChannel from "../../../../components/e-permissions/TickBoxChannels/TwoTickChannel/TTTextMessageChannel";
-import TTEmailChannel from "../../../../components/e-permissions/TickBoxChannels/TwoTickChannel/TTEmailChannel";
-import TTTelephoneChannel from "../../../../components/e-permissions/TickBoxChannels/TwoTickChannel/TTTelephoneChannel";
-import TTPostChannel from "../../../../components/e-permissions/TickBoxChannels/TwoTickChannel/TTPostChannel";
-import { DesktopYesNoContainer } from "../../../../components/e-permissions/TickBoxChannels/TwoTickChannel/TwoTickChannel.styles";
+import TTTextMessageChannel from "components/e-permissions/TickBoxChannels/TwoTickChannel/TTTextMessageChannel";
+import TTEmailChannel from "components/e-permissions/TickBoxChannels/TwoTickChannel/TTEmailChannel";
+import TTTelephoneChannel from "components/e-permissions/TickBoxChannels/TwoTickChannel/TTTelephoneChannel";
+import TTPostChannel from "components/e-permissions/TickBoxChannels/TwoTickChannel/TTPostChannel";
+import { DesktopYesNoContainer } from "components/e-permissions/TickBoxChannels/TwoTickChannel/TwoTickChannel.styles";
 import { pickRandomFunc } from "../../functions";
 
 const Scenario8: FC = () => {

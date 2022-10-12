@@ -12,7 +12,7 @@ import { useDispatch } from "react-redux";
 import {
   tickOtherNews,
   unTickOtherNews,
-} from "../../../../../screens/6.PrivacyPermissions/PrivacyPermissionsSlice";
+} from "screens/6.PrivacyPermissions/PrivacyPermissionsSlice";
 
 const OtherNewsChannel: FC = () => {
   const dispatch = useDispatch();

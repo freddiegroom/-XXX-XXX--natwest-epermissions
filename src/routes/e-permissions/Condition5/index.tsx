@@ -1,16 +1,16 @@
 import { useEFSData } from "@dectech/react-library";
 import React, { FC, useState } from "react";
 import { HashRouter as Router, Switch, Route } from "react-router-dom";
-import CurrentAccount from "../../../screens/1.ProductChoice/current-account";
-import Loan from "../../../screens/1.ProductChoice/loan/index";
-import PCNewCustomer from "../../../screens/2.PersonalDetails/PCNewCustomer/index";
-import AccountDetailsBlank from "../../../screens/3.AccountDetails/AccountDetails";
-import PermissionsInfo from "../../../screens/4.PermissionsInfo";
-import Scenario5 from "../../../screens/5.MarketingPreferences/NewCustomer/Scenario5";
-import PrivacyPopUp from "../../../screens/7.PrivacyPopUp";
-import AboutUsPopUp from "../../../screens/8.AboutUsUp";
+import CurrentAccount from "screens/1.ProductChoice/current-account";
+import Loan from "screens/1.ProductChoice/loan/index";
+import PCNewCustomer from "screens/2.PersonalDetails/PCNewCustomer/index";
+import AccountDetailsBlank from "screens/3.AccountDetails/AccountDetails";
+import PermissionsInfo from "screens/4.PermissionsInfo";
+import Scenario5 from "screens/5.MarketingPreferences/NewCustomer/Scenario5";
+import PrivacyPopUp from "screens/7.PrivacyPopUp";
+import AboutUsPopUp from "screens/8.AboutUsUp";
 import ScrollToTop from "../../ScrollToTop";
-import PrivacyPermissions510 from "../../../screens/6.PrivacyPermissions/6.PrivacyPermissions510/index";
+import PrivacyPermissions510 from "screens/6.PrivacyPermissions/6.PrivacyPermissions510/index";
 
 const Condition5: FC = () => {
   const { product = "current account", debug } = useEFSData();

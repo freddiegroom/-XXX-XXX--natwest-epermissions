@@ -15,7 +15,7 @@ import { useDispatch } from "react-redux";
 import {
   tickTelephone,
   unTickTelephone,
-} from "../../../../../screens/5.MarketingPreferences/MarketingPreferencesSlice";
+} from "screens/5.MarketingPreferences/MarketingPreferencesSlice";
 
 interface TTTelephoneChannelProps {
   state: any;

@@ -15,7 +15,7 @@ import { useDispatch } from "react-redux";
 import {
   tickTextMessage,
   unTickTextMessage,
-} from "../../../../../screens/5.MarketingPreferences/MarketingPreferencesSlice";
+} from "screens/5.MarketingPreferences/MarketingPreferencesSlice";
 
 interface TTTextMessageChannelProps {
   state: any;

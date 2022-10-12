@@ -1,8 +1,8 @@
 import React, { FC } from "react";
 import { useHistory } from "react-router-dom";
-import ExperimentContainer from "../../../components/e-permissions/ExperimentContainer";
-import WhiteFooter from "../../../components/e-permissions/WhiteFooter";
-import Header from "../../../components/e-permissions/Header";
+import ExperimentContainer from "components/e-permissions/ExperimentContainer";
+import WhiteFooter from "components/e-permissions/WhiteFooter";
+import Header from "components/e-permissions/Header";
 import { useScrollToTop } from "../../../hooks/useScrollToTop";
 import tick from "images/tick.png";
 
@@ -18,7 +18,7 @@ import {
   ChooseButton,
   PaddedCardRow,
 } from "./Loan.styles";
-import { HeadingText } from "../../../components/e-permissions/Text/Text.style";
+import { HeadingText } from "components/e-permissions/Text/Text.style";
 import { selectChoice } from "../productChoiceSlice";
 import { useDispatch } from "react-redux";
 import loan from "images/loan.png";

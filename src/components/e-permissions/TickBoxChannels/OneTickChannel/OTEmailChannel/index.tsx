@@ -14,7 +14,7 @@ import { useDispatch } from "react-redux";
 import {
   tickEmail,
   unTickEmail,
-} from "../../../../../screens/5.MarketingPreferences/MarketingPreferencesSlice";
+} from "screens/5.MarketingPreferences/MarketingPreferencesSlice";
 
 interface OTEmailChannelProps {
   state: number;

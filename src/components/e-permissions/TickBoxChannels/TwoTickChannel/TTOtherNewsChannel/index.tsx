@@ -10,13 +10,13 @@ import {
 import tickedCheckbox from "images/tick-checkbox.png";
 import checkbox from "images/checkbox.png";
 import { useDispatch } from "react-redux";
-import { PrivacySpan } from "../../../../../screens/6.PrivacyPermissions/PrivacyPermissions.styles";
+import { PrivacySpan } from "screens/6.PrivacyPermissions/PrivacyPermissions.styles";
 import { useHistory } from "react-router-dom";
 import {
   clickAboutUsNotice,
   tickOtherNews,
   unTickOtherNews,
-} from "../../../../../screens/6.PrivacyPermissions/PrivacyPermissionsSlice";
+} from "screens/6.PrivacyPermissions/PrivacyPermissionsSlice";
 
 interface TTOtherNewsChannelProps {
   state: any;

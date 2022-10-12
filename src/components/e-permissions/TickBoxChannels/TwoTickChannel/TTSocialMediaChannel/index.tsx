@@ -16,7 +16,7 @@ import { useDispatch } from "react-redux";
 import {
   tickSocialMedia,
   unTickSocialMedia,
-} from "../../../../../screens/5.MarketingPreferences/MarketingPreferencesSlice";
+} from "screens/5.MarketingPreferences/MarketingPreferencesSlice";
 
 interface TTSocialMediaChannelProps {
   state: any;

@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux";
 import {
   tickOAU,
   unTickOAU,
-} from "../../../../screens/5.MarketingPreferences/MarketingPreferencesSlice";
+} from "screens/5.MarketingPreferences/MarketingPreferencesSlice";
 import {
   OffersAndUpdatesContainer,
   OAUBox,

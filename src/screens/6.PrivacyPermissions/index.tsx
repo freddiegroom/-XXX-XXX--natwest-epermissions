@@ -1,14 +1,14 @@
 import React, { FC, useState } from "react";
 import { useDispatch } from "react-redux";
 
-import ContentContainer from "../../components/e-permissions/ContentContainer";
-import ExperimentContainer from "../../components/e-permissions/ExperimentContainer";
-import Footer from "../../components/e-permissions/Footer";
-import Header from "../../components/e-permissions/Header";
+import ContentContainer from "components/e-permissions/ContentContainer";
+import ExperimentContainer from "components/e-permissions/ExperimentContainer";
+import Footer from "components/e-permissions/Footer";
+import Header from "components/e-permissions/Header";
 import {
   BoldText,
   HeadingText,
-} from "../../components/e-permissions/Text/Text.style";
+} from "components/e-permissions/Text/Text.style";
 import { useEFSContinue } from "../../hooks/useEFSContinue";
 import { usePageDuration } from "../../hooks/usePageDuration";
 import cupSaucer from "images/cup-saucer.png";
@@ -19,13 +19,13 @@ import largebottomBevel from "images/large-bottom-bevel.png";
 import {
   NextButtonContainer,
   NextButtonStyle,
-} from "../../components/e-permissions/Buttons/NextButton/NextButton.style";
+} from "components/e-permissions/Buttons/NextButton/NextButton.style";
 import { useHistory } from "react-router-dom";
-import { DesktopYesNoContainer } from "../../components/e-permissions/TickBoxChannels/TwoTickChannel/TwoTickChannel.styles";
-import TTOtherNewsChannel from "../../components/e-permissions/TickBoxChannels/TwoTickChannel/TTOtherNewsChannel";
-import TTThirdPartyChannel from "../../components/e-permissions/TickBoxChannels/TwoTickChannel/TTThirdPartyChannel";
-import TTNatwestEmailsChannel from "../../components/e-permissions/TickBoxChannels/TwoTickChannel/TTNatwestEmailsChannel";
-import FakeNextButton from "../../components/e-permissions/Buttons/FakeNextButton";
+import { DesktopYesNoContainer } from "components/e-permissions/TickBoxChannels/TwoTickChannel/TwoTickChannel.styles";
+import TTOtherNewsChannel from "components/e-permissions/TickBoxChannels/TwoTickChannel/TTOtherNewsChannel";
+import TTThirdPartyChannel from "components/e-permissions/TickBoxChannels/TwoTickChannel/TTThirdPartyChannel";
+import TTNatwestEmailsChannel from "components/e-permissions/TickBoxChannels/TwoTickChannel/TTNatwestEmailsChannel";
+import FakeNextButton from "components/e-permissions/Buttons/FakeNextButton";
 
 interface PrivacyPermissionsProps {
   hideSubText?: boolean;

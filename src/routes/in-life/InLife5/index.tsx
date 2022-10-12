@@ -1,29 +1,29 @@
 import React, { useMemo, useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
-import { RedText } from "../../../components/e-permissions/Text/Text.style";
+import { RedText } from "components/e-permissions/Text/Text.style";
 import { saveCondition } from "../../../ConditionSelector/ConditionSelectorSlice";
 import { useEFSContinue } from "../../../hooks/useEFSContinue";
 import { usePageDuration } from "../../../hooks/usePageDuration";
-import { pickRandomFunc } from "../../../screens/5.MarketingPreferences/functions";
-import Channel from "../../../components/in-life/Channel";
+import { pickRandomFunc } from "screens/5.MarketingPreferences/functions";
+import Channel from "components/in-life/Channel";
 import {
   ChannelGroup,
   ChannelGroupDivider,
   ChannelGroupWrapper,
-} from "../../../components/in-life/Channel/Channel.styles";
-import Footer from "../../../components/in-life/Footer";
+} from "components/in-life/Channel/Channel.styles";
+import Footer from "components/in-life/Footer";
 import {
   ContentContainer,
   InLifeText,
-} from "../../../components/in-life/in-life.styles";
-import InLifeHeader from "../../../components/in-life/InLifeHeader";
-import MarketingPreferencesNav from "../../../components/in-life/MarketingPreferencesNav/Index";
-import PaymentSwitch from "../../../components/in-life/PaymentSwitch";
-import PhoneWrapper from "../../../components/in-life/PhoneWrapper";
+} from "components/in-life/in-life.styles";
+import InLifeHeader from "components/in-life/InLifeHeader";
+import MarketingPreferencesNav from "components/in-life/MarketingPreferencesNav/Index";
+import PaymentSwitch from "components/in-life/PaymentSwitch";
+import PhoneWrapper from "components/in-life/PhoneWrapper";
 import {
   SubmitButtonStyled,
   SubmitButtonWrapper,
-} from "../../../components/in-life/SubmitButton/SubmitButton.styles";
+} from "components/in-life/SubmitButton/SubmitButton.styles";
 import {
   clickOpenAccordionMobileApp,
   clickOpenAccordionSocialMedia,

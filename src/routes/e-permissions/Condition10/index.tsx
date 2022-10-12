@@ -1,14 +1,14 @@
 import { useEFSData } from "@dectech/react-library";
 import React, { FC, useState } from "react";
 import { HashRouter as Router, Switch, Route } from "react-router-dom";
-import CurrentAccount from "../../../screens/1.ProductChoice/current-account";
-import Loan from "../../../screens/1.ProductChoice/loan/index";
-import PCExistingCustomer from "../../../screens/2.PersonalDetails/PCExistingCustomer";
-import PermissionsInfo from "../../../screens/4.PermissionsInfo";
-import Scenario10 from "../../../screens/5.MarketingPreferences/ExistingCustomer/Scenario10";
-import PrivacyPermissions510 from "../../../screens/6.PrivacyPermissions/6.PrivacyPermissions510";
-import PrivacyPopUp from "../../../screens/7.PrivacyPopUp";
-import AboutUsPopUp from "../../../screens/8.AboutUsUp";
+import CurrentAccount from "screens/1.ProductChoice/current-account";
+import Loan from "screens/1.ProductChoice/loan/index";
+import PCExistingCustomer from "screens/2.PersonalDetails/PCExistingCustomer";
+import PermissionsInfo from "screens/4.PermissionsInfo";
+import Scenario10 from "screens/5.MarketingPreferences/ExistingCustomer/Scenario10";
+import PrivacyPermissions510 from "screens/6.PrivacyPermissions/6.PrivacyPermissions510";
+import PrivacyPopUp from "screens/7.PrivacyPopUp";
+import AboutUsPopUp from "screens/8.AboutUsUp";
 import ScrollToTop from "../../ScrollToTop";
 
 const Condition10: FC = () => {

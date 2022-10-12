@@ -1,10 +1,10 @@
 import React from "react";
 
 import { usePageDuration } from "../../hooks/usePageDuration";
-import ExperimentContainer from "../../components/e-permissions/ExperimentContainer/index";
-import BackButton from "../../components/e-permissions/Buttons/BackButton";
-import BeigeContentContainer from "../../components/e-permissions/BeigeContentContainer";
-import BlankContentContainer from "../../components/e-permissions/BlankContentContainer";
+import ExperimentContainer from "components/e-permissions/ExperimentContainer/index";
+import BackButton from "components/e-permissions/Buttons/BackButton";
+import BeigeContentContainer from "components/e-permissions/BeigeContentContainer";
+import BlankContentContainer from "components/e-permissions/BlankContentContainer";
 import {
   AboutUsRow,
   AboutUsColumn,

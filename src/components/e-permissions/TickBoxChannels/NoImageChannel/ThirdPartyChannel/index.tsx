@@ -12,7 +12,7 @@ import { useDispatch } from "react-redux";
 import {
   tickThirdParty,
   unTickThirdParty,
-} from "../../../../../screens/6.PrivacyPermissions/PrivacyPermissionsSlice";
+} from "screens/6.PrivacyPermissions/PrivacyPermissionsSlice";
 
 const ThirdPartyChannel: FC = () => {
   const dispatch = useDispatch();

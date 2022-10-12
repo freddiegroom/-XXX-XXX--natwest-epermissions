@@ -1,17 +1,14 @@
 import React, { FC, useState } from "react";
-import ExperimentContainer from "../../../components/e-permissions/ExperimentContainer";
-import WhiteFooter from "../../../components/e-permissions/WhiteFooter";
-import Header from "../../../components/e-permissions/Header";
-import Title from "../../../components/e-permissions/Selects/Title";
-import DetailsRadio from "../../../components/e-permissions/RadioButtons/DetailsRadio/index";
-import NextButton from "../../../components/e-permissions/Buttons/NextButton";
-import WhiteContentContainer from "../../../components/e-permissions/WhiteContentContainer";
+import ExperimentContainer from "components/e-permissions/ExperimentContainer";
+import WhiteFooter from "components/e-permissions/WhiteFooter";
+import Header from "components/e-permissions/Header";
+import Title from "components/e-permissions/Selects/Title";
+import DetailsRadio from "components/e-permissions/RadioButtons/DetailsRadio/index";
+import NextButton from "components/e-permissions/Buttons/NextButton";
+import WhiteContentContainer from "components/e-permissions/WhiteContentContainer";
 import { useScrollToTop } from "../../../hooks/useScrollToTop";
-import {
-  HeadingText,
-  RedText,
-} from "../../../components/e-permissions/Text/Text.style";
-import FakeNextButton from "../../../components/e-permissions/Buttons/FakeNextButton";
+import { HeadingText, RedText } from "components/e-permissions/Text/Text.style";
+import FakeNextButton from "components/e-permissions/Buttons/FakeNextButton";
 import { useEFSData } from "@dectech/react-library";
 import { usePageDuration } from "../../../hooks/usePageDuration";
 

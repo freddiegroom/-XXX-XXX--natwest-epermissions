@@ -12,7 +12,7 @@ import { useDispatch } from "react-redux";
 import {
   tickNatwestEmails,
   unTickNatwestEmails,
-} from "../../../../../screens/6.PrivacyPermissions/PrivacyPermissionsSlice";
+} from "screens/6.PrivacyPermissions/PrivacyPermissionsSlice";
 
 const NatwestEmailsChannel: FC = () => {
   const dispatch = useDispatch();

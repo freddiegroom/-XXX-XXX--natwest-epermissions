@@ -15,7 +15,7 @@ import InLife2Route from "../../routes/in-life/InLife2/InLife2Route";
 import InLife3 from "../../routes/in-life/InLife3";
 import InLife4 from "../../routes/in-life/InLife4";
 import InLife5 from "../../routes/in-life/InLife5";
-// import InLife1Container from "../../screens/InLife/InLife1/InLife1Container";
+// import InLife1Container from "screens/InLife/InLife1/InLife1Container";
 
 const DebugConditionSelector: FC = () => {
   const [debugCondition, SetDebugCondition] = useState(1);

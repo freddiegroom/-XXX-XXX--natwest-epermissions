@@ -1,9 +1,9 @@
 import React from "react";
-import BackButton from "../../../../components/e-permissions/Buttons/BackButton";
-import Header from "../../../../components/e-permissions/Header";
+import BackButton from "components/e-permissions/Buttons/BackButton";
+import Header from "components/e-permissions/Header";
 import { usePageDuration } from "../../../../hooks/usePageDuration";
-import { ContentContainer } from "../../../../components/in-life/in-life.styles";
-import PhoneWrapper from "../../../../components/in-life/PhoneWrapper";
+import { ContentContainer } from "components/in-life/in-life.styles";
+import PhoneWrapper from "components/in-life/PhoneWrapper";
 import {
   ListP,
   SectionHeading,

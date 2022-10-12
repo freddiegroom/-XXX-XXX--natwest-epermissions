@@ -1,10 +1,10 @@
 import React from "react";
 
 import { usePageDuration } from "../../hooks/usePageDuration";
-import ExperimentContainer from "../../components/e-permissions/ExperimentContainer/index";
-import Header from "../../components/e-permissions/Header";
-import BackButton from "../../components/e-permissions/Buttons/BackButton";
-import ContentContainer from "../../components/e-permissions/ContentContainer";
+import ExperimentContainer from "components/e-permissions/ExperimentContainer/index";
+import Header from "components/e-permissions/Header";
+import BackButton from "components/e-permissions/Buttons/BackButton";
+import ContentContainer from "components/e-permissions/ContentContainer";
 import {
   ListP,
   SectionHeading,
