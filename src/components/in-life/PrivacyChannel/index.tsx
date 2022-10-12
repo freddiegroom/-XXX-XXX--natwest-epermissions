@@ -8,10 +8,10 @@ import {
 } from "./PrivacyChannel.styles";
 import infoIcon from "./info-icon.png";
 import infoSquareIcon from "./square-arrow-icon.png";
-import { usePageDuration } from "../../../../hooks/usePageDuration";
+import { usePageDuration } from "../../../hooks/usePageDuration";
 import { useHistory } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { clickPrivacyPermissions } from "../../../../redux/InLifeSlice";
+import { clickPrivacyPermissions } from "../../../redux/InLifeSlice";
 
 const PrivacyChannel = () => {
   const history = useHistory();
