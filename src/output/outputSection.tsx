@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 import { useEFSData } from "@dectech/react-library";
 import { useSelector } from "react-redux";
-import { RootState } from "../redux/store";
+import { RootState } from "redux/store";
 import selectOutput from "./output.selectors";
 
 interface OutputLineProps {

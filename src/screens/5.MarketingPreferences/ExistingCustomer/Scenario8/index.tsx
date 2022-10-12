@@ -32,13 +32,13 @@ import {
   BoldText,
   HeadingText,
 } from "components/e-permissions/Text/Text.style";
-import { usePageDuration } from "../../../../hooks/usePageDuration";
+import { usePageDuration } from "hooks/usePageDuration";
 import TTTextMessageChannel from "components/e-permissions/TickBoxChannels/TwoTickChannel/TTTextMessageChannel";
 import TTEmailChannel from "components/e-permissions/TickBoxChannels/TwoTickChannel/TTEmailChannel";
 import TTTelephoneChannel from "components/e-permissions/TickBoxChannels/TwoTickChannel/TTTelephoneChannel";
 import TTPostChannel from "components/e-permissions/TickBoxChannels/TwoTickChannel/TTPostChannel";
 import { DesktopYesNoContainer } from "components/e-permissions/TickBoxChannels/TwoTickChannel/TwoTickChannel.styles";
-import { pickRandomFunc } from "../../functions";
+import { pickRandomFunc } from "../../../../utils/pickRandomFunc";
 
 const Scenario8: FC = () => {
   const stopPageTiming = usePageDuration("marketing-preferences-8");

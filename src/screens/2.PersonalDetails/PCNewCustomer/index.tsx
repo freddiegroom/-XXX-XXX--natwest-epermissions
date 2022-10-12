@@ -17,8 +17,8 @@ import WhiteContentContainer from "components/e-permissions/WhiteContentContaine
 import { RedText } from "components/e-permissions/Text/Text.style";
 import CountryNationality from "components/e-permissions/Selects/CountryNationality";
 import FakeNextButton from "components/e-permissions/Buttons/FakeNextButton";
-import { useScrollToTop } from "../../../hooks/useScrollToTop";
-import { usePageDuration } from "../../../hooks/usePageDuration";
+import { useScrollToTop } from "hooks/useScrollToTop";
+import { usePageDuration } from "hooks/usePageDuration";
 
 const PCNewCustomer: FC = () => {
   useScrollToTop();

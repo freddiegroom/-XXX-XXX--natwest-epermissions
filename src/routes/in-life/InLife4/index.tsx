@@ -2,9 +2,9 @@ import React, { useMemo, useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { RedText } from "components/e-permissions/Text/Text.style";
 import { saveCondition } from "../../../ConditionSelector/ConditionSelectorSlice";
-import { useEFSContinue } from "../../../hooks/useEFSContinue";
-import { usePageDuration } from "../../../hooks/usePageDuration";
-import { pickRandomFunc } from "screens/5.MarketingPreferences/functions";
+import { useEFSContinue } from "hooks/useEFSContinue";
+import { usePageDuration } from "hooks/usePageDuration";
+import { pickRandomFunc } from "utils/pickRandomFunc";
 import Channel from "components/in-life/Channel";
 import {
   ChannelGroup,
@@ -44,7 +44,7 @@ import {
   unTickSocialMedia,
   unTickTelephone,
   unTickTextMessage,
-} from "../../../redux/InLifeSlice";
+} from "redux/InLifeSlice";
 
 const InLife4 = () => {
   const dispatch = useDispatch();

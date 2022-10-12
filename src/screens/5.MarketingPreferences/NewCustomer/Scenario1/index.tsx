@@ -11,8 +11,8 @@ import OffersAndUpdates from "components/e-permissions/TickBoxes/OffersAndUpdate
 import WhiteFooter from "components/e-permissions/WhiteFooter";
 import WhiteContentContainer from "components/e-permissions/WhiteContentContainer";
 import cupSaucer from "images/cup-saucer.png";
-import { useEFSContinue } from "../../../../hooks/useEFSContinue";
-import { usePageDuration } from "../../../../hooks/usePageDuration";
+import { useEFSContinue } from "hooks/useEFSContinue";
+import { usePageDuration } from "hooks/usePageDuration";
 import {
   NextButtonContainer,
   NextButtonStyle,

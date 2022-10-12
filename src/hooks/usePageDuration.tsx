@@ -1,6 +1,6 @@
 import { useEffect, useCallback, useRef } from "react";
 import { useDispatch } from "react-redux";
-import { incrementDuration } from "../redux/pageDurationStore";
+import { incrementDuration } from "redux/pageDurationStore";
 
 export function usePageDuration(pageId: string): () => void {
   const dispatch = useDispatch();

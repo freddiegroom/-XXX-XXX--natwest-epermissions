@@ -8,7 +8,7 @@ import {
 } from "components/e-permissions/Text/Text.style";
 import WhiteContentContainer from "components/e-permissions/WhiteContentContainer";
 import WhiteFooter from "components/e-permissions/WhiteFooter";
-import { usePageDuration } from "../../hooks/usePageDuration";
+import { usePageDuration } from "hooks/usePageDuration";
 import cupSaucer from "images/cup-saucer.png";
 
 const PermissionsInfo: FC = () => {

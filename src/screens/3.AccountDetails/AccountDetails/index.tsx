@@ -11,7 +11,7 @@ import WhiteContentContainer from "components/e-permissions/WhiteContentContaine
 import WhiteFooter from "components/e-permissions/WhiteFooter";
 import FakeNextButton from "components/e-permissions/Buttons/FakeNextButton";
 import PIN from "components/e-permissions/ConfirmPIN/PIN";
-import { usePageDuration } from "../../../hooks/usePageDuration";
+import { usePageDuration } from "hooks/usePageDuration";
 
 interface AccountDetailsProps {
   debugCondition: number;

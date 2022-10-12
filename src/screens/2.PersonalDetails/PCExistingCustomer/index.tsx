@@ -6,11 +6,11 @@ import Title from "components/e-permissions/Selects/Title";
 import DetailsRadio from "components/e-permissions/RadioButtons/DetailsRadio/index";
 import NextButton from "components/e-permissions/Buttons/NextButton";
 import WhiteContentContainer from "components/e-permissions/WhiteContentContainer";
-import { useScrollToTop } from "../../../hooks/useScrollToTop";
+import { useScrollToTop } from "hooks/useScrollToTop";
 import { HeadingText, RedText } from "components/e-permissions/Text/Text.style";
 import FakeNextButton from "components/e-permissions/Buttons/FakeNextButton";
 import { useEFSData } from "@dectech/react-library";
-import { usePageDuration } from "../../../hooks/usePageDuration";
+import { usePageDuration } from "hooks/usePageDuration";
 
 interface PCExistingCustomerProps {
   debugCondition?: number;

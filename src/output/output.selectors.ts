@@ -1,6 +1,6 @@
 import { createSelector } from "@reduxjs/toolkit";
-import { getPageDurations } from "../redux/pageDurationStore";
-import { RootState } from "../redux/store";
+import { getPageDurations } from "redux/pageDurationStore";
+import { RootState } from "redux/store";
 
 const selectOutput = createSelector(
   getPageDurations,

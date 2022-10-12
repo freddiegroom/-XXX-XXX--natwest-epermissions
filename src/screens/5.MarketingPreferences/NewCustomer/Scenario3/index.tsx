@@ -29,7 +29,7 @@ import {
   HeadingText,
   SmallPaddingDiv,
 } from "components/e-permissions/Text/Text.style";
-import { usePageDuration } from "../../../../hooks/usePageDuration";
+import { usePageDuration } from "hooks/usePageDuration";
 import TTTextMessageChannel from "components/e-permissions/TickBoxChannels/TwoTickChannel/TTTextMessageChannel";
 import TTEmailChannel from "components/e-permissions/TickBoxChannels/TwoTickChannel/TTEmailChannel";
 import TTTelephoneChannel from "components/e-permissions/TickBoxChannels/TwoTickChannel/TTTelephoneChannel";

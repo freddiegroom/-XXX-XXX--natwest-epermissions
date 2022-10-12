@@ -15,8 +15,8 @@ import {
 import OffersAndUpdates from "components/e-permissions/TickBoxes/OffersAndUpdates";
 import WhiteContentContainer from "components/e-permissions/WhiteContentContainer";
 import WhiteFooter from "components/e-permissions/WhiteFooter";
-import { useEFSContinue } from "../../../../hooks/useEFSContinue";
-import { usePageDuration } from "../../../../hooks/usePageDuration";
+import { useEFSContinue } from "hooks/useEFSContinue";
+import { usePageDuration } from "hooks/usePageDuration";
 import cupSaucer from "images/cup-saucer.png";
 import bottomBevel from "images/bottom-bevel.png";
 import largebottomBevel from "images/large-bottom-bevel.png";

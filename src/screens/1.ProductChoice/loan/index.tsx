@@ -3,7 +3,7 @@ import { useHistory } from "react-router-dom";
 import ExperimentContainer from "components/e-permissions/ExperimentContainer";
 import WhiteFooter from "components/e-permissions/WhiteFooter";
 import Header from "components/e-permissions/Header";
-import { useScrollToTop } from "../../../hooks/useScrollToTop";
+import { useScrollToTop } from "hooks/useScrollToTop";
 import tick from "images/tick.png";
 
 import {
@@ -22,7 +22,7 @@ import { HeadingText } from "components/e-permissions/Text/Text.style";
 import { selectChoice } from "../productChoiceSlice";
 import { useDispatch } from "react-redux";
 import loan from "images/loan.png";
-import { usePageDuration } from "../../../hooks/usePageDuration";
+import { usePageDuration } from "hooks/usePageDuration";
 
 const Loan: FC = () => {
   useScrollToTop();
