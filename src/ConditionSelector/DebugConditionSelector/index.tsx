@@ -10,12 +10,12 @@ import React, { FC, useState } from "react";
 // import Condition8 from "../../routing/Condition8";
 // import Condition9 from "../../routing/Condition9";
 import { ConditionSelectorStyle } from "./DebugConditionSelector.style";
-import InLife1 from "../../screens/InLife/InLife1";
-import InLife2 from "../../screens/InLife/InLife2/index";
-import InLife3 from "../../screens/InLife/InLife3/index";
-import InLife4 from "../../screens/InLife/InLife4/index";
-import InLife5 from "../../screens/InLife/InLife5/index";
-import InLife2Route from "../../screens/InLife/InLife2/InLife2Route";
+import InLife1 from "../../routes-in-life/InLife1";
+import InLife2 from "../../routes-in-life/InLife2";
+import InLife3 from "../../routes-in-life/InLife3";
+import InLife4 from "../../routes-in-life/InLife4";
+import InLife5 from "../../routes-in-life/InLife5";
+import InLife2Route from "../../routes-in-life/InLife2/InLife2Route";
 // import InLife1Container from "../../screens/InLife/InLife1/InLife1Container";
 
 const DebugConditionSelector: FC = () => {

@@ -4,7 +4,7 @@ import conditionSelectorReducer from "../ConditionSelector/ConditionSelectorSlic
 // import personalDetailsReducer from "../screens/2.PersonalDetails/personalDetailsSlice";
 // import marketingPreferencesReducer from "../screens/5.MarketingPreferences/MarketingPreferencesSlice";
 // import privacyPermissionsReducer from "../screens/6.PrivacyPermissions/PrivacyPermissionsSlice";
-import inLifeReducer from "../screens/InLife/InLifeSlice";
+import inLifeReducer from "./InLifeSlice";
 import { pageDurationStoreReducer } from "./pageDurationStore";
 
 export const store = configureStore({

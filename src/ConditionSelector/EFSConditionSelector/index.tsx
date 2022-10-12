@@ -1,27 +1,27 @@
 import { useEFSData } from "@dectech/react-library";
 import React, { FC } from "react";
-// import Condition1 from "../../routing/Condition1";
-// import Condition10 from "../../routing/Condition10";
-// import Condition2 from "../../routing/Condition2";
-// import Condition3 from "../../routing/Condition3";
-// import Condition4 from "../../routing/Condition4";
-// import Condition5 from "../../routing/Condition5";
-// import Condition6 from "../../routing/Condition6";
-// import Condition7 from "../../routing/Condition7";
-// import Condition8 from "../../routing/Condition8";
-// import Condition9 from "../../routing/Condition9";
-import InLife1 from "../../screens/InLife/InLife1";
-import InLife2Route from "../../screens/InLife/InLife2/InLife2Route";
-import InLife3 from "../../screens/InLife/InLife3";
-import InLife4 from "../../screens/InLife/InLife4";
-import InLife5 from "../../screens/InLife/InLife5";
+import Condition1 from "../../routes/Condition1";
+import Condition10 from "../../routes/Condition10";
+import Condition2 from "../../routes/Condition2";
+import Condition3 from "../../routes/Condition3";
+import Condition4 from "../../routes/Condition4";
+import Condition5 from "../../routes/Condition5";
+import Condition6 from "../../routes/Condition6";
+import Condition7 from "../../routes/Condition7";
+import Condition8 from "../../routes/Condition8";
+import Condition9 from "../../routes/Condition9";
+import InLife1 from "../../routes-in-life/InLife1";
+import InLife2Route from "../../routes-in-life/InLife2/InLife2Route";
+import InLife3 from "../../routes-in-life/InLife3";
+import InLife4 from "../../routes-in-life/InLife4";
+import InLife5 from "../../routes-in-life/InLife5";
 
 const EFSConditionSelector: FC = () => {
   const { condition } = useEFSData();
 
   return (
     <>
-      {/* {condition === 1 && <Condition1 />}
+      {condition === 1 && <Condition1 />}
       {condition === 2 && <Condition2 />}
       {condition === 3 && <Condition3 />}
       {condition === 4 && <Condition4 />}
@@ -30,7 +30,7 @@ const EFSConditionSelector: FC = () => {
       {condition === 7 && <Condition7 />}
       {condition === 8 && <Condition8 />}
       {condition === 9 && <Condition9 />}
-      {condition === 10 && <Condition10 />} */}
+      {condition === 10 && <Condition10 />}
       {condition === 1 && <InLife1 />}
       {condition === 2 && <InLife2Route />}
       {condition === 3 && <InLife3 />}
