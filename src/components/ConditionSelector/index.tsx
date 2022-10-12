@@ -1,7 +1,7 @@
 import { useEFSData } from "@dectech/react-library";
 import React, { FC } from "react";
 import { useDispatch } from "react-redux";
-import { OutputSection } from "../output/outputSection";
+import { OutputSection } from "../../output/outputSection";
 import { saveCondition } from "./ConditionSelectorSlice";
 import DebugConditionSelector from "./DebugConditionSelector/index";
 import EFSConditionSelector from "./EFSConditionSelector";

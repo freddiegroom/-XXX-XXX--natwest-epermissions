@@ -1,7 +1,7 @@
 import React, { useMemo, useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { RedText } from "components/e-permissions/Text/Text.style";
-import { saveCondition } from "ConditionSelector/ConditionSelectorSlice";
+import { saveCondition } from "components/ConditionSelector/ConditionSelectorSlice";
 import { useEFSContinue } from "hooks/useEFSContinue";
 import { usePageDuration } from "hooks/usePageDuration";
 import { pickRandomFunc } from "utils/pickRandomFunc";

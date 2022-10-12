@@ -1,5 +1,5 @@
 import { configureStore } from "@reduxjs/toolkit";
-import conditionSelectorReducer from "ConditionSelector/ConditionSelectorSlice";
+import conditionSelectorReducer from "components/ConditionSelector/ConditionSelectorSlice";
 import productChoiceReducer from "redux/productChoiceSlice";
 import personalDetailsReducer from "redux/personalDetailsSlice";
 import marketingPreferencesReducer from "redux/MarketingPreferencesSlice";

@@ -56,6 +56,21 @@ export const OutputSection: FC = () => {
     outputCondition,
     outputReduxStore,
     outputPageDurations,
+    outputProductChoice,
+    outputPersonalDetailsTitle,
+    outputPersonalDetailsNationality,
+    outputPersonalDetailsAddress,
+    outputMarketingPreferencesOffersAndUpdates,
+    outputMarketingPreferencesInitialTextMessage,
+    outputMarketingPreferencesTextMessage,
+    outputMarketingPreferencesInitialEmail,
+    outputMarketingPreferencesEmail,
+    outputMarketingPreferencesInitialTelephone,
+    outputMarketingPreferencesTelephone,
+    outputMarketingPreferencesInitialPost,
+    outputMarketingPreferencesPost,
+    outputMarketingPreferencesInitialSocialMedia,
+    outputMarketingPreferencesSocialMedia,
     outputInLifeInitialMobileAppPrompts,
     outputInLifeMobileAppPrompts,
     outputInLifeInitialTextMessage,
@@ -94,6 +109,81 @@ export const OutputSection: FC = () => {
         varname={outputReduxStore}
         value={`${reduxStores}`}
         label="redux store (debug)"
+      />
+      <OutputLine
+        varname={outputProductChoice}
+        value={`${outputData.productChoice}`}
+        label="product choice"
+      />
+      <OutputLine
+        varname={outputPersonalDetailsTitle}
+        value={`${outputData.personalDetails.title}`}
+        label="personal details title"
+      />
+      <OutputLine
+        varname={outputPersonalDetailsNationality}
+        value={`${outputData.personalDetails.nationality}`}
+        label="personal details nationality"
+      />
+      <OutputLine
+        varname={outputPersonalDetailsAddress}
+        value={`${outputData.personalDetails.address}`}
+        label="personal details address"
+      />
+      <OutputLine
+        varname={outputMarketingPreferencesOffersAndUpdates}
+        value={`${outputData.marketingPreferences.offersAndUpdates}`}
+        label="marketing preferences offers and updates"
+      />
+      <OutputLine
+        varname={outputMarketingPreferencesInitialTextMessage}
+        value={`${outputData.marketingPreferences.initialTextMessage}`}
+        label="marketing preferences initial text message"
+      />
+      <OutputLine
+        varname={outputMarketingPreferencesTextMessage}
+        value={`${outputData.marketingPreferences.textMessage}`}
+        label="marketing preferences text message"
+      />
+      <OutputLine
+        varname={outputMarketingPreferencesInitialEmail}
+        value={`${outputData.marketingPreferences.initialEmail}`}
+        label="marketing preferences initial email"
+      />
+      <OutputLine
+        varname={outputMarketingPreferencesEmail}
+        value={`${outputData.marketingPreferences.email}`}
+        label="marketing preferences email"
+      />
+      <OutputLine
+        varname={outputMarketingPreferencesInitialTelephone}
+        value={`${outputData.marketingPreferences.initialTelephone}`}
+        label="marketing preferences initial telephone"
+      />
+      <OutputLine
+        varname={outputMarketingPreferencesTelephone}
+        value={`${outputData.marketingPreferences.telephone}`}
+        label="marketing preferences telephone"
+      />
+      <OutputLine
+        varname={outputMarketingPreferencesInitialPost}
+        value={`${outputData.marketingPreferences.initialPost}`}
+        label="marketing preferences initial post"
+      />
+      <OutputLine
+        varname={outputMarketingPreferencesPost}
+        value={`${outputData.marketingPreferences.post}`}
+        label="marketing preferences post"
+      />
+      <OutputLine
+        varname={outputMarketingPreferencesInitialSocialMedia}
+        value={`${outputData.marketingPreferences.initialPost}`}
+        label="marketing preferences initial post"
+      />
+      <OutputLine
+        varname={outputMarketingPreferencesInitialSocialMedia}
+        value={`${outputData.marketingPreferences.post}`}
+        label="marketing preferences post"
       />
       <OutputLine
         varname={outputPageDurations}

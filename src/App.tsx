@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import "./App.css";
-import ConditionSelector from "./ConditionSelector";
+import ConditionSelector from "./components/ConditionSelector";
 
 const App: FC = ({ children }) => {
   return (
