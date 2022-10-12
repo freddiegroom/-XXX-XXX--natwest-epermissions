@@ -1,20 +1,20 @@
 import React, { FC, useState } from "react";
-import FakeNextButton from "../../../../components/Buttons/FakeNextButton";
-import NextButton from "../../../../components/Buttons/NextButton";
-import ContentContainer from "../../../../components/ContentContainer";
-import ExperimentContainer from "../../../../components/ExperimentContainer";
-import Footer from "../../../../components/Footer";
-import Header from "../../../../components/Header";
+import FakeNextButton from "../../../../components/e-permissions/Buttons/FakeNextButton";
+import NextButton from "../../../../components/e-permissions/Buttons/NextButton";
+import ContentContainer from "../../../../components/e-permissions/ContentContainer";
+import ExperimentContainer from "../../../../components/e-permissions/ExperimentContainer";
+import Footer from "../../../../components/e-permissions/Footer";
+import Header from "../../../../components/e-permissions/Header";
 import {
   HeadingText,
   RedText,
   SmallPaddingDiv,
-} from "../../../../components/Text/Text.style";
-import TTEmailChannel from "../../../../components/TickBoxChannels/TwoTickChannel/TTEmailChannel";
-import TTPostChannel from "../../../../components/TickBoxChannels/TwoTickChannel/TTPostChannel";
-import TTTelephoneChannel from "../../../../components/TickBoxChannels/TwoTickChannel/TTTelephoneChannel";
-import TTTextMessageChannel from "../../../../components/TickBoxChannels/TwoTickChannel/TTTextMessageChannel";
-import { DesktopYesNoContainer } from "../../../../components/TickBoxChannels/TwoTickChannel/TwoTickChannel.styles";
+} from "../../../../components/e-permissions/Text/Text.style";
+import TTEmailChannel from "../../../../components/e-permissions/TickBoxChannels/TwoTickChannel/TTEmailChannel";
+import TTPostChannel from "../../../../components/e-permissions/TickBoxChannels/TwoTickChannel/TTPostChannel";
+import TTTelephoneChannel from "../../../../components/e-permissions/TickBoxChannels/TwoTickChannel/TTTelephoneChannel";
+import TTTextMessageChannel from "../../../../components/e-permissions/TickBoxChannels/TwoTickChannel/TTTextMessageChannel";
+import { DesktopYesNoContainer } from "../../../../components/e-permissions/TickBoxChannels/TwoTickChannel/TwoTickChannel.styles";
 import { usePageDuration } from "../../../../hooks/usePageDuration";
 import cupSaucer from "../../../../images/cup-saucer.png";
 

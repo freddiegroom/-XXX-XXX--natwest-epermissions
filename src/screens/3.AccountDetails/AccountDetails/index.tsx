@@ -1,16 +1,19 @@
 import { useEFSData } from "@dectech/react-library";
 import React, { FC, useState } from "react";
-import NextButton from "../../../components/Buttons/NextButton";
-import ExperimentContainer from "../../../components/ExperimentContainer";
-import Header from "../../../components/Header";
-import ChoosePassword from "../../../components/Inputs/ChoosePassword";
-import ConfirmPassword from "../../../components/Inputs/ConfirmPassword";
-import ConfirmPIN from "../../../components/ConfirmPIN";
-import { HeadingText, RedText } from "../../../components/Text/Text.style";
-import WhiteContentContainer from "../../../components/WhiteContentContainer";
-import WhiteFooter from "../../../components/WhiteFooter";
-import FakeNextButton from "../../../components/Buttons/FakeNextButton";
-import PIN from "../../../components/ConfirmPIN/PIN";
+import NextButton from "../../../components/e-permissions/Buttons/NextButton";
+import ExperimentContainer from "../../../components/e-permissions/ExperimentContainer";
+import Header from "../../../components/e-permissions/Header";
+import ChoosePassword from "../../../components/e-permissions/Inputs/ChoosePassword";
+import ConfirmPassword from "../../../components/e-permissions/Inputs/ConfirmPassword";
+import ConfirmPIN from "../../../components/e-permissions/ConfirmPIN";
+import {
+  HeadingText,
+  RedText,
+} from "../../../components/e-permissions/Text/Text.style";
+import WhiteContentContainer from "../../../components/e-permissions/WhiteContentContainer";
+import WhiteFooter from "../../../components/e-permissions/WhiteFooter";
+import FakeNextButton from "../../../components/e-permissions/Buttons/FakeNextButton";
+import PIN from "../../../components/e-permissions/ConfirmPIN/PIN";
 import { usePageDuration } from "../../../hooks/usePageDuration";
 
 interface AccountDetailsProps {

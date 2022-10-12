@@ -1,22 +1,22 @@
 import React, { FC } from "react";
-import ExperimentContainer from "../../../../components/ExperimentContainer";
-import Header from "../../../../components/Header";
+import ExperimentContainer from "../../../../components/e-permissions/ExperimentContainer";
+import Header from "../../../../components/e-permissions/Header";
 import {
   BoldText,
   HeadingText,
   PaddingDiv,
   SmallPaddingDiv,
-} from "../../../../components/Text/Text.style";
-import OffersAndUpdates from "../../../../components/TickBoxes/OffersAndUpdates";
-import WhiteFooter from "../../../../components/WhiteFooter";
-import WhiteContentContainer from "../../../../components/WhiteContentContainer";
+} from "../../../../components/e-permissions/Text/Text.style";
+import OffersAndUpdates from "../../../../components/e-permissions/TickBoxes/OffersAndUpdates";
+import WhiteFooter from "../../../../components/e-permissions/WhiteFooter";
+import WhiteContentContainer from "../../../../components/e-permissions/WhiteContentContainer";
 import cupSaucer from "../../../../images/cup-saucer.png";
 import { useEFSContinue } from "../../../../hooks/useEFSContinue";
 import { usePageDuration } from "../../../../hooks/usePageDuration";
 import {
   NextButtonContainer,
   NextButtonStyle,
-} from "../../../../components/Buttons/NextButton/NextButton.style";
+} from "../../../../components/e-permissions/Buttons/NextButton/NextButton.style";
 import bottomBevel from "../../../../images/bottom-bevel.png";
 import largebottomBevel from "../../../../images/large-bottom-bevel.png";
 
