@@ -1,6 +1,6 @@
 import React, { useMemo, useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
-import { saveCondition } from "../../../ConditionSelector/ConditionSelectorSlice";
+import { saveCondition } from "ConditionSelector/ConditionSelectorSlice";
 import { useEFSContinue } from "hooks/useEFSContinue";
 import { usePageDuration } from "hooks/usePageDuration";
 import { pickRandomFunc } from "utils/pickRandomFunc";
