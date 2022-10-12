@@ -7,9 +7,9 @@ import {
   ClickedBox,
   PostImg,
 } from "../OneTickChannel.styles";
-import tickedCheckbox from "../../../../images/tick-checkbox.png";
-import checkbox from "../../../../images/checkbox.png";
-import post from "../../../../images/post.png";
+import tickedCheckbox from "images/tick-checkbox.png";
+import checkbox from "images/checkbox.png";
+import post from "images/post.png";
 import { useDispatch } from "react-redux";
 import {
   tickPost,

@@ -9,7 +9,7 @@ import {
   OAUBox,
   OAUBoxTicked,
 } from "./OffersAndUpdates.styles";
-import tickBox from "../../../../images/tick-checkbox.png";
+import tickBox from "images/tick-checkbox.png";
 
 const OffersAndUpdates: FC = ({ children }) => {
   const [clicked, setClicked] = useState(false);

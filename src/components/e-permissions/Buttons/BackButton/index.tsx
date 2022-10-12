@@ -4,7 +4,7 @@ import {
   BackButtonContainer,
   LargeBevel,
 } from "./BackButton.style";
-import largebottomBevel from "../../../../images/large-bottom-bevel.png";
+import largebottomBevel from "images/large-bottom-bevel.png";
 import { useHistory } from "react-router-dom";
 
 export interface BackButtonProps {

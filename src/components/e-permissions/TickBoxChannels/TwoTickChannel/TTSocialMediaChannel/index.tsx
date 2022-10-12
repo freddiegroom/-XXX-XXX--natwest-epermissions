@@ -9,9 +9,9 @@ import {
   YesNoContainer,
 } from "../TwoTickChannel.styles";
 
-import tickedCheckbox from "../../../../images/tick-checkbox.png";
-import checkbox from "../../../../images/checkbox.png";
-import social from "../../../../images/social.png";
+import tickedCheckbox from "images/tick-checkbox.png";
+import checkbox from "images/checkbox.png";
+import social from "images/social.png";
 import { useDispatch } from "react-redux";
 import {
   tickSocialMedia,

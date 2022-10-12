@@ -27,7 +27,7 @@ import {
   SelectNoneButton,
 } from "./Scenario8.styles";
 import { useDispatch } from "react-redux";
-import cupSaucer from "../../../../images/cup-saucer.png";
+import cupSaucer from "images/cup-saucer.png";
 import {
   BoldText,
   HeadingText,

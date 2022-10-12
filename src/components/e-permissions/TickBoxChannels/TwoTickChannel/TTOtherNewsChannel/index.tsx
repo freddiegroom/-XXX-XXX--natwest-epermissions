@@ -7,8 +7,8 @@ import {
   YesNoContainer,
   ChannelTextWide,
 } from "../TwoTickChannel.styles";
-import tickedCheckbox from "../../../../../images/tick-checkbox.png";
-import checkbox from "../../../../../images/checkbox.png";
+import tickedCheckbox from "images/tick-checkbox.png";
+import checkbox from "images/checkbox.png";
 import { useDispatch } from "react-redux";
 import { PrivacySpan } from "../../../../../screens/6.PrivacyPermissions/PrivacyPermissions.styles";
 import { useHistory } from "react-router-dom";

@@ -5,8 +5,8 @@ import {
   IconRow,
   TitleRow,
 } from "./Header.style";
-import nwLogo from "../../../images/nw-logo.png";
-// import otherLogo from "../../images/credit-card-logo.png";
+import nwLogo from "images/nw-logo.png";
+// import otherLogo from "images/credit-card-logo.png";
 
 interface HeaderImageProps {
   image?: string;

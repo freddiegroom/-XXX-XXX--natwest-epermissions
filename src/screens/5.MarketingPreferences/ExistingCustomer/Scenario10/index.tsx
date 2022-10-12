@@ -15,7 +15,7 @@ import TTTelephoneChannel from "../../../../components/e-permissions/TickBoxChan
 import TTTextMessageChannel from "../../../../components/e-permissions/TickBoxChannels/TwoTickChannel/TTTextMessageChannel";
 import { DesktopYesNoContainer } from "../../../../components/e-permissions/TickBoxChannels/TwoTickChannel/TwoTickChannel.styles";
 import { usePageDuration } from "../../../../hooks/usePageDuration";
-import cupSaucer from "../../../../images/cup-saucer.png";
+import cupSaucer from "images/cup-saucer.png";
 import { pickRandomFunc } from "../../functions";
 import {
   saveEmail,

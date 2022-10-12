@@ -9,7 +9,7 @@ import {
 import WhiteContentContainer from "../../components/e-permissions/WhiteContentContainer";
 import WhiteFooter from "../../components/e-permissions/WhiteFooter";
 import { usePageDuration } from "../../hooks/usePageDuration";
-import cupSaucer from "../../images/cup-saucer.png";
+import cupSaucer from "images/cup-saucer.png";
 
 const PermissionsInfo: FC = () => {
   const stopPageTiming = usePageDuration("permissions-info");

@@ -8,9 +8,9 @@ import {
   EmailImg,
   YesNoContainer,
 } from "../TwoTickChannel.styles";
-import tickedCheckbox from "../../../../../images/tick-checkbox.png";
-import checkbox from "../../../../../images/checkbox.png";
-import email from "../../../../../images/email.png";
+import tickedCheckbox from "images/tick-checkbox.png";
+import checkbox from "images/checkbox.png";
+import email from "images/email.png";
 import { useDispatch } from "react-redux";
 import {
   tickEmail,

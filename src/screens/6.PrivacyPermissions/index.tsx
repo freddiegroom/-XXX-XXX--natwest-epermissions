@@ -11,11 +11,11 @@ import {
 } from "../../components/e-permissions/Text/Text.style";
 import { useEFSContinue } from "../../hooks/useEFSContinue";
 import { usePageDuration } from "../../hooks/usePageDuration";
-import cupSaucer from "../../images/cup-saucer.png";
+import cupSaucer from "images/cup-saucer.png";
 import { PrivacySpan, RegularText, RedText } from "./PrivacyPermissions.styles";
 import { clickPrivacyNotice } from "./PrivacyPermissionsSlice";
-import bottomBevel from "../../images/bottom-bevel.png";
-import largebottomBevel from "../../images/large-bottom-bevel.png";
+import bottomBevel from "images/bottom-bevel.png";
+import largebottomBevel from "images/large-bottom-bevel.png";
 import {
   NextButtonContainer,
   NextButtonStyle,

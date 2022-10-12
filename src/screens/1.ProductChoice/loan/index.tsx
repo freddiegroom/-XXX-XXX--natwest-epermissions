@@ -4,7 +4,7 @@ import ExperimentContainer from "../../../components/e-permissions/ExperimentCon
 import WhiteFooter from "../../../components/e-permissions/WhiteFooter";
 import Header from "../../../components/e-permissions/Header";
 import { useScrollToTop } from "../../../hooks/useScrollToTop";
-import tick from "../../../images/tick.png";
+import tick from "images/tick.png";
 
 import {
   ColourBar,
@@ -21,7 +21,7 @@ import {
 import { HeadingText } from "../../../components/e-permissions/Text/Text.style";
 import { selectChoice } from "../productChoiceSlice";
 import { useDispatch } from "react-redux";
-import loan from "../../../images/loan.png";
+import loan from "images/loan.png";
 import { usePageDuration } from "../../../hooks/usePageDuration";
 
 const Loan: FC = () => {

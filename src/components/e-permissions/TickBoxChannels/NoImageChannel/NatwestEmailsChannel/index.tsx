@@ -6,8 +6,8 @@ import {
   ClickBox,
   ClickedBox,
 } from "../NoImageChannel.styles";
-import tickedCheckbox from "../../../../images/tick-checkbox.png";
-import checkbox from "../../../../images/checkbox.png";
+import tickedCheckbox from "images/tick-checkbox.png";
+import checkbox from "images/checkbox.png";
 import { useDispatch } from "react-redux";
 import {
   tickNatwestEmails,

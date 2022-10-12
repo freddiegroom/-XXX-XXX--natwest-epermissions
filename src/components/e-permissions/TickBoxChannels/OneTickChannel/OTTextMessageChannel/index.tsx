@@ -7,9 +7,9 @@ import {
   ClickedBox,
   TextImg,
 } from "../OneTickChannel.styles";
-import tickedCheckbox from "../../../../images/tick-checkbox.png";
-import checkbox from "../../../../images/checkbox.png";
-import text from "../../../../images/text.png";
+import tickedCheckbox from "images/tick-checkbox.png";
+import checkbox from "images/checkbox.png";
+import text from "images/text.png";
 import { useDispatch } from "react-redux";
 import {
   tickTextMessage,

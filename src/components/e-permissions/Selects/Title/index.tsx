@@ -5,7 +5,7 @@ import {
   NormalSelect,
   SelectorContainer,
 } from "../selects.styles";
-import chevronDown from "../../../../images/icon-chev-down.png";
+import chevronDown from "images/icon-chev-down.png";
 import { saveTitle } from "../../../../screens/2.PersonalDetails/personalDetailsSlice";
 import { useDispatch } from "react-redux";
 

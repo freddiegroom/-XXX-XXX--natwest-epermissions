@@ -5,7 +5,7 @@ import {
   RedInput,
   NormalInput,
 } from "../inputs.styles";
-import redChevronDown from "../../../../images/icon-chev-up.png";
+import redChevronDown from "images/icon-chev-up.png";
 
 interface EmailAddressProps {
   state?: number;

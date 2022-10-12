@@ -15,7 +15,7 @@ import {
   TextContainerStyle,
   ChooseButton,
 } from "./CurrentAccount.styles";
-import infoIcon from "../../../images/information-icon.png";
+import infoIcon from "images/information-icon.png";
 import { useScrollToTop } from "../../../hooks/useScrollToTop";
 import { useHistory } from "react-router-dom";
 import {
@@ -24,7 +24,7 @@ import {
 } from "../../../components/e-permissions/Text/Text.style";
 import { selectChoice } from "../productChoiceSlice";
 import { useDispatch } from "react-redux";
-import creditCard from "../../../images/credit-card-logo.png";
+import creditCard from "images/credit-card-logo.png";
 import { usePageDuration } from "../../../hooks/usePageDuration";
 
 const CurrentAccount: FC = () => {

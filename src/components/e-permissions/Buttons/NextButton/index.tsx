@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 import { NextButtonStyle, NextButtonContainer } from "./NextButton.style";
-import bottomBevel from "../../../../images/bottom-bevel.png";
-import largebottomBevel from "../../../../images/large-bottom-bevel.png";
+import bottomBevel from "images/bottom-bevel.png";
+import largebottomBevel from "images/large-bottom-bevel.png";
 import { useHistory } from "react-router-dom";
 
 export interface NextButtonProps {

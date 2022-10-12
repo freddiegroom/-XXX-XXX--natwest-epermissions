@@ -10,15 +10,15 @@ import {
 import OffersAndUpdates from "../../../../components/e-permissions/TickBoxes/OffersAndUpdates";
 import WhiteFooter from "../../../../components/e-permissions/WhiteFooter";
 import WhiteContentContainer from "../../../../components/e-permissions/WhiteContentContainer";
-import cupSaucer from "../../../../images/cup-saucer.png";
+import cupSaucer from "images/cup-saucer.png";
 import { useEFSContinue } from "../../../../hooks/useEFSContinue";
 import { usePageDuration } from "../../../../hooks/usePageDuration";
 import {
   NextButtonContainer,
   NextButtonStyle,
 } from "../../../../components/e-permissions/Buttons/NextButton/NextButton.style";
-import bottomBevel from "../../../../images/bottom-bevel.png";
-import largebottomBevel from "../../../../images/large-bottom-bevel.png";
+import bottomBevel from "images/bottom-bevel.png";
+import largebottomBevel from "images/large-bottom-bevel.png";
 
 const Scenario1: FC = () => {
   const { EFSSubmit } = useEFSContinue();

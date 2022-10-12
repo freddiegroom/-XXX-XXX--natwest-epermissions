@@ -17,9 +17,9 @@ import WhiteContentContainer from "../../../../components/e-permissions/WhiteCon
 import WhiteFooter from "../../../../components/e-permissions/WhiteFooter";
 import { useEFSContinue } from "../../../../hooks/useEFSContinue";
 import { usePageDuration } from "../../../../hooks/usePageDuration";
-import cupSaucer from "../../../../images/cup-saucer.png";
-import bottomBevel from "../../../../images/bottom-bevel.png";
-import largebottomBevel from "../../../../images/large-bottom-bevel.png";
+import cupSaucer from "images/cup-saucer.png";
+import bottomBevel from "images/bottom-bevel.png";
+import largebottomBevel from "images/large-bottom-bevel.png";
 
 const Scenario6: FC = () => {
   const { EFSSubmit } = useEFSContinue();

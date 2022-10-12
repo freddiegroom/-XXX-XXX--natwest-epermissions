@@ -7,7 +7,7 @@ import {
   SmallRedInput,
   SmallNormalInput,
 } from "../multipleInputs.styles";
-import slash from "../../../../images/slash.png";
+import slash from "images/slash.png";
 
 interface AddressDateProps {
   mmState?: number;
