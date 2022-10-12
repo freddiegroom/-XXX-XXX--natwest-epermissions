@@ -13,7 +13,7 @@ import { useDispatch } from "react-redux";
 import {
   tickThirdParty,
   unTickThirdParty,
-} from "screens/6.PrivacyPermissions/PrivacyPermissionsSlice";
+} from "redux/PrivacyPermissionsSlice";
 
 interface TTThirdPartyChannelProps {
   state: any;

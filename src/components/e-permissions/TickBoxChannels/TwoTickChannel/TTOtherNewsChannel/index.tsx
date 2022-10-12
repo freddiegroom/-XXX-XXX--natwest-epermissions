@@ -16,7 +16,7 @@ import {
   clickAboutUsNotice,
   tickOtherNews,
   unTickOtherNews,
-} from "screens/6.PrivacyPermissions/PrivacyPermissionsSlice";
+} from "redux/PrivacyPermissionsSlice";
 
 interface TTOtherNewsChannelProps {
   state: any;

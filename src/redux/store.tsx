@@ -1,19 +1,19 @@
 import { configureStore } from "@reduxjs/toolkit";
 import conditionSelectorReducer from "ConditionSelector/ConditionSelectorSlice";
-// import productChoiceReducer from "screens/1.ProductChoice/productChoiceSlice";
-// import personalDetailsReducer from "screens/2.PersonalDetails/personalDetailsSlice";
-// import marketingPreferencesReducer from "screens/5.MarketingPreferences/MarketingPreferencesSlice";
-// import privacyPermissionsReducer from "screens/6.PrivacyPermissions/PrivacyPermissionsSlice";
+import productChoiceReducer from "redux/productChoiceSlice";
+import personalDetailsReducer from "redux/personalDetailsSlice";
+import marketingPreferencesReducer from "redux/MarketingPreferencesSlice";
+import privacyPermissionsReducer from "redux/PrivacyPermissionsSlice";
 import inLifeReducer from "./InLifeSlice";
 import { pageDurationStoreReducer } from "./pageDurationStore";
 
 export const store = configureStore({
   reducer: {
     conditionSelector: conditionSelectorReducer,
-    // productChoiceSlice: productChoiceReducer,
-    // personalDetailsSlice: personalDetailsReducer,
-    // MarketingPreferencesSlice: marketingPreferencesReducer,
-    // PrivacyPermissionsSlice: privacyPermissionsReducer,
+    productChoiceSlice: productChoiceReducer,
+    personalDetailsSlice: personalDetailsReducer,
+    MarketingPreferencesSlice: marketingPreferencesReducer,
+    PrivacyPermissionsSlice: privacyPermissionsReducer,
     InLifeSlice: inLifeReducer,
     pageDuration: pageDurationStoreReducer,
   },

@@ -22,7 +22,7 @@ import {
   HeadingText,
   RegularText,
 } from "components/e-permissions/Text/Text.style";
-import { selectChoice } from "../productChoiceSlice";
+import { selectChoice } from "../../../redux/productChoiceSlice";
 import { useDispatch } from "react-redux";
 import creditCard from "images/credit-card-logo.png";
 import { usePageDuration } from "hooks/usePageDuration";

@@ -1,9 +1,6 @@
 import React, { useState, FC } from "react";
 import { useDispatch } from "react-redux";
-import {
-  tickOAU,
-  unTickOAU,
-} from "screens/5.MarketingPreferences/MarketingPreferencesSlice";
+import { tickOAU, unTickOAU } from "redux/MarketingPreferencesSlice";
 import {
   OffersAndUpdatesContainer,
   OAUBox,

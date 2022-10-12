@@ -13,7 +13,7 @@ import { useDispatch } from "react-redux";
 import {
   tickNatwestEmails,
   unTickNatwestEmails,
-} from "screens/6.PrivacyPermissions/PrivacyPermissionsSlice";
+} from "redux/PrivacyPermissionsSlice";
 
 interface TTNatwestEmailsChannelProps {
   state: any;

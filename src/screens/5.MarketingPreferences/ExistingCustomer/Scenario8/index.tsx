@@ -20,7 +20,7 @@ import {
   unTickPost,
   unTickTelephone,
   unTickTextMessage,
-} from "../../MarketingPreferencesSlice";
+} from "../../../../redux/MarketingPreferencesSlice";
 import {
   SelectAllButton,
   SelectButtonsContainer,

@@ -7,7 +7,7 @@ import {
 } from "../selects.styles";
 import chevronDown from "images/icon-chev-down.png";
 import { useDispatch } from "react-redux";
-import { saveAddress } from "screens/2.PersonalDetails/personalDetailsSlice";
+import { saveAddress } from "redux/personalDetailsSlice";
 
 interface AddressProps {
   state?: number;

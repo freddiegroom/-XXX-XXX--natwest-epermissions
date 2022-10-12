@@ -9,10 +9,7 @@ import {
 import tickedCheckbox from "images/tick-checkbox.png";
 import checkbox from "images/checkbox.png";
 import { useDispatch } from "react-redux";
-import {
-  tickOtherNews,
-  unTickOtherNews,
-} from "screens/6.PrivacyPermissions/PrivacyPermissionsSlice";
+import { tickOtherNews, unTickOtherNews } from "redux/PrivacyPermissionsSlice";
 
 const OtherNewsChannel: FC = () => {
   const dispatch = useDispatch();

@@ -23,7 +23,7 @@ import {
   savePost,
   saveTelephone,
   saveTextMessage,
-} from "../../MarketingPreferencesSlice";
+} from "../../../../redux/MarketingPreferencesSlice";
 
 const Scenario9: FC = () => {
   const stopPageTiming = usePageDuration("marketing-preferences-9");

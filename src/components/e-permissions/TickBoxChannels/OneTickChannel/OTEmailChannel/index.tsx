@@ -11,10 +11,7 @@ import tickedCheckbox from "images/tick-checkbox.png";
 import checkbox from "images/checkbox.png";
 import email from "images/email.png";
 import { useDispatch } from "react-redux";
-import {
-  tickEmail,
-  unTickEmail,
-} from "screens/5.MarketingPreferences/MarketingPreferencesSlice";
+import { tickEmail, unTickEmail } from "redux/MarketingPreferencesSlice";
 
 interface OTEmailChannelProps {
   state: number;

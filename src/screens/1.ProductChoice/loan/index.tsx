@@ -19,7 +19,7 @@ import {
   PaddedCardRow,
 } from "./Loan.styles";
 import { HeadingText } from "components/e-permissions/Text/Text.style";
-import { selectChoice } from "../productChoiceSlice";
+import { selectChoice } from "../../../redux/productChoiceSlice";
 import { useDispatch } from "react-redux";
 import loan from "images/loan.png";
 import { usePageDuration } from "hooks/usePageDuration";
