@@ -1,20 +1,20 @@
 import React, { FC, useState } from "react";
-import Condition1 from "../../routes/e-permissions/Condition1";
-import Condition2 from "../../routes/e-permissions/Condition2";
-import Condition3 from "../../routes/e-permissions/Condition3";
-import Condition4 from "../../routes/e-permissions/Condition4";
-import Condition5 from "../../routes/e-permissions/Condition5";
-import Condition6 from "../../routes/e-permissions/Condition6";
-import Condition7 from "../../routes/e-permissions/Condition7";
-import Condition8 from "../../routes/e-permissions/Condition8";
-import Condition9 from "../../routes/e-permissions/Condition9";
-import Condition10 from "../../routes/e-permissions/Condition10";
+import Condition1 from "routes/e-permissions/Condition1";
+import Condition2 from "routes/e-permissions/Condition2";
+import Condition3 from "routes/e-permissions/Condition3";
+import Condition4 from "routes/e-permissions/Condition4";
+import Condition5 from "routes/e-permissions/Condition5";
+import Condition6 from "routes/e-permissions/Condition6";
+import Condition7 from "routes/e-permissions/Condition7";
+import Condition8 from "routes/e-permissions/Condition8";
+import Condition9 from "routes/e-permissions/Condition9";
+import Condition10 from "routes/e-permissions/Condition10";
 import { ConditionSelectorStyle } from "./DebugConditionSelector.style";
-import InLife1 from "../../routes/in-life/InLife1";
-import InLife2Route from "../../routes/in-life/InLife2/InLife2Route";
-import InLife3 from "../../routes/in-life/InLife3";
-import InLife4 from "../../routes/in-life/InLife4";
-import InLife5 from "../../routes/in-life/InLife5";
+import InLife1 from "routes/in-life/InLife1";
+import InLife2Route from "routes/in-life/InLife2/InLife2Route";
+import InLife3 from "routes/in-life/InLife3";
+import InLife4 from "routes/in-life/InLife4";
+import InLife5 from "routes/in-life/InLife5";
 // import InLife1Container from "screens/InLife/InLife1/InLife1Container";
 
 const DebugConditionSelector: FC = () => {
